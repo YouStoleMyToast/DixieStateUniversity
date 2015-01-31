@@ -11,3 +11,7 @@
 *.swap
 *.[oa]
 *a.out
+*.log
+*.aux
+*.mpx
+*.[0-100]
