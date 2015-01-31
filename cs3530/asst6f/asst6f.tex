@@ -1,0 +1,88 @@
+%
+% Assignment 6f for CS3530 Computational Theory:
+% Turing Machines
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{enumerate}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{center}
+\textbf{\Large CS 3530: Assignment 6f} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\section*{Exercises}
+
+\subsection*{Exercise 5.4 (20 points)}
+
+\subsubsection*{Problem}
+
+If $A\leq_m B$ and $B$ is a regular language, does that imply that
+$A$ is a regular language? Why or why not?
+
+\subsubsection*{Solution}
+
+No, $A$ is not implicitly a regular language.
+The relationship between $A$ and $B$ indicates they are both
+decidable or undecidable. Since $B$ is regular then they are both decidable
+but that doesn't tell you if $A$ is regualar. In fact it is possible to do a 
+reduction on a non-regular language and get a regular language. \\ \ \\ 
+
+Example: \\
+$A$ = \{a$^n$b$^n$: $n$ $\ge$ 0\} and $B$ = \{b*\} \\ 
+The reduction function that reduces $A$ to $B$ will reject $w$ 
+if it starts with the letter b ($w \notin A$), \\
+otherwise it will accept it ($w \in A$). \\
+
+
+
+\null
+\vfill
+
+Definitions \\
+computable function:\\
+A function $f$: $\Sigma^* \rightarrow \Sigma^*$ is a computable function
+if some turing machine $M$, on every input $w$, halts with just $f(w)$ on its 
+tape.\\ \ \\
+
+mapping reducable: \\
+if: there is a function $f$: $\Sigma^* \rightarrow \Sigma^*$
+where for every $w \in A \leftrightarrow f(w) \in B$. \\
+then: $f$ is the reduction of $A$ to $B$.
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

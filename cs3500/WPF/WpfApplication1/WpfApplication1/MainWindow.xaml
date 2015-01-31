@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="269*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="Prev" Height="23" Name="prevButton" Width="75" Margin="5" Click="prevButtonClick"/>
+            <Button Content="Next" Height="23" Name="nextButton" Width="75" Margin="5" Click="nextButtonClick"/>
+        </StackPanel>
+        <Image Grid.Row="1" Margin="15" Name="pic" ImageFailed="pic_ImageFailed" />
+    </Grid>
+</Window>

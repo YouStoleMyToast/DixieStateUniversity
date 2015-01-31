@@ -1,0 +1,41 @@
+
+//my own jack stuff version
+
+class Main
+{
+	function void main()
+	{
+
+		
+		var int randomseed, turns, x, y, x1,y1,x2,y2;
+		var Board board;
+		var Rabbit rabbit; 
+		var Fox fox;
+		
+		let randomseed = Keyboard.readInt("Pick a random number: ");
+		let turns=101;
+		do Random.init(randomseed);
+		let board = Board.new(21);
+		let fox = Fox.new(board);
+		let rabbit = Rabbit.new(board);
+		
+		while (x < turns)
+		{
+			do Sys.wait(500);
+			let x=x+1;
+			do rabbit.move();
+			do Sys.wait(500);
+			do fox.move();
+		}
+
+		/*
+		//below are parts that worked
+		var int x1,y1;
+		do Painter.drawBush(100,100);
+		do Painter.drawRabbit(50,50);
+		do Painter.drawFox(200,200);
+		do Painter.drawBlank(0,0);
+		*/
+		return;
+	}
+}

@@ -1,0 +1,16 @@
+class Random 
+{ 
+    static int seed;
+    function void init(int n) 
+	{
+        let seed = n;
+        return; 
+    }
+    function int next(int range) 
+	{
+        var int n;
+        let seed = seed * 2469 + 1;
+        let n = Math.abs(seed) / 2;
+        return n - (range * (n / range)); 
+    }
+}

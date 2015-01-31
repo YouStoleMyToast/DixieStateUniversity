@@ -1,0 +1,12 @@
+class circle{
+	field int radius;
+	constructor circle.new(int r)
+		{
+		if (r < 1){
+			let radius = 1;
+		}else{
+			let radius = r;
+		}
+		return this;
+		}
+}

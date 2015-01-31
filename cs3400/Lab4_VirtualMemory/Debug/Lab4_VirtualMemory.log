@@ -1,0 +1,539 @@
+﻿Build started 8/19/2013 1:14:25 PM.
+     1>Project "H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Lab4_VirtualMemory.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\Lab4_VirtualMemory.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\Lab4_VirtualMemory.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt os345.c os345fat.c os345lc3.c os345mmu.c os345p1.c os345p2.c os345p3.c os345p4.c os345p5.c os345p6.c os345park.c
+         os345park.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(82): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(84): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(86): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(146): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(150): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(404): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(405): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(406): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(407): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(408): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(409): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(410): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(411): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(412): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(413): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(414): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(415): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(416): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(417): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(418): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(419): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(420): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(421): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(422): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(423): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(424): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(425): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(426): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(427): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(428): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(431): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(435): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(439): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(443): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(447): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(451): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(455): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(459): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(463): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(467): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(471): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(475): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345park.c(481): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+         os345p6.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(153): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(154): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(229): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(277): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(278): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(290): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : see declaration of 'strncpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(326): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(327): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(573): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(623): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : see declaration of 'strncpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(626): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : see declaration of 'strncpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(640): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(646): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(663): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(666): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(672): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(676): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(677): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(678): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(679): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(680): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(809): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : see declaration of 'strncpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(813): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : see declaration of 'strncpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(831): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : see declaration of 'strncpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1025): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1033): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1048): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1071): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(175) : see declaration of 'strncat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1090): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1093): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1114): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(175) : see declaration of 'strncat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1135): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1161): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(175) : see declaration of 'strncat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1175): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1184): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1189): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1203): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1208): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1223): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1231): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1354): warning C4101: 'error' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1425): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1457): warning C4101: 'fileID' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1542): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.inl(112) : see declaration of 'localtime'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1759): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1760): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1815): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1826): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p6.c(1827): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+         os345p5.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p5.c(83): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p5.c(84): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p5.c(86): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p5.c(127): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+         os345p4.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p4.c(327): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p4.c(350): warning C4101: 'upte1' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p4.c(350): warning C4101: 'upte2' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p4.c(382): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p4.c(408): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p4.c(538): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+         os345p3.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(105): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(110): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(115): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(120): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(132): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(136): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(141): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(145): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(150): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(154): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(159): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(163): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(168): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(172): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(177): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(181): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(186): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(190): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(195): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(199): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(204): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(208): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(213): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(217): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(222): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(226): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(231): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(235): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(240): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(244): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(249): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(253): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(258): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(262): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(267): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(271): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(276): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(280): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(285): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(289): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(294): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(298): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(303): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(307): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(311): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(315): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(320): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(324): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(329): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(333): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(338): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(342): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(347): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(351): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(356): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(360): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(365): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(369): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(374): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(378): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(383): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(387): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(392): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(396): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(400): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(404): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(409): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(413): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(418): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(422): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(427): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(431): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(436): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(440): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(445): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(449): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(454): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(458): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(463): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(467): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(472): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(476): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(481): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(485): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(489): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(493): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(498): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(502): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(507): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(511): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(516): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(520): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(525): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(529): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(535): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(539): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(544): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(548): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(553): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(557): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(562): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(566): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(571): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(575): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(580): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(584): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(589): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(593): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(598): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(602): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(617): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(623): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(626): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(741): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(744): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(809): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(813): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(811): warning C4101: 'i' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(919): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(921): warning C4101: 'buf' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(947): warning C4028: formal parameter 2 different from declaration
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(960): warning C4028: formal parameter 2 different from declaration
+         os345p2.c
+         os345p1.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(112): warning C4047: '==' : 'int' differs in levels of indirection from 'void *'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(221): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(228): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(229): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(246): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(247): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(258): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(263): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(264): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(274): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(275): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(285): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(286): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(296): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(297): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(81): warning C4101: 'firstargv' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(363): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(420): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(427): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(452): warning C4244: '=' : conversion from 'time_t' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(453): warning C4244: '=' : conversion from 'time_t' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(458): warning C4244: '=' : conversion from 'time_t' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(451): warning C4101: 'timefin' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(468): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.inl(86) : see declaration of 'ctime'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(484): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(488): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(495): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(519): warning C4113: 'int (__cdecl *)()' differs in parameter lists from 'int (__cdecl *)(int,char **)'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p1.c(535): warning C4028: formal parameter 2 different from declaration
+         os345mmu.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345mmu.c(54): warning C4013: 'globalClock' undefined; assuming extern returning int
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345mmu.c(67): warning C4101: 'rpte' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345mmu.c(66): warning C4101: 'tasknum' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345mmu.c(66): warning C4101: 'pa' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345mmu.c(68): warning C4101: 'upte' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345mmu.c(344): warning C4101: 'pa' : unreferenced local variable
+         os345lc3.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345lc3.c(120): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345lc3.c(121): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345lc3.c(122): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345lc3.c(492): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345lc3.c(497): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345lc3.c(499): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345lc3.c(519): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : see declaration of 'sscanf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345lc3.c(529): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : see declaration of 'sscanf'
+         os345fat.c
+         os345.c
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(316): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(130) : see declaration of 'kbhit'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(316): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(128) : see declaration of 'getch'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(754): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(760): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(775): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(883): warning C4047: '!=' : 'char *' differs in levels of indirection from 'int'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(1199): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(1273): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(1324): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(1324): warning C4996: 'asctime': This function or variable may be unsafe. Consider using asctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.h(153) : see declaration of 'asctime'
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345.c(1324): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.inl(112) : see declaration of 'localtime'
+         Generating Code...
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345mmu.c(57): warning C4715: 'getFrame' : not all control paths return a value
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345mmu.c(161): warning C4715: 'globalClock' : not all control paths return a value
+     1>h:\sem 5 summer 2013(byu)\lab4_virtualmemory\os345p3.c(899): warning C4715: 'insertDeltaClock' : not all control paths return a value
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Lab4_VirtualMemory.exe.embed.manifest.res" Debug\Lab4_VirtualMemory_manifest.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Debug\Lab4_VirtualMemory.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lab4_VirtualMemory.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Debug\Lab4_VirtualMemory.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Debug\Lab4_VirtualMemory.lib" /MACHINE:X86 Debug\Lab4_VirtualMemory.exe.embed.manifest.res
+         Debug\os345.obj
+         Debug\os345fat.obj
+         Debug\os345lc3.obj
+         Debug\os345mmu.obj
+         Debug\os345p1.obj
+         Debug\os345p2.obj
+         Debug\os345p3.obj
+         Debug\os345p4.obj
+         Debug\os345p5.obj
+         Debug\os345p6.obj
+         Debug\os345park.obj
+       Manifest:
+         Deleting file "Debug\Lab4_VirtualMemory.exe.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Lab4_VirtualMemory.exe.embed.manifest" /manifest Debug\Lab4_VirtualMemory.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Lab4_VirtualMemory.exe.embed.manifest.res" Debug\Lab4_VirtualMemory_manifest.rc 
+       LinkEmbedManifest:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Debug\Lab4_VirtualMemory.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lab4_VirtualMemory.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Debug\Lab4_VirtualMemory.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Debug\Lab4_VirtualMemory.lib" /MACHINE:X86 Debug\Lab4_VirtualMemory.exe.embed.manifest.res
+         Debug\os345.obj
+         Debug\os345fat.obj
+         Debug\os345lc3.obj
+         Debug\os345mmu.obj
+         Debug\os345p1.obj
+         Debug\os345p2.obj
+         Debug\os345p3.obj
+         Debug\os345p4.obj
+         Debug\os345p5.obj
+         Debug\os345p6.obj
+         Debug\os345park.obj
+         Lab4_VirtualMemory.vcxproj -> H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Debug\Lab4_VirtualMemory.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Lab4_VirtualMemory.unsuccessfulbuild".
+         Touching "Debug\Lab4_VirtualMemory.lastbuildstate".
+     1>Done Building Project "H:\Sem 5 Summer 2013(BYU)\Lab4_VirtualMemory\Lab4_VirtualMemory.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.40

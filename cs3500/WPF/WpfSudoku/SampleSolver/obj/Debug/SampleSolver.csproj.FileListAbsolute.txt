@@ -1,0 +1,7 @@
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\SampleSolver\bin\Debug\SampleSolver.dll
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\SampleSolver\bin\Debug\SampleSolver.pdb
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\SampleSolver\bin\Debug\WpfSudoku.exe
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\SampleSolver\bin\Debug\WpfSudoku.pdb
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\SampleSolver\obj\Debug\SampleSolver.csprojResolveAssemblyReference.cache
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\SampleSolver\obj\Debug\SampleSolver.dll
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\SampleSolver\obj\Debug\SampleSolver.pdb

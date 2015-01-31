@@ -1,0 +1,16 @@
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\bin\Release\WpfSudoku.exe
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\bin\Release\WpfSudoku.pdb
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\SudokuBoard.baml
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\App.baml
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\MainWindow.g.cs
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\SudokuBoard.g.cs
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\App.g.cs
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\WpfSudoku_MarkupCompile.cache
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\WpfSudoku_MarkupCompile.lref
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\MainWindow.baml
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\WpfSudoku.g.resources
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\WpfSudoku.Properties.Resources.resources
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\WpfSudoku.csproj.GenerateResource.Cache
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\WpfSudoku.exe
+U:\Desktop\sem8fall2014\cs3500\WpfSudoku\WpfSudoku\obj\x86\Release\WpfSudoku.pdb

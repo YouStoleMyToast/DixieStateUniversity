@@ -1,0 +1,98 @@
+
+//my own jack stuff version
+
+class Painter
+{
+	function int getLeft(int x)
+	{
+		var int n;
+		let n=12*x+8;
+		return n;
+	}
+	function int getTop(int y)
+	{
+		var int n;
+		let n=12*y+8;
+		return n;
+	}
+	//////////checked start
+	function void drawblankboard(int x1,int y1)
+	{
+		var int x2,y2;
+
+		let x1=x1*12;
+		let y1=y1*12;
+		
+		let x2=x1+12;
+		let y2=y1+12;
+		
+		do Screen.drawLine(0,0,x2,0);
+		do Screen.drawLine(x2,0,x2,y2);
+
+		do Screen.drawLine(x1,y1,x1,y2);
+		do Screen.drawLine(x1,y2,x2,y2);
+		do Screen.drawLine(x2,y2,x1,y2);
+		do Screen.drawLine(x1,y2,x1,y1);
+		return;
+	}
+	function void drawBlank(int x1,int y1)
+	{
+		var int x2,y2;
+
+		let x1=x1*12;
+		let y1=y1*12;
+		
+		let x2=x1+12;
+		let y2=y1+12;
+		
+		do Screen.setColor(false);
+		do Screen.drawRectangle(x1+1,y1+1,x2-1,y2-1);
+		do Screen.setColor(true);
+		
+		do Screen.drawLine(0,0,x2,0);
+		do Screen.drawLine(x2,0,x2,y2);
+
+		do Screen.drawLine(x1,y1,x1,y2);
+		do Screen.drawLine(x1,y2,x2,y2);
+		do Screen.drawLine(x2,y2,x1,y2);
+		do Screen.drawLine(x1,y2,x1,y1);
+		return;
+	}
+	function void drawBush(int x1,int y1)
+	{
+		var int x1,y1,radius;
+		let x1=x1*12+5;
+		let y1=y1*12+5;
+		let radius=3;
+		do Screen.drawCircle(x1,y1,radius);
+		return;
+	}
+	function void drawRabbit(int x1,int y1)
+	{
+		
+		var int x1,y1,x2,y2,x3,y3;
+		let x1=x1*12+6;
+		let y1=y1*12+12-2;
+		let x2=x1-3;
+		let y2=y1-6;
+		let x3=x1+3;
+		let y3=y1-6;
+		do Screen.drawLine(x1,y1,x2,y2);
+		do Screen.drawLine(x1,y1,x3,y3);
+		
+		//do Screen.drawPixel(x1,y1);
+		return;
+	}
+	function void drawFox(int x1,int y1)
+	{
+		var int x1,y1,x2,y2,x3,y3,x4,y4;
+		let x1=x1*12+2;
+		let y1=y1*12+12-2;
+		let x2=x1+7;
+		let y2=y1-7;
+		do Screen.drawLine(x1,y1,x2,y2);
+		do Screen.drawLine(x2,y1,x1,y2);
+		return;
+	}
+	////////////checked end
+}

@@ -1,0 +1,127 @@
+function Bat.new 0
+push constant 5
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 2
+push argument 3
+pop this 3
+push argument 4
+pop this 4
+call Bat.show 0
+pop temp 0
+push constant 0
+return
+push pointer 0
+function Bat.dispose 0
+push argument 0
+pop pointer 0
+call Bat.Memory 0
+pop temp 0
+push pointer 0
+return
+function Bat.show 0
+push argument 0
+pop pointer 0
+call Bat.Screen 0
+pop temp 0
+push constant 1
+neg
+call Bat.draw 0
+pop temp 0
+return
+function Bat.hide 0
+push argument 0
+pop pointer 0
+call Bat.Screen 0
+pop temp 0
+push constant 0
+call Bat.draw 0
+pop temp 0
+return
+function Bat.draw 0
+push argument 0
+pop pointer 0
+call Bat.Screen 0
+pop temp 0
+return
+function Bat.setDirection 0
+push argument 0
+pop pointer 0
+push argument 5
+pop this 5
+return
+function Bat.getLeft 0
+push argument 0
+pop pointer 0
+push constant 0
+return
+function Bat.getRight 0
+push argument 0
+pop pointer 0
+push constant 0
+return
+function Bat.setWidth 0
+push argument 0
+pop pointer 0
+call Bat.hide 0
+pop temp 0
+push argument 6
+pop this 6
+call Bat.show 0
+pop temp 0
+return
+function Bat.move 0
+push argument 0
+pop pointer 0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+push argument 7
+pop this 7
+push argument 0
+push constant 1
+lt
+not
+if.goto IF_ELSE_0
+push argument 8
+pop this 8
+call Bat.Screen 0
+pop temp 0
+push constant 0
+call Bat.Screen 0
+pop temp 0
+call Bat.Screen 0
+pop temp 0
+push constant 1
+neg
+call Bat.Screen 0
+pop temp 0
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 9
+pop this 9
+push argument 0
+push constant 1
+add
+not
+if.goto IF_ELSE_0
+push argument 10
+pop this 10
+call Bat.Screen 0
+pop temp 0
+push constant 0
+call Bat.Screen 0
+pop temp 0
+call Bat.Screen 0
+pop temp 0
+push constant 1
+neg
+call Bat.Screen 0
+pop temp 0
+return

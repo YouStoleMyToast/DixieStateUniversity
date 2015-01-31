@@ -1,0 +1,82 @@
+%
+% Assignment 7c for CS3530 Computational Theory:
+% Computability
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{enumerate}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{center}
+\textbf{\Large CS 3530: Assignment 7c} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\subsection*{Problem 5.9 (20 points)}
+
+\subsubsection*{Problem}
+
+Let $T=\{\langle M\rangle: M$ is a TM that accepts $w^\mathcal{R}$
+whenever it accepts $w\}$. Show that $T$ is undecidable. \\
+You may not use Rice's Theorem. (Note: do a direct reduction)
+
+\subsubsection*{Solution}
+
+According to theorem 4.11: \\
+
+$A_{TM}$ is undecidable where
+\centering
+$A_{TM}$ = \{ $\langle M, w\rangle$ | $M$ is a TM that accepts $w$ \} \\ \ \\
+\raggedright
+
+
+and according to theorem 5.23: \\
+\centering
+If $A\leq_m B$ and $B$ is undecidable, then $A$ is undecidable \\ \ \\
+\raggedright
+
+So if we can do the reduction $T_{TM} \leq_{m} A_{TM}$ then we will know
+$T_{TM}$ is undecidable.\\ \ \\
+
+
+We will assume that $T$ is decidable.
+Let $D$ be a turring machine that decides $T$. \\
+Then We will use a Turing machine $S$ that decides $T_{TM}$. \\ \ \\
+
+S = on input $\langle M, w\rangle$ \\
+\ \ \ 1. create $R_{TM}$ as follows: \\
+\ \ \ \ \ \ On input $x$: \\
+\ \ \ \	\ \ \ \ 1. If $x$ has the form $w$ or $w^\mathcal{R}$ then accept \\
+\ \ \ \	\ \ \ \ 2. Else reject \\
+\ \ \ 2. Run $D$ on $\langle R_{TM}\rangle$ \\
+\ \ \ 3. If $D$ accepts then accept \\
+\ \ \ 4. Else reject \\ \ \\
+
+If $S_{TM}$ accepts then we see that $T_{TM} \leq_{m} A_{TM}$ which tells us that
+$T_{TM}$ is undecidable.
+
+\end{document}
+
+
+
+

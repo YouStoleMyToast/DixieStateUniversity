@@ -1,0 +1,35 @@
+Creating default GraphicsMode (32, 24, 8).
+DisplayDevice 1 (primary) supports 21 resolutions.
+Creating GraphicsContext.
+    GraphicsMode: Index: , Color: 32 (8888), Depth: 24, Stencil: 8, Samples: 0, Accum: 0 (0000), Buffers: 2, Stereo: False
+    IWindowInfo: Windows.WindowInfo: Handle 66746, Parent (Windows.WindowInfo: Handle 1442550, Parent (null))
+    GraphicsContextFlags: Default
+    Requested version: 1.0
+    Loaded opengl32.dll: 1471610880
+    Creating temporary context for wgl extensions.
+    Retrieving ARB pixel formats.... failed.
+    Device context: 1140919239
+    Retrieving PFD pixel formats... 
+    Setting pixel format... 8
+    Load extensions for OpenTK.Platform.Windows.Wgl... 17 extensions loaded in 1 ms.
+    Destroying window: Windows.WindowInfo: Handle 66748, Parent (null)
+    OpenGL will be bound to window:66746 on thread:1
+    Retrieving ARB pixel formats.... Setting pixel format... 8
+    Falling back to GL2... success! (id: 131072)
+    Load extensions for OpenTK.Platform.Windows.Wgl... 0 extensions loaded in 0 ms.
+Load extensions for OpenTK.Platform.Windows.Wgl... 17 extensions loaded in 0 ms.
+Bindings loaded in 40.0664 ms.
+
+
+WARNING: Output of vertex shader 'normal' not read by fragment shader
+
+
+
+
+
+
+
+
+Entering main loop.
+Destroying window: Windows.WindowInfo: Handle 1442550, Parent (null)
+Disposing context 131072.

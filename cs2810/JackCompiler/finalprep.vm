@@ -1,0 +1,28 @@
+function circle.new 0
+push constant 1
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+push constant 1
+lt
+not
+if.goto IF_ELSE_0
+poppath 4 popcount 0
+push argument 0
+pop this 0
+goto IF_EXIT_0
+label IF_ELSE_0
+poppath 4 popcount 1
+push argument 1
+pop this 1
+label IF_EXIT_0
+poppath 3 popcount 2
+push constant 1
+pop this 2
+goto IF_EXIT_0
+label IF_ELSE_0
+poppath 4 popcount 3
+push argument 3
+pop this 3
+push constant 0
+return

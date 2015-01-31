@@ -1,0 +1,294 @@
+function PongGame.new 0
+push constant 9
+call Memory.alloc 1
+pop pointer 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 50
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 2
+call ball.setDestination 0
+pop temp 0
+call Screen.drawRectangle 0
+pop temp 0
+call Output.moveCursor 0
+pop temp 0
+call Output.printString 0
+pop temp 0
+push contant 9
+call string.new 1
+push constant 34
+call string.appendChar 2
+push constant 83
+call string.appendChar 2
+push constant 99
+call string.appendChar 2
+push constant 111
+call string.appendChar 2
+push constant 114
+call string.appendChar 2
+push constant 101
+call string.appendChar 2
+push constant 58
+call string.appendChar 2
+push constant 48
+call string.appendChar 2
+push constant 34
+call string.appendChar 2
+push argument 3
+pop this 3
+push constant 0
+push constant 0
+pop this 4
+push constant 0
+pop this 5
+push constant 0
+pop this 6
+push constant 0
+return
+push pointer 0
+method PongGame.dispose 0
+push argument 0
+pop pointer 0
+call bat.dispose 0
+pop temp 0
+call ball.dispose 0
+pop temp 0
+call Memory.deAlloc 0
+pop temp 0
+push pointer 0
+return
+function PongGame.newInstance 9
+push argument 7
+pop this 7
+return
+function PongGame.getInstance 9
+push constant 0
+return
+method PongGame.run 0
+push argument 0
+pop pointer 0
+Label WHILE_EXIT_0
+push argument 0
+push constant 1
+not
+not
+if.goto WHILE_EXIT_0
+push argument 8
+pop this 8
+goto WHILE_TEST_0
+local WHILE_EXIT_0
+Label WHILE_EXIT_0
+push argument 0
+push constant 1
+not
+if.goto WHILE_EXIT_0
+push argument 9
+pop this 9
+goto WHILE_TEST_0
+local WHILE_EXIT_0
+push argument 10
+pop this 10
+call bat.move 0
+pop temp 0
+call moveBall.) 0
+pop temp 0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+push constant 130
+pop this 11
+goto IF_EXIT_0
+label IF_ELSE_0
+push constant 130
+pop this 12
+label IF_EXIT_0
+call bat.setDirection 0
+pop temp 0
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+push constant 132
+pop this 13
+goto IF_EXIT_0
+label IF_ELSE_0
+push constant 132
+pop this 14
+label IF_EXIT_0
+call bat.setDirection 0
+pop temp 0
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+push constant 140
+pop this 15
+goto IF_EXIT_0
+label IF_ELSE_0
+push constant 140
+pop this 16
+label IF_EXIT_0
+push argument 17
+pop this 17
+push constant 1
+neg
+Label WHILE_EXIT_0
+push argument 0
+push constant 1
+not
+not
+if.goto WHILE_EXIT_0
+push argument 18
+pop this 18
+goto WHILE_TEST_0
+local WHILE_EXIT_0
+push argument 19
+pop this 19
+call bat.move 0
+pop temp 0
+call moveBall.) 0
+pop temp 0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+push argument 20
+pop this 20
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 21
+pop this 21
+label IF_EXIT_0
+call Output.moveCursor 0
+pop temp 0
+call Output.printString 0
+pop temp 0
+push contant 10
+call string.new 1
+push constant 34
+call string.appendChar 2
+push constant 71
+call string.appendChar 2
+push constant 97
+call string.appendChar 2
+push constant 109
+call string.appendChar 2
+push constant 101
+call string.appendChar 2
+push constant 79
+call string.appendChar 2
+push constant 118
+call string.appendChar 2
+push constant 101
+call string.appendChar 2
+push constant 114
+call string.appendChar 2
+push constant 34
+call string.appendChar 2
+return
+method PongGame.moveBall 0
+push argument 0
+pop pointer 0
+push argument 22
+pop this 22
+push argument 0
+push constant 1
+gt
+not
+if.goto IF_ELSE_0
+push argument 23
+pop this 23
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 24
+pop this 24
+label IF_EXIT_0
+push argument 25
+pop this 25
+push constant 0
+pop this 26
+push argument 27
+pop this 27
+push argument 28
+pop this 28
+push argument 29
+pop this 29
+push argument 30
+pop this 30
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+push constant 4
+pop this 31
+goto IF_EXIT_0
+label IF_ELSE_0
+push constant 4
+pop this 32
+label IF_EXIT_0
+push argument 33
+pop this 33
+push argument 0
+push constant 1
+not
+not
+if.goto IF_ELSE_0
+push argument 34
+pop this 34
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 35
+pop this 35
+label IF_EXIT_0
+push argument 0
+push constant 1
+lt
+not
+if.goto IF_ELSE_0
+push argument 36
+pop this 36
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 37
+pop this 37
+label IF_EXIT_0
+push constant 1
+pop this 38
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 0
+push constant 1
+gt
+not
+if.goto IF_ELSE_0
+push argument 39
+pop this 39
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 40
+pop this 40
+label IF_EXIT_0
+push constant 1
+pop this 41
+push argument 42
+pop this 42
+call bat.setWidth 0
+pop temp 0
+push argument 43
+pop this 43
+call Output.moveCursor 0
+pop temp 0
+call Output.printInt 0
+pop temp 0
+call ball.bounce 0
+pop temp 0
+return

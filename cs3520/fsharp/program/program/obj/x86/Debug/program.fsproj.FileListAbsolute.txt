@@ -1,0 +1,6 @@
+U:\Desktop\sem6\cs3520\fsharp\program\program\bin\Debug\program.XML
+U:\Desktop\sem6\cs3520\fsharp\program\program\bin\Debug\program.exe
+U:\Desktop\sem6\cs3520\fsharp\program\program\bin\Debug\program.pdb
+U:\Desktop\sem6\cs3520\fsharp\program\program\obj\x86\Debug\ResolveAssemblyReference.cache
+U:\Desktop\sem6\cs3520\fsharp\program\program\obj\x86\Debug\program.exe
+U:\Desktop\sem6\cs3520\fsharp\program\program\obj\x86\Debug\program.pdb

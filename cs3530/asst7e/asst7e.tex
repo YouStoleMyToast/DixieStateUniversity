@@ -1,0 +1,71 @@
+%
+% Assignment 7e for CS3530 Computational Theory:
+% Computability
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{enumerate}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{center}
+\textbf{\Large CS 3530: Assignment 7e} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\subsection*{Problem 5.14 (20 points)}
+
+\subsubsection*{Problem}
+
+Consider the problem of determining whether a Turing machine $M$ on
+an input $w$ ever attempts to move its head left when its head is on
+the left-most tape cell. Formulate this problem as a language and
+show that it is undecidable. You may not use Rice's Theorem.
+(note: do by reduction(halting problem))
+\subsubsection*{Solution}
+
+%We will describe the above TM as: $L_{TM}$ = On input $w$ if head is at $q_0$ and attempts to move head left. 
+$L_{TM}$ = On input $w$ if head is at $q_0$ and attempts to move head left then it accepts. \\
+$HALT_{TM}$ = \{$\langle M, w\rangle$| $M$ is a $TM$ and $M$ halts on input $w$ \} \\
+Since we $HALT_{TM}$ is undecidable we will show that $L_{TM}$ is undecidable by doing a 
+reduction where $HALT_{TM}$ $\leq$ $L_{TM}$. \\ \ \\
+
+We will assume construct $S_{TM}$ to decide $HALT_{TM}$ \\
+$S$="On input $\langle M, w\rangle$: \\
+\hspace{5 mm}	1. Construct $T_{TM}$ from $M$ where $T$ marks the left-most cell and shifts the head to the right \\
+\hspace{5 mm}	2. $T_{TM}$ runs $M$ on $w$: \\
+\hspace{10 mm}		1. If $T$ is on the marked cell run $M$ on $w$, \\
+\hspace{15 mm}			Then $T$ moves to the right simulating $M$ reaching the left-most cell \\
+\hspace{10 mm}		2. If $M$ halts and accepts, \\
+\hspace{15 mm}			Then $T$ moves its head all the way to the left \\
+\hspace{5 mm}	3. If $T$ accepts then $S$ accpets \\
+\hspace{5 mm}	4. Else $T$ rejects then $S$ rejects \\ \ \\
+
+Since $T$ moves its head off the left-most cell when $M$ halts. Then $S$ decides $HALT$.
+Since $HALT$ is undecidable and $T$ decides $HALT$ then $L$ is undecidable.
+
+\end{document}
+
+
+
+
+

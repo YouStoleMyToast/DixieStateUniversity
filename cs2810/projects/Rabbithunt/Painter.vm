@@ -1,0 +1,253 @@
+function Painter.getLeft 1
+push constant 12
+push argument 0
+call Math.multiply 2
+push constant 8
+add
+pop local 0
+push local 0
+return
+function Painter.getTop 1
+push constant 12
+push argument 0
+call Math.multiply 2
+push constant 8
+add
+pop local 0
+push local 0
+return
+function Painter.drawblankboard 2
+push argument 0
+push constant 12
+call Math.multiply 2
+pop argument 0
+push argument 1
+push constant 12
+call Math.multiply 2
+pop argument 1
+push argument 0
+push constant 12
+add
+pop local 0
+push argument 1
+push constant 12
+add
+pop local 1
+push constant 0
+push constant 0
+push local 0
+push constant 0
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 0
+push local 0
+push local 1
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push argument 1
+push argument 0
+push local 1
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push local 1
+push local 0
+push local 1
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+push argument 0
+push local 1
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push local 1
+push argument 0
+push argument 1
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Painter.drawBlank 2
+push argument 0
+push constant 12
+call Math.multiply 2
+pop argument 0
+push argument 1
+push constant 12
+call Math.multiply 2
+pop argument 1
+push argument 0
+push constant 12
+add
+pop local 0
+push argument 1
+push constant 12
+add
+pop local 1
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 1
+add
+push argument 1
+push constant 1
+add
+push local 0
+push constant 1
+sub
+push local 1
+push constant 1
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+push constant 0
+push local 0
+push constant 0
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 0
+push local 0
+push local 1
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push argument 1
+push argument 0
+push local 1
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push local 1
+push local 0
+push local 1
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+push argument 0
+push local 1
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push local 1
+push argument 0
+push argument 1
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Painter.drawBush 3
+push argument 0
+push constant 12
+call Math.multiply 2
+push constant 5
+add
+pop argument 0
+push argument 1
+push constant 12
+call Math.multiply 2
+push constant 5
+add
+pop argument 1
+push constant 3
+pop local 2
+push argument 0
+push argument 1
+push local 2
+call Screen.drawCircle 3
+pop temp 0
+push constant 0
+return
+function Painter.drawRabbit 6
+push argument 0
+push constant 12
+call Math.multiply 2
+push constant 6
+add
+pop argument 0
+push argument 1
+push constant 12
+call Math.multiply 2
+push constant 12
+add
+push constant 2
+sub
+pop argument 1
+push argument 0
+push constant 3
+sub
+pop local 2
+push argument 1
+push constant 6
+sub
+pop local 3
+push argument 0
+push constant 3
+add
+pop local 4
+push argument 1
+push constant 6
+sub
+pop local 5
+push argument 0
+push argument 1
+push local 2
+push local 3
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push argument 1
+push local 4
+push local 5
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Painter.drawFox 8
+push argument 0
+push constant 12
+call Math.multiply 2
+push constant 2
+add
+pop argument 0
+push argument 1
+push constant 12
+call Math.multiply 2
+push constant 12
+add
+push constant 2
+sub
+pop argument 1
+push argument 0
+push constant 7
+add
+pop local 2
+push argument 1
+push constant 7
+sub
+pop local 3
+push argument 0
+push argument 1
+push local 2
+push local 3
+call Screen.drawLine 4
+pop temp 0
+push local 2
+push argument 1
+push argument 0
+push local 3
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return

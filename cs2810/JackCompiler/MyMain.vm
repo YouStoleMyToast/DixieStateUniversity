@@ -1,0 +1,19 @@
+function Main.main 12
+class newInstance
+functionname (
+call newInstance.( 0
+pop temp 0
+push argument 0
+push constant 1
+eq
+pop argument 0
+class game
+functionname .
+call game.. 0
+pop temp 0
+class ;
+functionname .
+call ;.. 0
+pop temp 0
+push constant 0
+return

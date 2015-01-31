@@ -1,0 +1,12 @@
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\play.XML
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\play.exe
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\play.pdb
+U:\Desktop\sem6\cs3520\fsharp\play\play\obj\x86\Debug\ResolveAssemblyReference.cache
+U:\Desktop\sem6\cs3520\fsharp\play\play\obj\x86\Debug\play.exe
+U:\Desktop\sem6\cs3520\fsharp\play\play\obj\x86\Debug\play.pdb
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\OpenTK.Compatibility.dll
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\OpenTK.dll
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\OpenTK.GLControl.dll
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\OpenTK.xml
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\OpenTK.Compatibility.xml
+U:\Desktop\sem6\cs3520\fsharp\play\play\bin\Debug\OpenTK.GLControl.xml

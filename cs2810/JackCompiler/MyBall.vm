@@ -1,0 +1,527 @@
+function Ball.new 0
+push constant 15
+call Memory.alloc 1
+pop pointer 0
+popcount 0
+push argument 0
+pop this 0
+popcount 1
+push argument 1
+pop this 1
+popcount 2
+push argument 2
+pop this 2
+popcount 3
+push argument 3
+pop this 3
+popcount 4
+push argument 4
+pop this 4
+popcount 5
+push argument 5
+pop this 5
+popcount 6
+push constant wall
+pop this 6
+call Ball.show 0
+pop temp 0
+push constant 0
+return
+push pointer 0
+method Ball.dispose 0
+push argument 0
+pop pointer 0
+call Ball.Memory 0
+pop temp 0
+push pointer 0
+return
+method Ball.show 0
+push argument 0
+pop pointer 0
+call Ball.Screen 0
+pop temp 0
+push constant 1
+neg
+call Ball.draw 0
+pop temp 0
+return
+method Ball.hide 0
+push argument 0
+pop pointer 0
+call Ball.Screen 0
+pop temp 0
+push constant 0
+call Ball.draw 0
+pop temp 0
+return
+method Ball.draw 0
+push argument 0
+pop pointer 0
+call Ball.Screen 0
+pop temp 0
+return
+method Ball.getLeft 0
+push argument 0
+pop pointer 0
+push constant 0
+return
+method Ball.getRight 0
+push argument 0
+pop pointer 0
+push constant 0
+return
+method Ball.setDestination 0
+push argument 0
+pop pointer 0
+popcount 7
+push argument 7
+pop this 7
+popcount 8
+push argument 8
+pop this 8
+popcount 9
+push argument 9
+pop this 9
+popcount 10
+push argument 10
+pop this 10
+popcount 11
+push argument 11
+pop this 11
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 12
+push argument 12
+pop this 12
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 13
+push argument 13
+pop this 13
+label IF_EXIT_0
+popcount 14
+push argument 14
+pop this 14
+popcount 15
+push argument 15
+pop this 15
+popcount 16
+push argument 16
+pop this 16
+popcount 17
+push argument 17
+pop this 17
+popcount 18
+push argument 18
+pop this 18
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 19
+push argument 19
+pop this 19
+popcount 20
+push argument 20
+pop this 20
+popcount 21
+push constant 2
+pop this 21
+popcount 22
+push constant d
+pop this 22
+popcount 23
+push constant straightD
+pop this 23
+popcount 24
+push constant diagonalD
+pop this 24
+return
+method Ball.move 0
+push argument 0
+pop pointer 0
+call Ball.hide 0
+pop temp 0
+push argument 0
+push constant 1
+lt
+not
+if.goto IF_ELSE_0
+popcount 25
+push constant 0
+pop this 25
+popcount 26
+push constant (
+pop this 26
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 27
+push constant 0
+pop this 27
+popcount 28
+push constant (
+pop this 28
+label IF_EXIT_0
+popcount 29
+push argument 29
+pop this 29
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 30
+push argument 30
+pop this 30
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 31
+push argument 31
+pop this 31
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 32
+push argument 32
+pop this 32
+label IF_EXIT_0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 33
+push argument 33
+pop this 33
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 34
+push argument 34
+pop this 34
+label IF_EXIT_0
+popcount 35
+push argument 35
+pop this 35
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 36
+push argument 36
+pop this 36
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 37
+push argument 37
+pop this 37
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 38
+push argument 38
+pop this 38
+label IF_EXIT_0
+popcount 39
+push argument 39
+pop this 39
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 40
+push argument 40
+pop this 40
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 41
+push argument 41
+pop this 41
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 42
+push argument 42
+pop this 42
+label IF_EXIT_0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 43
+push argument 43
+pop this 43
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 44
+push argument 44
+pop this 44
+label IF_EXIT_0
+popcount 45
+push argument 45
+pop this 45
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 46
+push argument 46
+pop this 46
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 47
+push argument 47
+pop this 47
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 48
+push argument 48
+pop this 48
+label IF_EXIT_0
+popcount 49
+push argument 49
+pop this 49
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 50
+push argument 50
+pop this 50
+push argument 0
+push constant 1
+not
+not
+if.goto IF_ELSE_0
+popcount 51
+push argument 51
+pop this 51
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 52
+push argument 52
+pop this 52
+label IF_EXIT_0
+popcount 53
+push constant wall
+pop this 53
+popcount 54
+push argument 54
+pop this 54
+push argument 0
+push constant 1
+not
+not
+if.goto IF_ELSE_0
+popcount 55
+push argument 55
+pop this 55
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 56
+push argument 56
+pop this 56
+label IF_EXIT_0
+popcount 57
+push constant wall
+pop this 57
+popcount 58
+push argument 58
+pop this 58
+push argument 0
+push constant 1
+not
+not
+if.goto IF_ELSE_0
+popcount 59
+push argument 59
+pop this 59
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 60
+push argument 60
+pop this 60
+label IF_EXIT_0
+popcount 61
+push constant wall
+pop this 61
+popcount 62
+push argument 62
+pop this 62
+push argument 0
+push constant 1
+not
+not
+if.goto IF_ELSE_0
+popcount 63
+push argument 63
+pop this 63
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 64
+push argument 64
+pop this 64
+label IF_EXIT_0
+popcount 65
+push constant wall
+pop this 65
+popcount 66
+push argument 66
+pop this 66
+call Ball.show 0
+pop temp 0
+push constant 0
+return
+method Ball.bounce 0
+push argument 0
+pop pointer 0
+popcount 67
+push argument 67
+pop this 67
+popcount 68
+push argument 68
+pop this 68
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 69
+push constant 0
+pop this 69
+popcount 70
+push constant (
+pop this 70
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 71
+push constant 0
+pop this 71
+popcount 72
+push constant (
+pop this 72
+label IF_EXIT_0
+popcount 73
+push constant factor
+pop this 73
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 0
+push constant 1
+not
+not
+if.goto IF_ELSE_0
+popcount 74
+push argument 74
+pop this 74
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 75
+push argument 75
+pop this 75
+label IF_EXIT_0
+popcount 76
+push constant factor
+pop this 76
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 77
+push constant factor
+pop this 77
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 78
+push constant 1
+pop this 78
+popcount 79
+push constant (
+pop this 79
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 80
+push constant 1
+pop this 80
+popcount 81
+push constant (
+pop this 81
+label IF_EXIT_0
+popcount 82
+push constant newx
+pop this 82
+popcount 83
+push argument 83
+pop this 83
+popcount 84
+push argument 84
+pop this 84
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 85
+push constant 2
+pop this 85
+popcount 86
+push constant (
+pop this 86
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 87
+push constant 2
+pop this 87
+popcount 88
+push constant (
+pop this 88
+label IF_EXIT_0
+popcount 89
+push constant newx
+pop this 89
+popcount 90
+push argument 90
+pop this 90
+popcount 91
+push argument 91
+pop this 91
+goto IF_EXIT_0
+label IF_ELSE_0
+push argument 0
+push constant 1
+not
+if.goto IF_ELSE_0
+popcount 92
+push constant 3
+pop this 92
+popcount 93
+push constant (
+pop this 93
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 94
+push constant 3
+pop this 94
+popcount 95
+push constant (
+pop this 95
+label IF_EXIT_0
+popcount 96
+push constant newy
+pop this 96
+popcount 97
+push argument 97
+pop this 97
+popcount 98
+push argument 98
+pop this 98
+goto IF_EXIT_0
+label IF_ELSE_0
+popcount 99
+push constant newy
+pop this 99
+popcount 100
+push argument 100
+pop this 100
+popcount 101
+push argument 101
+pop this 101
+call Ball.setDestination 0
+pop temp 0
+return

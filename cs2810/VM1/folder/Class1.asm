@@ -1,0 +1,8 @@
+('push', 'argument', '0')
+('pop', 'static', '0')
+('push', 'argument', '1')
+('pop', 'static', '1')
+('push', 'constant', '0')
+('push', 'static', '0')
+('push', 'static', '1')
+('sub',)

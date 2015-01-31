@@ -1,0 +1,52 @@
+﻿<Window x:Class = "WpfSudoku.MainWindow"
+        xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:clr = "clr-namespace:WpfSudoku"
+        Title = "MainWindow" Height = "700" Width = "800">
+    <Window.Background><ImageBrush ImageSource="resources/tron.jpg" /></Window.Background>
+        <DockPanel>
+        <StackPanel DockPanel.Dock = "Left" Width="150">
+            <TextBlock DockPanel.Dock = "Top" FontSize = "40" Foreground="#41f4f6" Padding="10">Sudoku</TextBlock>
+            <Expander IsExpanded = "True" Header = "Main Menu">
+                <Border Margin = "5" Padding = "10" Background = "#e7fcfa" BorderBrush = "#41f4f6" BorderThickness = "1">
+                    <StackPanel>
+                        <Button Name = "newGame" Click="newGame_Click">New Game</Button>
+                        <Button Name = "loadGame" Click="loadGame_Click">Load Game</Button>
+                        <Button Name = "saveGame" Click="saveGame_Click">Save Game</Button>
+                        <Button Name = "quitGame" Click="Quit_Click">Quit</Button>
+                    </StackPanel>
+                </Border>
+            </Expander>
+            <Expander IsExpanded = "True" Header = "New Game Settings" BorderBrush="#41f4f6">
+                <Border Margin = "5" Padding = "10" Background ="#e7fcfa" BorderBrush = "#41f4f6" BorderThickness = "1">
+                    <StackPanel>
+                        <TextBlock Foreground = "#0c3935">Board Size:</TextBlock>
+                        <ComboBox x:Name = "BoardSize" xmlns:s = "clr-namespace:System;assembly=mscorlib" ItemTemplate = "{StaticResource BoardSizeTemplate}" IsEditable ="False">
+                            <ComboBox.SelectedItem>
+                                <s:Int32>9</s:Int32>
+                            </ComboBox.SelectedItem>
+                            <s:Int32>9</s:Int32>
+                            <s:Int32>16</s:Int32>
+                            <s:Int32>25</s:Int32>
+                            <s:Int32>36</s:Int32>
+                        </ComboBox>
+                        <TextBlock Foreground = "#0c3935">Difficulty:</TextBlock>
+                        <ComboBox x:Name = "Difficulty" xmlns:s = "clr-namespace:System;assembly=mscorlib" ItemTemplate = "{StaticResource BoardSizeTemplate}" IsEditable ="False">
+                            <ComboBoxItem IsSelected ="true" Name="ComboHard" Content="Hard"/>
+                            <ComboBoxItem Name="ComboMedium" Content="Medium"/>
+                            <ComboBoxItem Name="ComboEasy" Content="Easy"/>
+                        </ComboBox>
+                    </StackPanel>
+                </Border>
+            </Expander>
+            <Expander IsExpanded = "True" Header = "Timer" >
+                <Border Margin = "5" Padding = "10" Background = "#e7fcfa" BorderBrush = "#41f4f6" BorderThickness = "1" >
+                    <ContentControl Name="timeText" Foreground="#0c3935">00:00:00</ContentControl>
+                </Border>
+            </Expander>
+        </StackPanel>
+        <TextBlock DockPanel.Dock = "Top" Margin="20"/>
+        <TextBlock DockPanel.Dock = "Bottom" Margin="20"/>
+        <clr:SudokuBoard x:Name = "Board" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"/>
+    </DockPanel>
+</Window>

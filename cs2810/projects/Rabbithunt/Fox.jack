@@ -1,0 +1,25 @@
+class Fox
+{
+	field Board local;
+	constructor Fox new(Board board)
+	{
+		let local=board;
+		return this;
+	}
+	method void move()
+	{
+		var int n,x,y,c;
+		let c = 0;
+		//getblockage
+		let n=Random.next(8);
+		//
+		let x=local.getFoxX();
+		let y=local.getFoxY();
+		do local.getBlockage(x,y,n);
+		do Painter.drawBlank(x,y);
+		
+		
+		do local.moveFox(n);
+		return;
+	}
+}

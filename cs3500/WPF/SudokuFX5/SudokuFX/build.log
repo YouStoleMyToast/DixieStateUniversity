@@ -1,0 +1,34 @@
+Microsoft (R) Build Engine Version 2.0.50727.42
+[Microsoft .NET Framework, Version 2.0.50727.42]
+Copyright (C) Microsoft Corporation 2005. All rights reserved.
+
+Build started 3/8/2006 4:41:53 PM.
+__________________________________________________
+Project "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\SudokuFX.csproj" (default targets):
+
+Target PrepareForBuild:
+    Creating directory "obj\Debug\".
+Target GenerateTemporaryTargetAssembly:
+    __________________________________________________
+    Project "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\SudokuFX.csproj" is building "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\sjrvdkkx.yuo" (CoreCompile target(s)):
+
+    Target CoreCompile:
+        C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Csc.exe /noconfig /nowarn:1701,1702 /warn:4 /define:DEBUG;TRACE /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\PresentationCore.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\PresentationFramework.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\ReachFramework.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\System.IdentityModel.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\System.Printing.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\System.Runtime.Serialization.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\System.ServiceModel.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\UIAutomationProvider.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\UIAutomationTypes.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\WindowsBase.dll" /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /debug+ /debug:full /optimize- /out:obj\Debug\SudokuFX.exe /target:winexe MyApp.xaml.cs Window1.xaml.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs SudokuBoarcUtil.cs SudokuBoard.xaml.cs "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\obj\Debug\MyApp.g.cs" "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\obj\Debug\SudokuBoard.g.cs" "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\obj\Debug\Window1.g.cs"
+Target MarkupCompilePass2:
+    Succeed to generate right BAML or source code files from the passed markup files in task MarkupCompilePass2.
+Target CleanupTemporaryTargetAssembly:
+    Deleting file "obj\Debug\SudokuFX.exe".
+Target CoreResGen:
+    Processing resource file "Properties\Resources.resx" into "obj\Debug\SudokuFX.Properties.Resources.resources".
+Target CoreCompile:
+    C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Csc.exe /noconfig /nowarn:1701,1702 /warn:4 /define:DEBUG;TRACE /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\PresentationCore.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\PresentationFramework.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\ReachFramework.dll" /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\System.IdentityModel.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\System.Printing.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\System.Runtime.Serialization.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\System.ServiceModel.dll" /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\UIAutomationProvider.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\UIAutomationTypes.dll" /reference:"C:\Program Files\Reference Assemblies\Microsoft\WinFX\v3.0\WindowsBase.dll" /debug+ /debug:full /optimize- /out:obj\Debug\SudokuFX.exe /resource:obj\Debug\SudokuFX.g.resources /resource:obj\Debug\SudokuFX.Properties.Resources.resources /target:winexe MyApp.xaml.cs Window1.xaml.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs SudokuBoarcUtil.cs SudokuBoard.xaml.cs "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\obj\Debug\SudokuBoard.g.cs" "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\obj\Debug\Window1.g.cs" "C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\obj\Debug\MyApp.g.cs"
+Target CopyFilesToOutputDirectory:
+    Copying file from "obj\Debug\SudokuFX.exe" to ".\bin\Debug\SudokuFX.exe".
+    SudokuFX -> C:\Documents and Settings\t-lucasm\My Documents\Visual Studio 2005\Projects\SudokuFX\SudokuFX\bin\Debug\SudokuFX.exe
+    Copying file from "obj\Debug\SudokuFX.pdb" to ".\bin\Debug\SudokuFX.pdb".
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.95

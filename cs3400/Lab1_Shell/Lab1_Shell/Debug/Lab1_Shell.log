@@ -1,0 +1,87 @@
+﻿Build started 7/15/2013 7:48:37 AM.
+     1>Project "H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Lab1_Shell\Lab1_Shell.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\Lab1_Shell.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\Lab1_Shell.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt os345.c os345fat.c os345lc3.c os345mmu.c os345p1.c os345p2.c os345p3.c os345p4.c os345p5.c os345p6.c os345park.c
+         os345park.c
+         os345p6.c
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p6.c(663): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p6.c(1354): warning C4101: 'error' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p6.c(1457): warning C4101: 'fileID' : unreferenced local variable
+         os345p5.c
+         os345p4.c
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p4.c(321): warning C4101: 'upte1' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p4.c(321): warning C4101: 'upte2' : unreferenced local variable
+         os345p3.c
+         os345p2.c
+         os345p1.c
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(109): warning C4047: '==' : 'int' differs in levels of indirection from 'void *'
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(80): warning C4101: 'tempArgv' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(82): warning C4101: 'firstargv' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(72): warning C4101: 'j' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(413): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(420): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(445): warning C4244: '=' : conversion from 'time_t' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(446): warning C4244: '=' : conversion from 'time_t' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(451): warning C4244: '=' : conversion from 'time_t' to 'int', possible loss of data
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(444): warning C4101: 'timefin' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345p1.c(512): warning C4113: 'int (__cdecl *)()' differs in parameter lists from 'int (__cdecl *)(int,char **)'
+         os345mmu.c
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345mmu.c(81): warning C4101: 'uptFrame' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345mmu.c(81): warning C4101: 'rptFrame' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345mmu.c(80): warning C4101: 'upte1' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345mmu.c(78): warning C4101: 'pa' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345mmu.c(80): warning C4101: 'upta' : unreferenced local variable
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345mmu.c(80): warning C4101: 'upte2' : unreferenced local variable
+         os345lc3.c
+         os345fat.c
+         os345.c
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345.c(340): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(130) : see declaration of 'kbhit'
+     1>h:\sem 5 summer 2013(byu)\lab1_shell\lab1_shell\os345.c(340): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(128) : see declaration of 'getch'
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Lab1_Shell.exe.embed.manifest.res" Debug\Lab1_Shell_manifest.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Debug\Lab1_Shell.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lab1_Shell.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Debug\Lab1_Shell.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Debug\Lab1_Shell.lib" /MACHINE:X86 Debug\Lab1_Shell.exe.embed.manifest.res
+         Debug\os345.obj
+         Debug\os345fat.obj
+         Debug\os345lc3.obj
+         Debug\os345mmu.obj
+         Debug\os345p1.obj
+         Debug\os345p2.obj
+         Debug\os345p3.obj
+         Debug\os345p4.obj
+         Debug\os345p5.obj
+         Debug\os345p6.obj
+         Debug\os345park.obj
+       Manifest:
+         Deleting file "Debug\Lab1_Shell.exe.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Lab1_Shell.exe.embed.manifest" /manifest Debug\Lab1_Shell.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Lab1_Shell.exe.embed.manifest.res" Debug\Lab1_Shell_manifest.rc 
+       LinkEmbedManifest:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Debug\Lab1_Shell.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lab1_Shell.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Debug\Lab1_Shell.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Debug\Lab1_Shell.lib" /MACHINE:X86 Debug\Lab1_Shell.exe.embed.manifest.res
+         Debug\os345.obj
+         Debug\os345fat.obj
+         Debug\os345lc3.obj
+         Debug\os345mmu.obj
+         Debug\os345p1.obj
+         Debug\os345p2.obj
+         Debug\os345p3.obj
+         Debug\os345p4.obj
+         Debug\os345p5.obj
+         Debug\os345p6.obj
+         Debug\os345park.obj
+         Lab1_Shell.vcxproj -> H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Debug\Lab1_Shell.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Lab1_Shell.unsuccessfulbuild".
+         Touching "Debug\Lab1_Shell.lastbuildstate".
+     1>Done Building Project "H:\Sem 5 Summer 2013(BYU)\Lab1_Shell\Lab1_Shell\Lab1_Shell.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.60

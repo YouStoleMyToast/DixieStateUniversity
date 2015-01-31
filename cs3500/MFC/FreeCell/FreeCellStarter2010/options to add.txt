@@ -1,0 +1,15 @@
+menu
+	new
+	save
+	load
+	quit
+	restart
+	select game(from typed in seed number)
+
+display game # (random seed) in the top bar
+
+popup windows(win popup, game select popup)
+
+background
+
+different cards
