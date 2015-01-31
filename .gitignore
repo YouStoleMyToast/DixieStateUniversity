@@ -1,5 +1,13 @@
 
 #.*
 .#.*
-._.*
 .DS_*
+*~
+*.o
+*.pyc
+.DS_Store
+._.DS_Store
+._*
+*.swap
+*.[oa]
+*a.out
