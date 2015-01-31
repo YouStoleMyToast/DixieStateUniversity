@@ -1,0 +1,55 @@
+OODB
+
+overview:
+
+
+
+
+
+
+Technical Features:
+
+Access to data can be faster because joins are often not needed. 
+This is because an object can be retrieved directly without a search, by following pointers.
+
+Usually the programming language and the database schema use the same type definitions.
+
+Multimedia applications are facilitated because the class methods associated with the data are responsible for its correct interpretation.
+
+Many object databases, for example Gemstone or VOSS, offer support for versioning. 
+An object can be viewed as the set of all its versions. Also, object versions can be treated as objects in their own right. 
+Some object databases also provide systematic support for triggers and constraints which are the basis of active databases.
+
+The efficiency of such a database is also greatly improved in areas which demand massive amounts of data about one item. 
+For example, a banking institution could get the user's account information and provide them efficiently with extensive information such as 
+transactions, account information entries etc. 
+The Big O Notation for such a database paradigm drops from O(n) to O(1), greatly increasing efficiency in these specific cases.
+
+
+
+
+
+Comparison with RDBMSs(relational database managment systems):
+
+An object database stores complex data and relationships between data directly, without mapping to relational rows and columns, and this makes them suitable for applications dealing with very complex data.[6] Objects have a many to many relationship and are accessed by the use of pointers. Pointers are linked to objects to establish relationships. Another benefit of an OODBMS is that it can be programmed with small procedural differences without affecting the entire system.[7] This is most helpful for those organizations that have data relationships that are not entirely clear or need to change these relations to satisfy the new business requirements.
+
+Potential advantages:
+
+    Objects don't require assembly and disassembly saving coding time and execution time to assemble or disassemble objects.
+    Reduced paging.
+    Easier navigation.
+    Better concurrency control - a hierarchy of objects may be locked.
+    Data model is based on the real world.
+    Works well for distributed architectures.
+    Less code required when applications are object oriented.
+
+Potential disadvantages:
+
+    Lower efficiency when data is simple and relationships are simple.
+    Relational tables are simpler.
+    Late binding may slow access speed.
+    More user tools exist for RDBMS.
+    Standards for RDBMS are more stable.
+    Support for RDBMS is more certain and change is less likely to be required.
+
+

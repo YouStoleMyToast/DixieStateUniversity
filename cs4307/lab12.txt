@@ -1,0 +1,266 @@
+--------------
+drop database if exists flame
+--------------
+
+Query OK, 7 rows affected (0.01 sec)
+
+--------------
+create database flame
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
+--------------
+drop table if exists payrole
+--------------
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+--------------
+create table payroll(Dept int(1),Manager tinyint(1), Name char(20), Birthdate date, Salary int(10))
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+insert into payroll values
+	(1,1,'BOB','2001-1-1',50000),
+	(1,0,'BILL','2002-2-2',40000),
+	(1,0,'BART','2003-3-3',70000),
+	(2,1,'JIM','2004-4-4',40000),
+	(2,0,'Janet','2005-5-5',50000),
+	(2,0,'JACK','2006-6-6',60000),
+	(3,1,'MARY','2007-7-7',50000),
+	(3,0,'MARTHA','2008-8-8',70000),
+	(3,0,'MARTY','2009-9-9',90000)
+--------------
+
+Query OK, 9 rows affected (0.00 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+--------------
+create view dept1all
+	as
+	select * from payroll
+	where Dept=1
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create view dept1
+        as
+        select Dept, Manager, Name, Birthdate from payroll
+        where Dept=1
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create view dept2all
+        as
+        select * from payroll
+        where Dept=2
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+create view dept2
+        as
+        select Dept,Manager,Name, Birthdate  from payroll
+        where Dept=2
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create view dept3all
+        as
+        select * from payroll
+        where Dept=3
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+create view dept3
+        as
+        select Dept, Manager, Name, Birthdate  from payroll
+        where Dept=3
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'bob'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'bill'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'bart'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'jim'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'janet'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'jack'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'mary'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'martha'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+drop user 'marty'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'bob'@'localhost' identified by 'bobpass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'bill'@'localhost' identified by 'billpass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'bart'@'localhost' identified by 'bartpass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'jim'@'localhost' identified by 'jimpass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'janet'@'localhost' identified by 'janetpass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'jack'@'localhost' identified by 'jackpass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'mary'@'localhost' identified by 'marypass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'martha'@'localhost' identified by 'marthapass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+create user 'marty'@'localhost' identified by 'martypass'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+grant select, update (Dept, Manager, Name, Birthdate), select (Salary) on dept1all
+	to 'bob'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+grant select on dept1 
+	to 'bill'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+grant select on dept1
+	to 'bart'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+grant select, update (Dept, Manager, Name, Birthdate), select (Salary) on dept2all 
+	to 'jim'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+grant select on dept2 
+	to 'janet'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+grant select on dept2
+	to 'jack'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+grant all on flame.payroll 
+	to 'mary'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+grant select on dept3 
+	to 'martha'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+grant select (Dept, Manager, Name, Birthdate), update (Birthdate) on flame.payroll 
+	to 'marty'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+

@@ -1,0 +1,7 @@
+seq,city,miles
+1,'Seattle, WA',0
+2,'Portland, OR',174
+3,'San Francisco, CA',808
+4,'Monterey, CA',926
+5,'Los Angeles, CA',1251
+6,'San Diego, CA',1372

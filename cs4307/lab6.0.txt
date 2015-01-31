@@ -1,0 +1,16 @@
+select title_id, title_name, price, "New Price"/price as discount, price*.9 as "New Price" from titles;
+select concat(au_lname,', ',au_fname) as name from authors;
+select concat(substr(au_lname from 1 for 3),substr(phone,-4)), concat(au_lname,', ',au_fname) as name from authors;
+select au_lname, length(au_lname) from authors;
+select title_id, title_name, extract(year from pubdate) as year from titles;
+select title_id, titles_name, pubdate, date_add(pubdate, interval 28 year) from titles;
+select title_id, title_name, price, case when type is history price*.90 when type is not history price*.80 as "New Price" from titles;
+select title_id, title_name, coalesce(price, priceless) as retail from titles;
+select current_timestamp as "Current Time";
+select substr(current_user, possition("@" in current_user) as server;
+
+vm notes for logging into/booting vm without use of site:
+putty into hamlet.cs.dixie.edu
+citv showvm
+citv bootvm Linux c
+df

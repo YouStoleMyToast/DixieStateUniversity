@@ -1,0 +1,18 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="10">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="294" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\mediahome.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\loginfunc.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\login.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\logout.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\addmedia.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\mediacollection.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="CSS" encoding="-1" filename="U:\public_html\CS 4000\mymedia\mediastyle.css" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="728" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="U:\public_html\CS 4000\mymedia\mediadata.txt" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="735" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\header.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="735" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\footer.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="735" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="U:\public_html\CS 4000\mymedia\about.php" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

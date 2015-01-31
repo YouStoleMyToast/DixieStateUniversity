@@ -1,0 +1,31 @@
+mysql> use books;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
+--------------
+show tables
+--------------
+
++-----------------+
+| Tables_in_books |
++-----------------+
+| au_orders       |
+| authors         |
+| dups            |
+| employees       |
+| empsales        |
+| hier            |
+| publishers      |
+| roadtrip        |
+| royalties       |
+| telephones      |
+| temps           |
+| time_series     |
+| title_authors   |
+| titles          |
++-----------------+
+14 rows in set (0.00 sec)
+
+mysql> exit

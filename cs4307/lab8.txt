@@ -1,0 +1,173 @@
+--------------
+select t.title_id, t.title_name, a.au_lname  from titles t, authors a, title_authors ta where ta.au_id=a.au_id and ta.title_id=t.title_id and ta.au_order=1
+--------------
+
++----------+-------------------------------------+-----------+
+| title_id | title_name                          | au_lname  |
++----------+-------------------------------------+-----------+
+| T01      | 1977!                               | Buchman   |
+| T02      | 200 Years of German Humor           | Buchman   |
+| T03      | Ask Your System Administrator       | Kells     |
+| T04      | But I Did It Unconsciously          | Hull      |
+| T05      | Exchange of Platitudes              | Hull      |
+| T06      | How About Never?                    | Heydemark |
+| T07      | I Blame My Mother                   | Heydemark |
+| T08      | Just Wait Until After School        | Kellsey   |
+| T09      | Kiss My Boo-Boo                     | Kellsey   |
+| T10      | Not Without My Faberge Egg          | Heydemark |
+| T11      | Perhaps It's a Glandular Problem    | Kellsey   |
+| T12      | Spontaneous, Not Annoying           | Heydemark |
+| T13      | What Are The Civilian Applications? | Buchman   |
++----------+-------------------------------------+-----------+
+13 rows in set (0.00 sec)
+
+--------------
+select t.title_id, t.title_name, p.pub_id, p.pub_name from titles t, publishers p where t.pub_id=p.pub_id
+--------------
+
++----------+-------------------------------------+--------+---------------------+
+| title_id | title_name                          | pub_id | pub_name            |
++----------+-------------------------------------+--------+---------------------+
+| T01      | 1977!                               | P01    | Abatis Publishers   |
+| T06      | How About Never?                    | P01    | Abatis Publishers   |
+| T10      | Not Without My Faberge Egg          | P01    | Abatis Publishers   |
+| T12      | Spontaneous, Not Annoying           | P01    | Abatis Publishers   |
+| T03      | Ask Your System Administrator       | P02    | Core Dump Books     |
+| T02      | 200 Years of German Humor           | P03    | Schadenfreude Press |
+| T07      | I Blame My Mother                   | P03    | Schadenfreude Press |
+| T13      | What Are The Civilian Applications? | P03    | Schadenfreude Press |
+| T04      | But I Did It Unconsciously          | P04    | Tenterhooks Press   |
+| T05      | Exchange of Platitudes              | P04    | Tenterhooks Press   |
+| T08      | Just Wait Until After School        | P04    | Tenterhooks Press   |
+| T09      | Kiss My Boo-Boo                     | P04    | Tenterhooks Press   |
+| T11      | Perhaps It's a Glandular Problem    | P04    | Tenterhooks Press   |
++----------+-------------------------------------+--------+---------------------+
+13 rows in set (0.00 sec)
+
+--------------
+select t.title_id, t.title_name, p.pub_id, p.pub_name from titles t, publishers p where t.pub_id=p.pub_id and p.state='CA'
+--------------
+
++----------+----------------------------------+--------+-------------------+
+| title_id | title_name                       | pub_id | pub_name          |
++----------+----------------------------------+--------+-------------------+
+| T03      | Ask Your System Administrator    | P02    | Core Dump Books   |
+| T04      | But I Did It Unconsciously       | P04    | Tenterhooks Press |
+| T05      | Exchange of Platitudes           | P04    | Tenterhooks Press |
+| T08      | Just Wait Until After School     | P04    | Tenterhooks Press |
+| T09      | Kiss My Boo-Boo                  | P04    | Tenterhooks Press |
+| T11      | Perhaps It's a Glandular Problem | P04    | Tenterhooks Press |
++----------+----------------------------------+--------+-------------------+
+6 rows in set (0.00 sec)
+
+--------------
+select t.type as type, count(t.title_name) as numbers from titles t, publishers p where t.pub_id=p.pub_id and p.state='CA' group by type
+--------------
+
++------------+---------+
+| type       | numbers |
++------------+---------+
+| children   |       2 |
+| computer   |       1 |
+| psychology |       3 |
++------------+---------+
+3 rows in set (0.00 sec)
+
+--------------
+select count(emp_id) as '# Emplyees', sum(sales) as 'Total Sales' from empsales
+--------------
+
++------------+-------------+
+| # Emplyees | Total Sales |
++------------+-------------+
+|         10 |        5900 |
++------------+-------------+
+1 row in set (0.00 sec)
+
+--------------
+select count(es.emp_id) as '# Employees', sum(es.sales) as 'Total Sales'  from empsales es left outer join employees em on es.emp_id=em.emp_id
+--------------
+
++-------------+-------------+
+| # Employees | Total Sales |
++-------------+-------------+
+|          10 |        5900 |
++-------------+-------------+
+1 row in set (0.00 sec)
+
+--------------
+select es.emp_id, em.emp_name, es.sales as sales from empsales es left outer join employees em on es.emp_id=em.emp_id
+--------------
+
++--------+-------------------+-------+
+| emp_id | emp_name          | sales |
++--------+-------------------+-------+
+| E01    | Lord Copper       |   600 |
+| E02    | Jocelyn Hitchcock |   800 |
+| E03    | Mr. Salter        |   500 |
+| E04    | William Boot      |   500 |
+| E05    | Mr. Corker        |   700 |
+| E06    | NULL              |   500 |
+| E07    | NULL              |   300 |
+| E08    | NULL              |   400 |
+| E09    | NULL              |   900 |
+| E10    | NULL              |   700 |
++--------+-------------------+-------+
+10 rows in set (0.00 sec)
+
+--------------
+select es.emp_id, em.emp_name, es.sales  from employees em left outer join empsales es on es.emp_id=em.emp_id
+--------------
+
++--------+-------------------+-------+
+| emp_id | emp_name          | sales |
++--------+-------------------+-------+
+| E01    | Lord Copper       |   600 |
+| E02    | Jocelyn Hitchcock |   800 |
+| E03    | Mr. Salter        |   500 |
+| E04    | William Boot      |   500 |
+| E05    | Mr. Corker        |   700 |
++--------+-------------------+-------+
+5 rows in set (0.00 sec)
+
+--------------
+select es.emp_id, em.emp_name, es.sales  from empsales es left outer join employees em on es.emp_id=em.emp_id
+--------------
+
++--------+-------------------+-------+
+| emp_id | emp_name          | sales |
++--------+-------------------+-------+
+| E01    | Lord Copper       |   600 |
+| E02    | Jocelyn Hitchcock |   800 |
+| E03    | Mr. Salter        |   500 |
+| E04    | William Boot      |   500 |
+| E05    | Mr. Corker        |   700 |
+| E06    | NULL              |   500 |
+| E07    | NULL              |   300 |
+| E08    | NULL              |   400 |
+| E09    | NULL              |   900 |
+| E10    | NULL              |   700 |
++--------+-------------------+-------+
+10 rows in set (0.00 sec)
+
+--------------
+select h.emp_id, e.emp_name, h.boss_id, (select emp_name from employees where emp_id=h.boss_id) as "emp_name" from hier h left join employees e on e.emp_id=h.emp_id
+--------------
+
++--------+-------------------+---------+-------------------+
+| emp_id | emp_name          | boss_id | emp_name          |
++--------+-------------------+---------+-------------------+
+| E01    | Lord Copper       | NULL    | NULL              |
+| E02    | Jocelyn Hitchcock | E01     | Lord Copper       |
+| E03    | Mr. Salter        | E01     | Lord Copper       |
+| E04    | William Boot      | E02     | Jocelyn Hitchcock |
+| E05    | Mr. Corker        | E02     | Jocelyn Hitchcock |
+| E06    | NULL              | E03     | Mr. Salter        |
+| E07    | NULL              | E04     | William Boot      |
+| E08    | NULL              | E04     | William Boot      |
+| E09    | NULL              | E04     | William Boot      |
+| E10    | NULL              | E06     | NULL              |
+| E11    | NULL              | E06     | NULL              |
++--------+-------------------+---------+-------------------+
+11 rows in set (0.00 sec)
+

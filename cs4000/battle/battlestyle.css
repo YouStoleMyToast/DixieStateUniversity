@@ -1,0 +1,28 @@
+body{ 
+    text-align:center;
+}
+table{
+	border_color:blue;
+	background:blue;
+}
+
+th{
+	height:50;
+	width:50;
+	background:gray;
+	text-align:center;
+}
+td{
+	height:50;
+	width:50;
+	border_color:blue;
+	background:blue;
+	text-align:center;
+}
+tr{
+	height:50;
+	width:50;	
+	border_color:blue;
+	background:blue;
+	text-align:center;
+}

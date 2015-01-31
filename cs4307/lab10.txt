@@ -1,0 +1,67 @@
+--------------
+select city from s union select city from j
+--------------
+
++--------+
+| city   |
++--------+
+| London |
+| Paris  |
+| Athens |
+| Rome   |
+| Oslo   |
++--------+
+5 rows in set (0.00 sec)
+
+--------------
+select city from s union select city from j union select city from p
+--------------
+
++--------+
+| city   |
++--------+
+| London |
+| Paris  |
+| Athens |
+| Rome   |
+| Oslo   |
++--------+
+5 rows in set (0.00 sec)
+
+--------------
+select distinct(s.city) from s inner join j  on s.city=j.city
+--------------
+
++--------+
+| city   |
++--------+
+| Paris  |
+| Athens |
+| London |
++--------+
+3 rows in set (0.00 sec)
+
+--------------
+select distinct(s.city) from s inner join j on s.city=j.city inner join p on s.city=p.city
+--------------
+
++--------+
+| city   |
++--------+
+| Paris  |
+| London |
++--------+
+2 rows in set (0.00 sec)
+
+--------------
+select distinct(city) from j where city  not in(select city from p) union select distinct(city) from s where city  not in(select city from p)
+--------------
+
++--------+
+| city   |
++--------+
+| Athens |
+| Oslo   |
++--------+
+2 rows in set (0.00 sec)
+

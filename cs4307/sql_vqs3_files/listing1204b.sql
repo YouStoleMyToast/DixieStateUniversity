@@ -1,0 +1,1 @@
+DROP INDEX titles.pub_id_idx;

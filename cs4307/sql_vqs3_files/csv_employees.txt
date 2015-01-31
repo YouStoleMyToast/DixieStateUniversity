@@ -1,0 +1,6 @@
+emp_id,emp_name,boss_id
+'E01','Lord Copper',NULL
+'E02','Jocelyn Hitchcock','E01'
+'E03','Mr. Salter','E01'
+'E04','William Boot','E03'
+'E05','Mr. Corker','E03'

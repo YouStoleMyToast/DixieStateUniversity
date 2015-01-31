@@ -1,0 +1,163 @@
+--------------
+select title_id, title_name, price, 0.10 as discount, price*.9 as "New Price" from titles
+--------------
+
+title_id	title_name	price	discount	New Price
+T01	1977!	21.99	0.10	19.791
+T02	200 Years of German Humor	19.95	0.10	17.955
+T03	Ask Your System Administrator	39.95	0.10	35.955
+T04	But I Did It Unconsciously	12.99	0.10	11.691
+T05	Exchange of Platitudes	6.95	0.10	6.255
+T06	How About Never?	19.95	0.10	17.955
+T07	I Blame My Mother	23.95	0.10	21.555
+T08	Just Wait Until After School	10.00	0.10	9.000
+T09	Kiss My Boo-Boo	13.95	0.10	12.555
+T10	Not Without My Faberge Egg	NULL	0.10	NULL
+T11	Perhaps It's a Glandular Problem	7.99	0.10	7.191
+T12	Spontaneous, Not Annoying	12.99	0.10	11.691
+T13	What Are The Civilian Applications?	29.99	0.10	26.991
+13 rows in set
+
+--------------
+select concat(au_lname,', ',au_fname) as name from authors
+--------------
+
+name
+Buchman, Sarah
+Heydemark, Wendy
+Hull, Hallie
+Hull, Klee
+Kells, Christian
+Kellsey, 
+O'Furniture, Paddy
+7 rows in set
+
+--------------
+select concat(substr(au_lname from 1 for 3),substr(phone,-4)) as "Search ID", concat(au_lname,', ',au_fname) as name from authors
+--------------
+
+Search ID	name
+Buc7223	Buchman, Sarah
+Hey7020	Heydemark, Wendy
+Hul4278	Hull, Hallie
+Hul4278	Hull, Klee
+Kel4680	Kells, Christian
+Kel7128	Kellsey, 
+O'F0752	O'Furniture, Paddy
+7 rows in set
+
+--------------
+select au_lname, length(au_lname) from authors
+--------------
+
+au_lname	length(au_lname)
+Buchman	7
+Heydemark	9
+Hull	4
+Hull	4
+Kells	5
+Kellsey	7
+O'Furniture	11
+7 rows in set
+
+--------------
+select title_id, title_name, extract(year from pubdate) as year from titles
+--------------
+
+title_id	title_name	year
+T01	1977!	2000
+T02	200 Years of German Humor	1998
+T03	Ask Your System Administrator	2000
+T04	But I Did It Unconsciously	1999
+T05	Exchange of Platitudes	2001
+T06	How About Never?	2000
+T07	I Blame My Mother	1999
+T08	Just Wait Until After School	2001
+T09	Kiss My Boo-Boo	2002
+T10	Not Without My Faberge Egg	NULL
+T11	Perhaps It's a Glandular Problem	2000
+T12	Spontaneous, Not Annoying	2000
+T13	What Are The Civilian Applications?	1999
+13 rows in set
+
+--------------
+select title_id, title_name, pubdate, date_add(pubdate, interval 28 year) as "copyright date" from titles
+--------------
+
+title_id	title_name	pubdate	copyright date
+T01	1977!	2000-08-01	2028-08-01
+T02	200 Years of German Humor	1998-04-01	2026-04-01
+T03	Ask Your System Administrator	2000-09-01	2028-09-01
+T04	But I Did It Unconsciously	1999-05-31	2027-05-31
+T05	Exchange of Platitudes	2001-01-01	2029-01-01
+T06	How About Never?	2000-07-31	2028-07-31
+T07	I Blame My Mother	1999-10-01	2027-10-01
+T08	Just Wait Until After School	2001-06-01	2029-06-01
+T09	Kiss My Boo-Boo	2002-05-31	2030-05-31
+T10	Not Without My Faberge Egg	NULL	NULL
+T11	Perhaps It's a Glandular Problem	2000-11-30	2028-11-30
+T12	Spontaneous, Not Annoying	2000-08-31	2028-08-31
+T13	What Are The Civilian Applications?	1999-05-31	2027-05-31
+13 rows in set
+
+--------------
+select `title_id`, `title_name`, `price`,
+	case `type`
+		when `type`!='history' then price*.9
+		when `type`='history' then price*.8
+	end as "New Price" from titles
+--------------
+
+title_id	title_name	price	New Price
+T01	1977!	21.99	19.791
+T02	200 Years of German Humor	19.95	17.955
+T03	Ask Your System Administrator	39.95	31.960
+T04	But I Did It Unconsciously	12.99	10.392
+T05	Exchange of Platitudes	6.95	5.560
+T06	How About Never?	19.95	15.960
+T07	I Blame My Mother	23.95	19.160
+T08	Just Wait Until After School	10.00	8.000
+T09	Kiss My Boo-Boo	13.95	11.160
+T10	Not Without My Faberge Egg	NULL	NULL
+T11	Perhaps It's a Glandular Problem	7.99	6.392
+T12	Spontaneous, Not Annoying	12.99	10.392
+T13	What Are The Civilian Applications?	29.99	26.991
+13 rows in set
+
+--------------
+select title_id, title_name, coalesce(price, "priceless") as retail from titles
+--------------
+
+title_id	title_name	retail
+T01	1977!	21.99
+T02	200 Years of German Humor	19.95
+T03	Ask Your System Administrator	39.95
+T04	But I Did It Unconsciously	12.99
+T05	Exchange of Platitudes	6.95
+T06	How About Never?	19.95
+T07	I Blame My Mother	23.95
+T08	Just Wait Until After School	10.00
+T09	Kiss My Boo-Boo	13.95
+T10	Not Without My Faberge Egg	priceless
+T11	Perhaps It's a Glandular Problem	7.99
+T12	Spontaneous, Not Annoying	12.99
+T13	What Are The Civilian Applications?	29.99
+13 rows in set
+
+--------------
+select current_timestamp as "Current Time"
+--------------
+
+Current Time
+2013-02-21 18:30:38
+1 row in set
+
+--------------
+select substr(current_user from position("@" in current_user)+1) as server
+--------------
+
+server
+localhost
+1 row in set
+
+Bye

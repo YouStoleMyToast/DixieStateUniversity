@@ -1,0 +1,2 @@
+SELECT state
+  FROM authors;

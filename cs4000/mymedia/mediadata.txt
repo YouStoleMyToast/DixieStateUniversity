@@ -1,0 +1,34 @@
+{"mediatype":"music","title":"Carry on my wayward son","artist":"Kansas","genre":"rock"}
+{"mediatype":"music","title":"Don't bring me down","artist":"ELO","genre":"rock"}
+{"mediatype":"music","title":"Ballade #3","artist":"Chopin","genre":"classical"}
+{"mediatype":"music","title":"Spaaaaace","artist":"Apriture Labs","genre":"game"}
+{"mediatype":"show","title":"Phineas and Ferb","artist":"Disney","genre":"rock"}
+{"mediatype":"picture","title":"Our trip picture","artist":"A rock","genre":"rock"}
+{"mediatype":"movie","title":"matrix","artist":"","genre":"rock"}
+{"mediatype":"show","title":"Dick Van Dyke Show","artist":"Dick Van Dyke","genre":"classical"}
+{"mediatype":"movie","title":"Cloudy with a chance of meatballs","artist":"unknown","genre":"classical"}
+{"mediatype":"music","title":"Final Fantasy 6","artist":"Umatsu","genre":"game"}
+[]
+[]
+[]
+{"mediatype":"music","title":"Break it down again","artist":"Tears for fears","genre":"rock"}
+[]
+{"mediatype":"show","title":"I Love Lucy","artist":"Lucial Ball","genre":"classical"}
+[]
+{"mediatype":"picture","title":"Antother trip","artist":"some stranger","genre":"rock"}
+[]
+{"mediatype":"movie","title":"UHF","artist":"Wierd Al","genre":"rock"}
+[]
+{"mediatype":"music","title":"that song","artist":"that guy","genre":"rock"}
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]

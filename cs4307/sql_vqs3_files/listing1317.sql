@@ -1,0 +1,1 @@
+DROP VIEW ny_authors;
