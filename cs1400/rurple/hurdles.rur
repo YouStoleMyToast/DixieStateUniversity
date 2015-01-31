@@ -1,0 +1,17 @@
+def turn_right():
+    repeat(turn_left,3)
+
+def jump():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+repeat(jump,4)
+move()
+pick_beeper()
+turn_off()

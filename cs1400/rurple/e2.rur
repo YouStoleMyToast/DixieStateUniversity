@@ -1,0 +1,26 @@
+def turn_right():
+    repeat(turn_left,3)
+
+def follow_wall():
+    if right_is_clear():
+        put_beeper()
+        turn_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
+
+move()
+move()
+turn_left()
+move()
+put_beeper()
+move()
+repeat(follow_wall, 41)
+move()
+move()
+turn_left()
+move()
+turn_left()
+turn_off()
