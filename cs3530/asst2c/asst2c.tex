@@ -1,0 +1,172 @@
+%
+% Assignment 2c for CS3530 Computational Theory:
+% Regular Expressions
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{emp,ifpdf}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\ifpdf\DeclareGraphicsRule{*}{mps}{*}{}\fi
+
+\empprelude{input boxes; input theory}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{empfile}
+
+\begin{center}
+\textbf{\Large CS 3530: Assignment 2c} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\section*{Problems}
+
+\subsection*{Problem 1.31 (10 points)}
+
+\subsubsection*{Problem}
+
+For any string $w=w_1w_2\cdots w_n$, the \textbf{\textit{reverse}}
+of $w$, written $w^\mathcal{R}$, is the string $w$ in reverse order,
+$w_n\cdots w_2w_1$. For any language $A$, let
+$A^\mathcal{R}=\{w^\mathcal{R}: w\in A\}$. Show that if $A$ is
+regular, so is $A^\mathcal{R}$.
+
+\subsubsection*{Solution}
+\subsubsection*{non-reversed DFA}
+
+\begin{center}
+\begin{emp}(0,0)
+	a := 2cm;
+	b := a*2;
+
+	node.q0(); q0.c = origin;
+	node.q1(); q1.c = q0.c + (a,0);
+	node.q2(); q2.c = q0.c + (b,0);
+
+
+	makestart(q0);
+	makefinal(q2);
+
+	drawboxed(q0,q1,q2);
+
+	edge(q0,q1,right,"1");
+	edge(q1,q2,right,"1");
+	
+	
+	loop(q0,down,"0");
+	loop(q1,down,"0");
+	loop(q2,down,"0,1");
+
+\end{emp}
+\end{center}
+
+\subsubsection*{DFA reversed into NFA}
+
+\begin{center}
+\begin{emp}(0,0)
+	a := 2cm;
+	b := a*2;
+
+	node.q0(); q0.c = origin;
+	node.q1(); q1.c = q0.c + (a,0);
+	node.q2(); q2.c = q0.c + (b,0);
+
+
+	makestart(q0);
+	makefinal(q2);
+
+	drawboxed(q0,q1,q2);
+
+	edge(q0,q1,right,"1");
+	edge(q1,q2,right,"1");
+	
+	
+	loop(q2,down,"0");
+	loop(q1,down,"0");
+	loop(q0,down,"0,1");
+
+\end{emp}
+\end{center}
+
+\newpage
+
+\subsection*{Problem 1.43 (10 points)}
+
+\subsubsection*{Problem}
+
+Let $A$ be any language. Define \textit{DROP-OUT}$(A)$ to be the
+language containing all strings that can be obtained by removing one
+symbol from a string in $A$. Thus, \textit{DROP-OUT}$(A)=\{xz:
+xyz\in A$ where $x,z\in\Sigma^*,y\in\Sigma\}$. Show that the class
+of regular languages is closed under the \textit{DROP-OUT}
+operation. Give both a proof by picture and a more formal proof by
+construction as in Theorem~1.47.
+
+\subsubsection*{Solution Description}
+
+
+N = (Q, $\Sigma$, $\delta$, $q_0$, F) \newline 
+Q = \{0, 1, ... , n\} \newline
+$\Sigma$ = \{0,1\} \newline
+$q_0 = \{0\}$ \newline 
+F = \{n\} \newline 
+$\delta$ = \newline
+
+$\delta (q_n,0) = q_n$ for all $n$ \newline
+$\delta (q_n,1) = q_n$ for $n_{max}$ \newline
+$\delta (q_n,1) = q_{n+1}$ for all $n < n_{max}$\newline
+$\delta (q_n,\varepsilon) = q_{n+1}$ for all $n < n_{max}$
+
+\subsubsection*{Solution Diagram}
+
+\begin{center}
+\begin{emp}(0,0)
+	a := 2cm;
+	b := a*2;
+
+	node.q0("0"); q0.c = origin;
+	node.q1("1"); q1.c = q0.c + (a,0);
+	node.q2("n"); q2.c = q0.c + (b,0);
+
+
+	makestart(q0);
+	makefinal(q2);
+
+	drawboxed(q0,q1,q2);
+
+	edge(q0,q1,right,"1");
+	edge(q1,q2,right,"1");
+	
+	edge(q0,q1,45, E );
+	edge(q1,q2,45, E );
+	
+	loop(q0,down,"0");
+	loop(q1,down,"0");
+	loop(q2,down,"0,1");
+
+\end{emp}
+\end{center}
+
+
+\end{empfile}
+\immediate\write18{mpost -tex=latex \jobname}
+\end{document}

@@ -1,0 +1,60 @@
+%
+% Assignment 7b for CS3530 Computational Theory:
+% Computability
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{enumerate}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{center}
+\textbf{\Large CS 3530: Assignment 7b} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\section*{Problems}
+
+\subsection*{Problem 4.19 (20 points)}
+
+\subsubsection*{Problem}
+
+Let $S=\{\langle M\rangle: M$ is a DFA that accepts $w^\mathcal{R}$
+whenever it accepts $w\}$. Show that $S$ is decidable.
+
+\subsubsection*{Solution}
+
+First construct a DFA N that accepts $w$. 
+Then construct a DFA P (which is M$^\mathcal{R}$)
+that accepts the reverse of the DFA M by flipping the transitions and 
+the start and accept states. Then we need to determine if the DFAs N and P 
+are in $\langle M\rangle$. We can determine if N and P are in 
+$\langle M\rangle$ by determining the symmetric difference between the DFAs 
+in M and N or P to determine they are equivalent.
+
+
+
+\end{document}
+
+
+
+

@@ -1,0 +1,71 @@
+%
+% Assignment 8d for CS3530 Computational Theory:
+% Complexity
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{enumerate}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Large CS 3530: Assignment 8d} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\section*{Problems}
+
+\subsection*{Problem 7.17 (20 points)}
+
+\subsubsection*{Problem}
+
+Show that, if P = NP, then every language $A\in$ P, except
+$A=\emptyset$ and $A=\Sigma^*$, is NP-complete.
+
+\subsubsection*{Solution}
+
+Theorem 7.27(Cook-Levin):  SAT $\in$ P iff P = NP \\
+Theorem 7.31: If $A \le_p B$ and $B \in$ P, then $A \in$ P \\ \ \\
+
+According to the Cook-Levin theorem SAT is in P iff P = NP.
+If we combine this with theorem 7.31 then if every language
+A reduces to SAT then A is in P, it is also in NP since P = NP.
+In either case since A can be verified in polynomial time
+making it NP-complete. \\ 
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+

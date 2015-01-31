@@ -1,0 +1,71 @@
+1. Non-deterministically select a value for i and j where i, j > 1 and i, j < |w| then go to step 2.\\
+2. for i times write $a$ to the first empty space then go to step 3.\\
+3. write \$ to the first empty space then go to step 4.\\
+4. for j times write $a$ to the first empty space then go to step 5.\\
+5. if strings $a^{i*j}$ and $a^{|w|}$ are the same then $accept$ \\ \parindent=12pt
+   else $reject$
+
+////////////////////////////////////////////////////////////////////////////////////
+With pushdown stacks: $S_i, S_j, S_k$\\
+1. Non-deterministically select a value for i and j where i, j > 1 and i, j < |w| then go to step 2.\\
+2. for i times write $a$ to the first available space and push $a$ onto $S_i$ then go to step 3.\\
+3. write \$ to the first available space then go to step 4.\\
+4. for j times write $a$ to the first available space and push $a$ onto $S_j$ then go to step 5.\\
+5. 
+
+////////////////////////////////////////////////////////////////////////////////////
+M = on string w: \\
+1. Scan the tape and mark the first unmarked $a$. \\ \parindent=12pt
+   if no unmarked $a$ is found $reject$. \\
+   else go to step 2. \\ \ \\ \parindent=0pt
+
+2. Scan the tape and mark the first unmarked $a$. \\ \parindent=12pt
+   if no unmarked $a$ is found $reject$. \\
+   else go to step 3. \\ \ \\ \parindent=0pt
+   
+3. Scan the tape and write an \$ to the first empty location and go to step 4. \\ \ \\ \parindent=0pt
+
+4. Scan the tape and write an $a$ to the first empty location after the \$ then go to step 5. \\ \ \\ \parindent=0pt
+
+5. Scan the tape and mark the first unmarked $a$ before the \$. \\ \parindent=12pt
+   if no unmarked $a$ is found $reject$. \\
+   else go to step 6. \\ \ \\ \parindent=0pt
+
+6. Scan the tape and mark the first unmarked $a$ before the \$. \\ \parindent=12pt
+   if no unmarked $a$ is found $reject$. \\
+   else go to step 7. \\ \ \\ \parindent=0pt
+   
+7. Scan the tape and write an $a$ to the first empty location after the \$ then go to step 8. \\ \ \\ \parindent=0pt
+   
+8. Scan the tape and mark the first unmarked $a$ before the \$. \\ \parindent=12pt
+   if no unmarked $a$ is found $accept$. (note: even in length and i,j $\ge$ 2)\\
+   else go to step 9. \\ \ \\ \parindent=0pt
+
+9. Scan the tape and mark the first unmarked $a$ before the \$. \\ \parindent=12pt
+   if no unmarked $a$ is found got to step 10. (note: odd in length and i,j $\ge$ 2)\\
+   else go to step 7. \\ \ \\ \parindent=0pt
+   
+10. Scan the tape and write an $a$ to the first empty location before the \$ then go to step 11. \\ \ \\ \parindent=0pt   
+
+11. 
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+M = on string w: \\
+1. Scan the tape and mark the first unmarked $a$ and increment counter. \\ \parindent=12pt
+   if no unmarked $a$ is found $reject$. \\
+   else go to step 2. \\ \ \\ \parindent=0pt
+
+2. Scan the tape and mark the first unmarked $a$ and increment counter. \\ \parindent=12pt
+   if no unmarked $a$ is found $reject$. \\
+   else go to step 3. \\ \ \\ \parindent=0pt
+
+3. Scan the tape and mark the first unmarked $a$ and increment counter. \\ \parindent=12pt
+   if no unmarked $a$ is found $reject$. \\
+   else go to step 4. \\ \ \\ \parindent=0pt
+   
+4. Scan the tape and mark the first unmarked $a$ and increment counter. \\ \parindent=12pt
+   if no unmarked $a$ is found $reject$. \\
+   else go to step 5. \\ \ \\ \parindent=0pt

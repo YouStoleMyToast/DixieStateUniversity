@@ -1,0 +1,381 @@
+%
+% Assignment 1c for CS3530 Computational Theory:
+% Finite Automata
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{emp,ifpdf}
+\usepackage{graphicx}
+
+\ifpdf\DeclareGraphicsRule{*}{mps}{*}{}\fi
+
+\empprelude{input boxes; input theory}
+
+% skip for paragraphs, don't indent
+\addtolength{\parskip}{0.5\baselineskip}
+\parindent=0pt
+
+\begin{document}
+\begin{empfile}
+
+\begin{center}
+\textbf{\Large CS 3530: Assignment 1c} \\[2mm]
+Fall 2014
+\end{center}
+
+Name: Eric Beilmann
+
+\raggedright
+
+\section*{Exercises}
+
+\subsection*{Exercise 1.8b (3 points)}
+
+\subsubsection*{Problem}
+
+Use the construction given in the proof of Theorem~1.45 to give the
+state diagrams of NFAs recognizing the union of the languages given.
+
+\begin{itemize}
+\item[b.] Language: $L_1\cup L_2$ where $L_1$ is the language from
+1.6c and $L_2$ is the language from 1.6f \\ (note: both language are
+from assignment 1a)
+
+Language from 1.6c: $\{w:w$ contains the substring $0101$, i.e.,
+$w=x0101y$ for some $x$ and $y\}$
+
+Language from 1.6f: $\{w:w$ doesn't contain the substring $110\}$
+\end{itemize}
+
+\subsubsection*{Solution}
+
+\begin{center}
+\begin{emp}(0,0)
+	a := 2cm;
+	b := a*2;
+	c := a*3;
+	d := a*4;
+	e := a/2;
+	node.q0(); q0.c = origin;
+	node.q1(); q1.c = q0.c + (a,0);
+	node.q2(); q2.c = q0.c + (b,0);
+	node.q3(); q3.c = q0.c + (c,0);
+	node.q4(); q4.c = q0.c + (d,0);
+	node.q5(); q5.c = q0.c + (0,-a);
+	node.q6(); q6.c = q0.c + (a,-a);
+	node.q7(); q7.c = q0.c + (b,-a);
+	node.q8(); q8.c = q0.c + (c,-a);
+	
+	node.q9(); q9.c = q0.c + (-a,-e);
+	
+	makestart(q9);
+	makefinal(q4);makefinal(q5);makefinal(q6);makefinal(q7);
+
+	drawboxed(q0,q1,q2,q3,q4,q5,q6,q7,q8,q9);
+	edge(q9,q0,right,EMPTYSTRING);
+	edge(q9,q5,right,EMPTYSTRING);
+
+	edge(q0,q1,right,"0");
+	edge(q1,q2,right,"1");
+	edge(q2,q3,right,"0");
+	edge(q3,q4,right,"1");
+	edge(q2,q0,-curve,"1");
+	edge(q3,q1,-curve,"0");
+	loop(q0,down,"1");
+	loop(q1,down,"0");
+	loop(q4,down,"0,1");
+
+	edge(q5,q6,curve,"1");
+	edge(q6,q5,curve,"0");
+	edge(q6,q7,right,"1");
+	edge(q7,q8,right,"0");
+	loop(q5,down,"0");
+	loop(q6,down,"1");
+	loop(q7,down,"0,1");
+
+\end{emp}
+\end{center}
+
+\newpage
+
+\subsection*{Exercise 1.9b (3 points)}
+
+\subsubsection*{Problem}
+
+Use the construction given in the proof of Theorem~1.47 to give the
+state diagrams of NFAs recognizing the concatenation of the
+languages given.
+
+\begin{itemize}
+\item[b.] Language: $L_1\circ L_2$ where $L_1$ is the language from
+1.6b and $L_2$ is the language from 1.6m \\ (note: both language are
+from assignment 1a)
+
+Language from 1.6b: $\{w:w$ contains at least three $1$s$\}$
+
+Language from 1.6m: The empty set
+\end{itemize}
+
+\subsubsection*{Solution}
+
+
+\begin{center}
+\begin{emp}(0,0)
+	a := 2cm;
+	b := a*2;
+	c := a*3;
+	d := a*4;
+	node.q0(); q0.c = origin;
+	node.q1(); q1.c = q0.c + (a,0);
+	node.q2(); q2.c = q0.c + (b,0);
+	node.q3(); q3.c = q0.c + (c,0);
+	node.q4(); q4.c = q0.c + (d,0);
+
+	makestart(q0);
+	makefinal(q3);
+
+	drawboxed(q0,q1,q2,q3,q4);
+
+	edge(q0,q1,right,"1");
+	edge(q1,q2,right,"1");
+	edge(q2,q3,right,"1");
+	edge(q3,q4,right,EMPTYSTRING);
+	
+	loop(q0,down,"0");
+	loop(q1,down,"0");
+	loop(q2,down,"0");
+	loop(q3,down,"0,1");
+	loop(q4,down,"0,1");
+
+
+
+
+\end{emp}
+\end{center}
+
+
+
+
+
+
+
+\newpage
+
+\subsection*{Exercise 1.15 (7 points)}
+
+\subsubsection*{Problem}
+
+Give a counterexample to show that the following construction fails
+to prove Theorem~1.49 
+\footnote{Theorem~1.49: The class of regular languages is closed under the star operation.}
+, the closure of the class of regular languages under the star operation.%
+\footnote{In other words, you must present a finite automaton,
+$N_1$, for which the constructed automaton $N$ does not recognize
+the star of $N_1$'s language.}
+Let $N_1=(Q_1,\Sigma,\delta_1,q_1,F_1)$ recognize $A_1$. Construct
+$N=(Q_1,\Sigma,\delta,q_1,F)$ as follows. $N$ is supposed to
+recognize $A^*_1$.
+
+
+
+\begin{enumerate}
+\renewcommand{\labelenumi}{\alph{enumi}}
+\item The states of $N$ are the states of $N_1$.
+\item The start state of $N$ is the same as the start state of $N_1$.
+\item $F=\{q_1\}\cup F_1$.
+
+The accept states $F$ are the old accept states plus its start state.
+\item Define $\delta$ so that for any $q\in Q$ and any
+$a\in\Sigma_\varepsilon$,
+$$
+\delta(q,a)=
+\begin{cases}
+\delta_1(q,a) & q\notin F_1\text{ or }a\neq\varepsilon \\
+\delta_1(q,a)\cup\{q_1\} & q\in F_1\text{ and }a=\varepsilon.
+\end{cases}
+$$
+\end{enumerate}
+(Suggestion: Show this construction graphically, as in Figure~1.50.)
+
+\subsubsection*{Solution Original}
+Language: $\{w:w$ contains at least three $1$s$\}$
+
+\begin{center}
+\begin{emp}(0,0)
+	a := 2cm;
+	b := a*2;
+	c := a*3;
+	d := a*4;
+	node.q0(); q0.c = origin;
+	node.q1(); q1.c = q0.c + (a,0);
+	node.q2(); q2.c = q0.c + (b,0);
+	node.q3(); q3.c = q0.c + (c,0);
+
+	makestart(q0);
+	makefinal(q3);
+
+	drawboxed(q0,q1,q2,q3);
+
+	edge(q0,q1,right,"1");
+	edge(q1,q2,right,"1");
+	edge(q2,q3,right,"1");
+	
+	
+	loop(q0,down,"0");
+	loop(q1,down,"0");
+	loop(q2,down,"0");
+	loop(q3,down,"0,1");
+
+\end{emp}
+\end{center}
+
+
+\subsubsection*{Solution Modified}
+$\Sigma$  = $\{0\}$ could be a solution.
+
+\begin{center}
+\begin{emp}(0,0)
+	a := 2cm;
+	b := a*2;
+	c := a*3;
+	d := a*4;
+	node.q0(); q0.c = origin;
+	node.q1(); q1.c = q0.c + (a,0);
+	node.q2(); q2.c = q0.c + (b,0);
+	node.q3(); q3.c = q0.c + (c,0);
+
+	makestart(q0);
+	makefinal(q0);makefinal(q3);
+
+	drawboxed(q0,q1,q2,q3);
+
+	edge(q0,q1,right,"1");
+	edge(q1,q2,right,"1");
+	edge(q2,q3,right,"1");
+	
+	
+	loop(q0,down,"0");
+	loop(q1,down,"0");
+	loop(q2,down,"0");
+	loop(q3,down,"0,1");
+
+\end{emp}
+\end{center}
+
+
+
+
+\newpage
+
+\subsection*{Exercise 1.16 (7 points)}
+
+\subsubsection*{Problem}
+
+Use the construction given in Theorem~1.39 to convert the following
+two nondeterministic finite automata to equivalent deterministic
+finite automata.
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{emp}(0,0)
+  bignodes;
+  u := 1.5cm;
+  node.a1("1"); a1.c=(0,0);
+  node.a2("2"); a2.c=(0,-u);
+  makestart(a1); makefinal(a1);
+  drawboxed(a1,a2);
+  edge(a1,a2,curve,AB);
+  edge(a2,a1,curve,B);
+  loop(a1,right,A);
+\end{emp}
+&
+\qquad\begin{emp}(0,0)
+  bignodes;
+  u := 1.5cm;
+  s := u*sqrt(2);
+  node.b1("1"); b1.c=(0,0);
+  node.b2("2"); b2.c=(s,0);
+  node.b3("3"); b3.c=(.5s,-u);
+  makestart(b1); makefinal(b2);
+  drawboxed(b1,b2,b3);
+  edge(b1,b2,curve,E);
+  edge(b2,b1,curve,A);
+  edge(b1,b3,right,A);
+  edge(b3,b2,right,AB);
+  loop(b3,right,B);
+\end{emp}
+\\
+\textbf{(a)} & \qquad\textbf{(b)}
+\end{tabular}
+\end{center}
+
+\subsubsection*{Solution}
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{emp}(0,0)
+
+  a := 2cm;
+  node.a1("1"); a1.c=(0,0);
+  node.a2("2"); a2.c=(0,-a);
+  
+  makestart(a1); makefinal(a1);
+  drawboxed(a1,a2);
+  
+  edge(a1,a2,curve,B);
+  edge(a2,a1,curve,B);
+  loop(a1,right,A);
+  loop(a2,right,A);
+  
+\end{emp}
+&
+\qquad\begin{emp}(0,0)
+
+  a := 2cm;
+  b := 2*a;
+  c := 3*a;
+  d := 4*a;
+
+  node.b0("0");       b0.c=(a,b);
+  %node.b1("1");       b1.c=(c,b);
+  node.b2("2");       b2.c=(a,a);
+  node.b3("3");       b3.c=(c,a);
+  node.b12("1,2");    b12.c=(a,0);
+  node.b13("1,3");    b13.c=(c,-a);
+  node.b23("2,3");    b23.c=(c,0);
+  node.b123("1,2,3"); b123.c=(a,-a);
+
+  
+  makestart(b12); 
+  makefinal(b2);makefinal(b12);makefinal(b23);makefinal(b123);
+  drawboxed(b0,b2,b3,b12,b13,b23,b123);
+  
+  loop(b0,up,"a,b");        
+  %edge(b1,b3,right,A);    edge(b1,b0,right,B);
+  edge(b2,b12,right,A);   edge(b2,b0,right,B);
+  edge(b3,b2,right,A);    edge(b3,b23,right,B);
+  edge(b12,b23,right,A);  edge(b12,b3,right,B);
+  edge(b13,b23,curve,A);  edge(b13,b23,-curve,B);
+  edge(b23,b123,right,A); edge(b23,b2,right,B);
+  edge(b123,b12,right,A); loop(b123,right,B);
+  
+  
+\end{emp}
+\\
+\textbf{(a)} & \qquad\textbf{(b)}
+\end{tabular}
+\end{center}
+
+\end{empfile}
+\immediate\write18{mpost -tex=latex \jobname}
+\end{document}

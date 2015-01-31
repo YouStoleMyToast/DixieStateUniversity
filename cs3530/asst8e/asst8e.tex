@@ -1,0 +1,133 @@
+%
+% Assignment 8e for CS3530 Computational Theory:
+% Complexity
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{emp,ifpdf}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\ifpdf\DeclareGraphicsRule{*}{mps}{*}{}\fi
+
+\empaddtoTeX{\usepackage{amsmath}}
+\empprelude{input boxes; input theory}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{empfile}
+
+\begin{center}
+\textbf{\Large CS 3530: Assignment 8e} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\subsection*{Problem 7.30 (20 points)}
+
+\subsubsection*{Problem}
+
+This problem is inspired by the single-player game
+\textit{Minesweeper}, generalized to an arbitrary graph. Let $G$ be
+an undirected graph, where each node either contains a single,
+hidden \textit{mine} or is empty. The player chooses nodes, one by
+one. If the player chooses a node containing a mine, the player
+loses. If the player chooses an empty node, the player learns the
+number of neighboring nodes containing mines. (A neighboring node is
+one connected to the chosen node by an edge.). The player wins if
+and when all empty nodes have been so chosen.
+
+In the \textit{mine consistency problem} you are given a graph $G$,
+along with numbers labeling some of $G$'s nodes. You must determine
+whether a placement of mines on the remaining nodes is possible, so
+that any node $v$ that is labeled $m$ has exactly $m$ neighboring
+nodes containing mines. Formulate this problem as a language and
+show that it is NP-complete.
+
+\subsubsection*{Solution}
+
+1. detrermine polynomial time verification \\ \ \\
+
+for each node check that node v labeled m has edges connecting it to m bomb nodes \\
+time is O(nodes*edges) \\ \ \\
+
+
+2. reduction from a known np-complete problem to minesweeper in polynomial time\\ \ \\
+
+To reduce \textsc{subset-sum} into minesweeper. Where \textsc{subset-sum} is: \\ \ \\
+
+\textsc{subset-sum}=\{$\langle S, t \rangle$ | $S=\{x1,...,xj\}$ and for some 
+$\{x1,...,xj\} \subseteq \{y1,...,yk\}$, we have $\Sigma yi=t$\} \\
+note: the sets are multisets which allow duplicate numbers \\ \ \\
+
+We will use this formula to determine if the sum of unknown cells
+(potential bombs) is equal to (or less than) the numbers represented
+from the known cells. Since a single known cells value represents more 
+than one cell we will need to make sure to extract those numbers
+without duplicating the count but that should be managed in polynomial 
+time. \\ \ \\
+
+If the sum is less than or equal to number of potential bombs then
+we have proven that the minesweeper instance(G) is valid. \\ \ \\
+
+Also with the reduction of \textsc{subset-sum} into minesweeperwe were 
+able to show minesweeper is NP-complete since \textsc{subset-sum}
+is NP-complete.
+
+%reduce 3-SAT into minesweeper
+
+
+%a-sat = (l1 & l2 & l3 & ln): is node one valid & node two....
+%hiden or not = ((N | !N) & (E | !E) & (S | !S) & (W | !W))
+%l1 is valid if for N, S, E, and W if at least one is not hiden and its number is <= the number of hiden 
+
+
+
+%problem:
+%all nodes have: 8,5, or 3 edges
+%all nodes are: numbered or hiden (all mines are here as well as othes)
+
+%mine consistency problem: a given grid is consistant
+
+\end{empfile}
+\immediate\write18{mpost -tex=latex \jobname}
+\end{document}
+
+%wrong-what about nodes higher than 3
+%In trying to see how this problem would fit within a SAT problem I tried to break
+%it down into its smallest viable component I could think of. This is where a graph 
+%containing five nodes has four outer nodes that connect only to a fifth center 
+%node. The four outer nodes are neighboring cells where the fifth one in the 
+%center reflects the state of its neighboring cells if it is a valid configuration 
+%or not. A valid cofiguration is determined by if all cells are hiden or at 
+%least one outer node is not hiden and its number is less than or equal to the 
+%number of outer nodes that are hiden. The whole minesweeper puzzel is valid 
+%if all center nodes are valid.
+
+%To reduce SAT into minesweeper we will use a SAT in the format of 
+
+%hiden or not = ((N | !N) \& (E | !E) \& (S | !S) \& (W | !W))
+
+%valid = \\(((N \& N $\le$ 3) \& !E \& !S \& !W) || ((N \& N $\le$ 2) \& ((!E \& !S) || (!S \& !W))) 
+%|| ((N \& N $\le$ 1) \& (!E || !S || !W)))
+
+
+

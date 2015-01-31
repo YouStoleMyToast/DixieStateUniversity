@@ -1,0 +1,78 @@
+%
+% Assignment 5a for CS3530 Computational Theory:
+% Context-free Languages
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{emp,ifpdf}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\ifpdf\DeclareGraphicsRule{*}{mps}{*}{}\fi
+
+\empaddtoTeX{\usepackage{amsmath}}
+\empprelude{input boxes; input theory}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{empfile}
+
+\begin{center}
+\textbf{\Large CS 3530: Assignment 5a} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\section*{Problems}
+
+\subsection*{Problem 2.31 (20 points)}
+
+\subsubsection*{Problem}
+
+Let $B$ be the language of all palindromes over $\{0,1\}$ containing
+an equal number of $0$s and $1$s. Show that $B$ is not context free.
+
+\subsubsection*{Solution}
+
+
+Assume B is context free \\
+and there is a string $s \in B$ of at least length $p$ \\
+then $s$ may be divided int $s = uvxyz$ satisfying the following conditions \\
+
+1. for each $i \ge 0, uv^ixy^iz \in B$ \\
+2. $|vy| > 0$ \\
+3. $|vxy| \le p$ \\
+$\newline$
+if $s$ is split into $s = 0^p1^{p+i}1^p0^{p+i}$ 
+then it will not produce a palindrome since \\ 
+the first half will have more 1's and the second half will have more 0's.
+
+
+\end{empfile}
+\immediate\write18{mpost -tex=latex \jobname}
+\end{document}
+
+
+
+
+
+
+

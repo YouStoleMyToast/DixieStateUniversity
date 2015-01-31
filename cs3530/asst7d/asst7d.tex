@@ -1,0 +1,72 @@
+%
+% Assignment 7d for CS3530 Computational Theory:
+% Computability
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{enumerate}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{center}
+\textbf{\Large CS 3530: Assignment 7d} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\subsection*{Problem 5.13 (20 points)}
+
+\subsubsection*{Problem}
+
+A \textit{useless state} in a Turing machine is one that is never
+entered on any input string. Consider the problem of determining
+whether a Turing machine has any useless states. Formulate this
+problem as a language and show that it is undecidable.
+
+\subsubsection*{Solution}
+
+We will Call the machine that determines if it has any usless states $U_{TM}$. \\
+
+According to theorem 4.11: $A_{TM}$ is undecidable where $A_{TM}$ = \{ $\langle M, w\rangle$ | 
+$M$ is a TM that accepts $w$ \} \\
+So if we can do the reduction $A_{TM} \leq_{m} U_{TM}$ then we will know $U_{TM}$ is undecidable.\\ \ \\
+
+To prove reducability we need a computable function $f$ that takes input of the form $\langle M, w\rangle$
+and returns output $\langle M', w'\rangle$ where $\langle M, w\rangle \in A_{TM}$ iff
+$\langle M', w'\rangle \in U_{TM}$.
+
+$R_{TM}$ = on input $\langle M, w\rangle$: \\
+\hspace{5 mm}	1. Construct the following machine $M'$ \\
+\hspace{10 mm}		$M'$ = on input $x$: \\
+\hspace{15 mm}			1. Run $M$ on $x$ keeping track of all used states\\
+\hspace{15 mm}			2. If $M$ accepts, $accept$ \\
+\hspace{15 mm}			3. If $M$ rejects, $reject$." \\
+\hspace{5 mm}	2. If useless states are found $accept$. \\
+\hspace{5 mm}	3. Else $reject$. \\
+
+\end{document}
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+%
+% Assignment 6c for CS3530 Computational Theory:
+% Turing Machines
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{enumerate}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+
+% a list environment with no bullets or numbers
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{center}
+\textbf{\Large CS 3530: Assignment 6c} \\[2mm]
+Fall 2014
+\end{center}
+
+\raggedright
+
+\section*{Problems}
+
+\subsection*{Problem 3.13 (20 points)}
+
+\subsubsection*{Problem}
+
+A \textit{\textbf{Turing machine with stay put instead of left}} is
+similar to an ordinary Turing machine, but the transition function
+has the form
+
+$$ \delta: Q\times\Gamma\rightarrow
+Q\times\Gamma\times\{\text{R},\text{S}\}. $$
+
+At each point the machine can move its head right or let it stay in
+the same position. Show that this Turing machine variant is
+\textit{not} equivalent to the usual version. What class of
+languages do these machines recognize?
+
+\subsubsection*{Solution}
+
+In a recent homework example 3.8c language L = 
+$\{w:w$ does not contain exactly twice as many $0$s as $1$s$\}$
+was decided by a turing machine. However in this modified turing machine it would be impossible since there is no way of going back to see how many of any particular number there are without a counter or another tool availble (which since it wasn't mentioned I will assume there isn't). In another homework example (2.24) we were able to do something similar to language L but with context-free grammers. This shows there is a difference in the power of a turing machine with the modified turing machine. It also shows the differences in the language types generated. Since the machine was not able to produce the language then it is undecidable.
+
+\end{document}
+
+

@@ -1,0 +1,189 @@
+%
+% Assignment 2a for CS3530 Computational Theory:
+% Regular Expressions
+% Fall 2014
+%
+% Problems taken from Sipser
+%
+
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae,aecompl}
+\usepackage{emp,ifpdf}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\ifpdf\DeclareGraphicsRule{*}{mps}{*}{}\fi
+
+\empprelude{input boxes; input theory}
+
+% skip for paragraphs, don't indent
+\parskip 6pt plus 1pt
+\parindent=0pt
+\raggedbottom
+\newenvironment{indentlist}{\begin{list}{}{\addtolength{\itemsep}{0.5\baselineskip}}}{\end{list}}
+
+\begin{document}
+\begin{empfile}
+
+\begin{center}
+\textbf{\Large CS 3530: Assignment 2a} \\[2mm]
+Fall 2014
+\end{center}
+
+Name: Eric Beilmann
+
+\raggedright
+
+\section*{Exercises}
+
+\subsection*{Exercise 1.12 (6 points)}
+
+\subsubsection*{Problem}
+
+Let $D=\{w:w$ contains an even number of $a$'s and an odd number of
+$b$'s and does not contain the substring $ab\}$. Give a DFA with
+five states that recognizes $D$ and a regular expression that
+generates $D$. (Suggestion: Describe $D$ more simply).
+
+\subsubsection*{DFA Solution}
+
+\begin{center}
+\begin{emp}(0,0)
+	a := 2cm;
+	b := a*2;
+
+	node.q0(); q0.c = origin;
+	node.q1(); q1.c = q0.c + (a,0);
+	node.q2(); q2.c = q0.c + (0,-a);
+	node.q3(); q3.c = q0.c + (a,-a);
+	node.q4(); q4.c = q0.c + (b,-a);
+	
+	
+	makestart(q0);
+	makefinal(q2);makefinal(q4);
+	drawboxed(q0,q1,q2,q3,q4);
+
+	edge(q0,q1,right,A);
+	edge(q0,q2,curve,B);
+	edge(q2,q0,curve,B);
+	edge(q2,q3,right,A);
+	edge(q3,q1,right,B);
+	edge(q4,q1,right,B);
+	edge(q3,q4,curve,A);
+	edge(q4,q3,curve,A);
+	
+	loop(q1,right,"a,b");
+
+	
+\end{emp}
+\end{center}
+
+RE = b((bb)*(aa)*)
+
+
+\subsection*{Exercise 1.18 (14 points)}
+
+\subsubsection*{Problem}
+
+Give regular expressions generating the languages of Exercise~1.6.
+
+\begin{enumerate}[\bfseries a.]
+\item $\{w: w$ begins with a $1$ and ends with a $0\}$
+
+\textbf{Solution}
+
+RE = 1$\Sigma$*0
+
+\item $\{w: w$ contains at least three $1$s$\}$
+
+\textbf{Solution}
+
+RE = $\Sigma$*1$\Sigma$*1$\Sigma$*1$\Sigma$*
+
+\item $\{w: w$ contains the substring $0101$, i.e., $w=x0101y$ for
+some $x$ and $y\}$
+
+\textbf{Solution}
+
+RE = $\Sigma$*0101$\Sigma$*
+
+\item $\{w: w$ has length at least $3$ and its third symbol is a $0\}$
+
+\textbf{Solution}
+
+RE = $\Sigma$$\Sigma$0$\Sigma$*
+
+\item $\{w: w$ starts with $0$ and has odd length, or starts with
+$1$ and has even length$\}$
+
+\textbf{Solution}
+
+RE = 0((0$\cup$1)(0$\cup$1))* $\cup$ 1(0$\cup$1)((0$\cup$1)(0$\cup$1))*
+
+\item $\{w: w$ doesn't contain the substring $110\}$
+
+\textbf{Solution}
+
+RE = (0$\cup$10)*1*
+
+\item $\{w:$ the length of $w$ is at most $5\}$
+
+\textbf{Solution}
+
+RE = (0$\cup$1)$\cup$((0$\cup$1)(0$\cup$1))$\cup$((0$\cup$1)(0$\cup$1)(0$\cup$1))
+$\cup$((0$\cup$1)(0$\cup$1)(0$\cup$1)(0$\cup$1))$\cup$((0$\cup$1)(0$\cup$1)(0$\cup$1)(0$\cup$1)(0$\cup$1))
+
+\item $\{w: w$ is any string except $11$ and $111\}$
+
+\textbf{Solution}
+
+RE = (0$\cup$1) $\cup$ (00$\cup$01$\cup$10) $\cup$ 
+(0$\Sigma$$\Sigma$ $\cup$ $\Sigma$0$\Sigma$ $\cup$ $\Sigma$$\Sigma$0)($\Sigma$)*
+
+\item $\{w:$ every odd position of $w$ is a $1\}$
+
+\textbf{Solution}
+
+RE = (1((01)$\cup$(11))*) $\cup$ (1((01)$\cup$(11))*$\cup$(0$\cup$1))
+
+\item $\{w: w$ contains at least two $0$s and at most one $1\}$
+
+\textbf{Solution}
+
+RE = (0)*(001 $\cup$ 010 $\cup$ 100)(0)*
+
+\item $\{\varepsilon, 0\}$
+
+\textbf{Solution}
+
+RE = (0)*
+
+\item $\{w: w$ contains an even number of $0$s, or contains exactly two $1$s$\}$
+
+\textbf{Solution}
+
+RE = ((00)* $\cup$ (1)*)* (00) ((00)* $\cup$ (1)*) $\cup$ ((0)*1(0)*1(0)*)
+
+\item The empty set
+
+\textbf{Solution}
+
+RE = 1*$\emptyset$
+
+\item All strings except the empty string
+
+\textbf{Solution}
+
+RE = (0$\cup$1)(0$\cup$1)*
+
+\end{enumerate}
+
+\end{empfile}
+\immediate\write18{mpost -tex=latex \jobname}
+\end{document}
