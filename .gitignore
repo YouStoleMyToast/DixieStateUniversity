@@ -5,7 +5,7 @@
 *~
 *.o
 *.pyc
-.DS_Store
+.DS_Stoe
 ._.DS_Store
 ._*
 *.swap

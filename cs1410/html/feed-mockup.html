@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>YouFace</title>
+<link rel="stylesheet" href="youface.css" type="text/css" />
+</head>
+<body>
+<div id="maincontainer">
+<div id="header">
+<h1><a href="/">YouFace</a></h1>
+<h2>A billion dollars and it's yours!</h2>
+</div>
+<div id="maincolumn">
+<div class="box">
+<h1>Welcome, Alice</h1>
+<form method="post" action="/status">
+<p><label for="status">Change your status:</label><input type="text" name="status" /></p>
+<p><input type="submit" name="change" value="Change" /></p>
+</form>
+</div>
+<div class="box">
+<h1>Recent status updates</h1>
+<ul>
+<li>working on cs1410</li>
+<li>eating lunch</li>
+<li>sleeping in class</li>
+</ul>
+</div>
+</div>
+<div id="sidebar">
+<div class="gadget">
+<h1>Logout</h1>
+<form method="post" action="/logout">
+<p><input type="submit" name="logout" value="Logout" /></p>
+</form>
+</div>
+<div class="gadget">
+<h1>Friends</h1>
+<ul>
+<li><a href="/friend/Bob">Bob</a></li>
+<li><a href="/friend/Charlie">Charlie</a></li>
+<li><a href="/friend/Dorothy">Dorothy</a></li>
+</ul>
+<form method="post" action="/addfriend">
+<p><input type="text" name="name" /><input type="submit" name="addfriend" value="Add Friend" /></p>
+</form>
+</div>
+<div class="gadget">
+<h1>Links</h1>
+<ul>
+<li><a href="http://cit.cs.dixie.edu/cs/cs1410/">CS 1410</a></li>
+<li><a href="http://new.dixie.edu/reg/syllabus/">College calendar</a></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset name="portal" firstgid="1" tilewidth="32" tileheight="32">
+  <image source="portal tileset.png"/>
+ </tileset>
+ <layer name="Layer 0" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO3YwQqDMAwG4KoHBWU33S57/9e0u4VibJK6psp/+EGwlU9jrHQJISyNpyvMTFJ6LXpN+O7rmw+SjoEvP+d3/GLGtOLjAh988MEn8R19j+F7Tn3h0/u2mDcTL5+0B+C7//tn8X2dfWe1T8+1tn54+Cy9U6O+OZe3TzoHPn3dWvBd0c+11jdNX3v5uP6uUd+Se3qiTzPXuk+s9fUxQzJ3FcT6/DkfdVDfGDMZfdw/PM1H6KOO3L6+1PfP7Cq3i8sAGQAA
+  </data>
+ </layer>
+</map>
