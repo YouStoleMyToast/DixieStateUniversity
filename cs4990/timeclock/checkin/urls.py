@@ -1,0 +1,13 @@
+from django.conf.urls import patterns, url
+
+from checkin import views
+
+urlpatterns=patterns('',
+	url(r'^$',views.PunchList.as_view(), name='index'),
+	url(r'^clockin/$',views.ClockIn.as_view(),name='clockin'),
+	url(r'^clockout/$',views.ClockOut.as_view(),name='clockout'),
+	url(r'^record/(?P<pk>\d+)/$',views.RecordDetail.as_view(),name='recorddetail'),
+	url(r'^record/(?P<pk>\d+)/edit/$',views.RecordUpdate.as_view(),name='recordupdate'),
+	url(r'^record/(?P<pk>\d+)/delete/$',views.RecordDelete.as_view(),name='recorddelete'),
+	url(r'^record/add/$',views.RecordAdd.as_view(),name='recordadd'),
+)

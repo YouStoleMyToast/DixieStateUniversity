@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Time Sheet for {{ user.username }}{% endblock %}
+
+{% block content %}
+
+<h1>Time Sheet for {{ user.username }}</h1>
+
+<div>
+<form action="." method="get">
+<table class="table">
+{{ date_range_form }}
+</table>
+<button class="btn">Search</button>
+</form>
+</div>
+
+
+<table class="table table-striped">
+<tr>
+    <th>Project</th>
+    <th>Clock In</th>
+    <th>Clock Out</th>
+    <th>Time</th>
+    <th>Description</th>
+    <th></th>
+</tr>
+
+{% for record in records %}
+	{% if record %}
+	<tr>
+		<td>{{ record.project }}</td>
+		<td>{{ record.starttime|date:"Y-m-d g:i a" }}</td>
+		<td>
+			{% if record.endtime %}{{ record.endtime|date:"Y-m-d g:i a" }}{% else %}
+			<span class="label label-danger">in-process</span>{% endif %}
+		</td>
+		<td>{{ record.elapsed_time }}</td>
+		<td>{{ record.message|truncatewords:8 }}</td>
+		<td><a href="{% url 'checkin:recorddetail' record.id %}">details</a></td>
+	</tr>
+	{% else %}
+	<tr>
+		<td>No records found</td>
+	</tr>
+	{% endif %}
+{% endfor %}
+<tr>
+    <td colspan="2"></td>
+    <td align="right">Total:</td>
+    <td>{{ total_time }}</td>
+    <td colspan="2"></td>
+</tr>
+</table>
+
+<div class="actions">
+<h3>Actions</h3>
+<a href="#" class="btn btn-primary">Manage Projects</a>
+<a href="{% url 'checkin:record-add' %}" class="btn btn-success">Add New Timeclock Entry</a>
+</div>
+
+{% endblock %}

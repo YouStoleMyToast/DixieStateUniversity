@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load tz %}
+
+{% block title %}Details for Time Record Starting {{ record.start_time|localtime }}{% endblock %}
+
+{% block content %}
+
+<h1>Time Clock Record</h1>
+
+{% if not record %}
+<p class="label label-error">No record with record ID {{ record.id }} found.</p>
+{% else %}
+<table class="table table-striped">
+<tr><td>Project:</td><td>{{ record.project }}</td></tr>
+<tr><td>Start Time:</td><td>{{ record.start_time|date:"Y-m-d g:i a" }}</td></tr>
+<tr>
+	<td>End Time:</td>
+	{% if record.end_time %}
+		<td>{{ record.end_time|date:"Y-m-d g:i a" }}
+	{% else %}
+		<span class="label label-danger">in-process</span>
+	{% endif %}
+	</td>
+</tr>
+<tr>
+    <td>Elapsed Time</td><td>{{ record.elapsed_time }}</td>
+    {% if record.message %}
+		</tr><tr><td>Message:</td><td>{{ record.message|truncatewords:8 }}</td>
+    {% endif %}
+</tr>
+</table>
+<div class="actions">
+<h3>Actions</h3>
+<a href="#" class="btn btn-default">Return to time clock</a>
+<a href="{% url 'checkin:record-edit' record.id %}" class="btn btn-primary">Update this entry</a>
+<a href="{% url 'checkin:record-delete' record.id %}" class="btn btn-danger">Delete this entry</a>
+</div>
+{% endif %}
+
+{% endblock %}

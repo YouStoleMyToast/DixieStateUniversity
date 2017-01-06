@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extrascripts %}
+<script src=...></script>
+
+{% block extrascripts %}
+<script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
+<link rel="stylesheet" type="text/">
+<script type='text/javascript'>
+$(function(){
+	$('#id-start_time').datepicker();
+	$('#id-end_time').datepicker();
+});
+</script>
+{% endblock %}
+
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+
+
+{% endblock %}
