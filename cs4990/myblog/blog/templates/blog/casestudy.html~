@@ -1,0 +1,15 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/portfolio.css' %}" />
+   
+<h1>{{ casestudy.title }}</h1>
+
+{% block content %}
+<table>
+
+<h2>{{ study.title }}</h2>
+<img src="{{ MEDIA_URL}}{{ study.picture }}" />
+<p>{{ study.description|safe }}</p>
+
+</table>
+{% endblock %}

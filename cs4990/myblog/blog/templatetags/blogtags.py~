@@ -1,0 +1,14 @@
+from django import template
+from blog.models import Blog
+
+register = template.Library()
+
+@register.inclusion_tag('blog/bloglist.html')
+def bloglist():
+	blogentries=[]
+	for blogentry in Blog.objects.all():
+		blogentries.append(blogentry.date)
+		print blogentries
+		
+	return {'blogentries':blogentries}
+

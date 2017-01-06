@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<ul>
+{% block links %}
+	{% for blog in blog_list %}
+		{% if blog.active %}
+			<li>
+			<div id=datelink>
+			<a href="{{DIRNAME }}{{ blog.id }}">
+			{{ blog.date | date:"d M Y" }} - {{ blog.topic}}
+			</a>
+			</div>
+			</li>
+		{% endif %}
+	{% endfor %}
+{% endblock %}
+</ul>

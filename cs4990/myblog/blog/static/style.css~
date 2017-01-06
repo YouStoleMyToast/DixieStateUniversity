@@ -1,0 +1,132 @@
+html{
+    background:#f18457;
+}
+
+title{
+
+}
+
+body{ 
+    margin-top:75px;
+    margin-right:100px;
+    margin-bottom:75px;
+    margin-left:100px;
+    background:#f9fffc;
+    /*background-image:url("images/brushedsteel.jpg");*/
+
+    padding:30px;
+    font-family:arial;
+    font-weight:500;
+    font-size:25px;
+    color:#071414;
+    text-align:center;
+    text-style:justify;
+    border-style:solid;
+    border-width:5px;
+    border-color:#47b0a8;
+
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+input{
+    margin-top:20px;
+    width:100px;
+}
+
+li{
+    
+    list-style:none;
+    margin-top:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+    margin-left:10px;
+    
+}
+
+h1{
+
+    font-family:"zapf chancery";
+    letter-spacing:3px;
+    font-weight:500;
+    font-size:60px;
+    color:#790000;
+}
+
+h2{
+    font-family:arial;
+    font-weight:500;
+    font-size:30px;
+    color:#790000;
+    text-align:center;
+}
+
+p{
+	text-align:justify;
+}
+
+table{
+    padding:5px;
+}
+
+td{
+	padding:5px;
+	width:30%;
+    border-style:solid;
+    border-width:3px;
+    border-color:#47b0a8;
+	text-align:center;
+	background:#87dec4;
+    font-size:18px;
+    
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+tr{
+}
+
+a:link{
+    color:#790000;
+}
+
+a:visited{
+    color:#790000;
+}
+
+a:hover{
+    color:#790000;
+}
+
+a:active {
+    color:#790000;
+}
+
+#pic{
+	height:100px;
+	position:relative;
+	top:10px;
+	
+	border-style:solid;
+    border-width:3px;
+    border-color:#47b0a8;
+}
+
+#job{
+	border-style:solid;
+    border-width:3px;
+    border-color:#47b0a8;
+}
+
+#desc{
+    border-style:solid;
+    border-width:3px;
+    border-color:#47b0a8;
+}
+
+
+

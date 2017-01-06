@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}" />
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<td>
+<div id=blogbody>
+{% for blogentry in blogentries %}
+	{% if blogentry.active %}
+		{% if forloop.counter <= 10 %}
+		<div id=bodytitle>{{ blogentry.title }}</div>
+		<div id=bodyauthor>By: {{ blogentry.author }}</div>
+		<div id=bodydate>Date: {{ blogentry.date }}</div>
+		<div id=bodytext><p>{{ blogentry.body }}</p></div>
+		{% endif %}
+	{% endif %}
+{% endfor %}
+</div>
+</td>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% load staticfiles %}
+{% load blog_tags %}
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}" />
+<title>Blog</title>
+</head>
+<body>
+<h1>My Blog 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eric Beilmann</h1>
+
+<table>
+{% block content %}
+
+
+
+{% endblock %}
+
+{% block links %}
+	<td>
+	<div id=bloglist>
+	<div id=homelink>
+	<ul>
+	<li>
+	<a href="{% url 'views:blog' %}">Home</a>
+	</li>
+	</ul>
+	</div>
+	{% blog_links %}
+	</div>
+	</td>
+{% endblock %}
+</table>
+
+
+
+<img src="http://media.djangopony.com/img/small/badge.png" width="210" height="65" alt="pony powered" style="float:right"></a>
+<br><br>
+
+</body>
+</html>
+
+

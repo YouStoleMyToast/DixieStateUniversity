@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<td>
+<div id=blogbody>
+	<div id=bodytitle>{{ blogentry.title }}</div>
+	<div id=bodyauthor>BY: {{ blogentry.author }} </div>
+	<div id=bodydate>DATE: {{ blogentry.date }}</div>
+	<div id=bodytext><p>{{ blogentry.body }}</p></div>
+</div>
+</td>
+
+{% endblock %}
+

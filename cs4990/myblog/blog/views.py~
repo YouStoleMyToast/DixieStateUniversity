@@ -1,0 +1,21 @@
+# Create your views here.
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
+
+from blog.models import Blog
+
+def index(request):
+    blogentries = Blog.objects.all().order_by('-date')
+    context = {'blogentries' : blogentries}
+    return render(request, 'blog/index.html', context)
+
+def detail(request, blogentry_id):
+    blogentry = get_object_or_404(Blog, pk=blogentry_id)
+    context = {'blogentry' : blogentry}
+    return render(request, 'blog/detail.html', context)
+
+#from walkthrough part 3
+#def yeararchive
+#def montharchive
+#def dayarchive
+#def commentaction
