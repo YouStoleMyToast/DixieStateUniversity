@@ -1,0 +1,59 @@
+{% extends 'inventory/index.html' %}
+{% load staticfiles %}
+
+<div id="titlespace">{% block title %}{{ categoryentry.title }}{% endblock %}</div>
+
+{% comment %}
+{% block extrascripts %}
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script>
+$(function(){
+	$('#comment-form').submit(
+		function (evt) {
+			alert('Just tried to submit');
+			evt.perventDefault();
+			
+			$.ajax({
+				url:$(this).attr('action'),//can do dot or url //this is #comment-form
+				type:'post',
+				data:$(this).serialize(),
+				success:function(data){
+					alert('Successfully posted your comment.');
+				},
+				error:function(){
+					alert('Can\'t post your comment.');
+				},
+			});
+			return false;
+		});
+});
+</script>
+{% endblock %}
+{% endcomment %}
+
+
+{% block categorycontent %}
+<td>
+<div id=inventorybody>
+	{% if categoryentry %}
+		<img src="{{ MEDIA_URL }}{{ categoryentry.picture }}" height="100" width="70"/><br/>
+		<p>{{ categoryentry.id}}</p>
+</div>
+</td>		
+		<form action="." method="POST" id="comment-form">
+		<table>
+		{% csrf_token %}
+		{{ form }}
+		</table>
+		<button>Leave a comment</button>
+		</form>
+	{% else %}
+		<p>No studies here, bud.</p>
+	{% endif %}
+{% endblock %}
+
+
+
+
+

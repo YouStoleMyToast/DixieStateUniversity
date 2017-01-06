@@ -1,0 +1,15 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+   
+<h1>{{ casestudy.title }}</h1>
+
+{% block content %}
+<table>
+
+<div id=pic><img src="{{ casestudy.picture }}"></div>
+<div id=job><h2>{{ casestudy.title }}</h2></div>
+<div id=desc><p>{{ casestudy.description|slice:":500" }}...</p></div>
+
+</table>
+{% endblock %}

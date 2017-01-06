@@ -1,0 +1,10 @@
+{% load staticfiles thumbnail%}
+{% extends 'portfolio/base.html' %}
+
+{% if study %}
+<h1>{{ study.title }}</h1>
+<img src="{{ MEDIA_URL}}{{ study.picture }}" /><br/>
+<p>{{ study.description|safe }}</p>
+{% else %}
+{% endif %}
+{% endblock %}

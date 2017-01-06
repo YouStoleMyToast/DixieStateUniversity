@@ -1,0 +1,8 @@
+<ul>
+	{% block links %}
+	{# <div id=datelink><a href="{% url 'blog:detail' blogentry.id %}">{{ blogentry.date|date:"d M Y" }}</a></div> #}
+	{% for entry in blogentries %}
+	<li>{{ entry.url }}</li>
+	{% endfor %}
+	{% endblock %}
+</ul>

@@ -1,0 +1,17 @@
+{% load staticfiles thumbnail%}
+{% extends 'portfolio/base.html' %}
+
+{% if studies %}
+<ul>
+	{% for study in studies %}
+	<li>
+		{% thumbnail study.picture "100x100" as pic %}
+		<img src="{{ MEDIA_URL }}{{ pic.url }}" />
+		{% endthumbnail %}
+		<a href="{% url 'portfolio:detail' study.id %}">{{ study.title }}</a>
+	</li>
+	
+	{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

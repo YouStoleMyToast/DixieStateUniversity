@@ -1,0 +1,27 @@
+{% extends 'inventory/base.html' %}
+
+
+{% block content %}
+
+    {% if inventoryentry %}
+    <h1>thanks for your comment</h1>
+    <p>return back to <a href="{% url inventoryentry:detail' inventoryentry.id %}">inventoryentry</a>
+    {% endif %}
+    
+    <form action="{% url 'inventoryentry:detail' inventoryentry.id %}" method="POST" id="update-form">
+    <table border=1>
+    {% csrf_token %}
+    {{ form }} {# also can: as_table,as_ul,as_p #}
+    </table>
+    <button>leave a comment</button> {# don't submit #}
+    </form>
+    
+    {# {{ form.as_p}} as_table,as_ul #}
+    {# or do them sepperate for control freaks #}
+    {# <p>message to give someone</p> #}
+    {# {{form.message}} #}
+    
+    {# {{form.author}} #}
+	</table>
+	
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'inventory/index.html' %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'inventory/inventory.css' %}" />
+{% block title %}{% endblock %}
+
+{% block catagories %}
+	{% for inv in inventoryentries %}
+		<p>{{ inv.title }}</p>
+		<p>{{ inv.description }}</p>
+		<imp src="{{ MEDIA_URL }}{{ inv.picture }}" height="100" width="70">
+	
+	{% endfor %}
+{% endblock %}

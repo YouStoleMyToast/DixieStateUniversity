@@ -1,0 +1,28 @@
+{% extends "portfolio/base.html" %}
+{% load thumbnail %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/portfolio.css' %}" />
+
+{% block title %}{% endblock %}
+
+{% block content %}
+	<table><tr>
+	{% for casestudy in casestudies %}
+		<td>
+			{% thumbnail study.picture "100x100" as pic %}
+			<div id=pic><img src="{{ MEDIA_URL }}{{ pic.url }}" /></div>
+			{% endthumbnail %}
+			<div id=job><h2><a href="{% url 'portfolio:detail' study.id %}">{{ study.title }}</a></h2></div>
+			<div id=desc><p>{{ casestudy.description|slice:":500" }}...</p></div>
+		</td>
+		{% if forloop.last %}
+			</tr>
+		{% else %}
+			{% if forloop.counter|divisibleby:"3" %}
+				</tr><tr>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+	</table>
+{% endblock %}

@@ -1,0 +1,13 @@
+from django import template
+from blog.models import Blog
+
+register = template.Library()
+
+@register.inclusion_tag('blog/blog_links.html')
+def blog_links():
+	blog_list=[]
+	for blog in Blog.objects.all():
+		blog_list.append(blog.id)
+		
+	return {'blog_list':blog_list}
+
