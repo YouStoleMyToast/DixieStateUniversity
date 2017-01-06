@@ -1,0 +1,674 @@
+(x=`pwd`; x=`dirname $x`; x=`dirname $x`; \
+	 sed 's?^PREFIX_DIR *:=.*$?PREFIX_DIR := '$x'?' Makefile.top > Makefile.top.tmp; \
+	 mv Makefile.top.tmp Makefile.top)
+(x=`pwd`; x=`dirname $x`; x=`dirname $x`; x=`dirname $x`; \
+	 sed 's?^AI_PREFIX_DIR *:=.*$?AI_PREFIX_DIR := '$x'/ai?' Makefile.top > Makefile.top.tmp; \
+	 mv Makefile.top.tmp Makefile.top)
+(cd prog; make install)
+make[1]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog'
+for d in utils ScavengerWorld WumpusWorld PLTest FOLTest Rectangle Candy CCheckers TicTacToe Mancala; do \
+		(cd $d; make -j install) \
+	done
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/utils'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/utils'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+for d in SA_Test Genesis; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+for d in WumpusAgent; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+building .depend-o.eebbirgitte.d
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+g++ -I/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include -Wall -DUSE_GLUT  -O2 -c /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp -o 00obj-o/eebbirgitte.o
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In member function ‘virtual ai::Agent::Action* eebb::Birgitte::Program(const ai::Agent::Percept*)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:38:38: error: ‘homely’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In member function ‘bool eebb::Birgitte::parsepercepts(const ai::Agent::Percept*)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:256:6: error: expected ‘(’ before ‘{’ token
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In member function ‘bool eebb::Birgitte::goalsearch()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:323:20: error: ‘Quit’ is not a member of ‘ai::Agent::WumpusAction’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:360:3: error: expected unqualified-id before ‘else’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:361:3: error: ‘cout’ in namespace ‘std’ does not name a type
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:362:3: error: expected unqualified-id before ‘return’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:382:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskStench()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:387:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:387:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:387:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:387:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:389:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:396:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:396:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:396:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:396:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:398:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:403:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskBreeze()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:408:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:408:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:408:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:408:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:410:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:417:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:417:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:417:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:417:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:419:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:424:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskNothing()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:429:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:429:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:429:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:429:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:431:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:438:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:438:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:438:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:438:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:440:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:447:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskPitNorth()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:452:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:452:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:452:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:452:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:455:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:462:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:462:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:462:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:462:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:465:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:470:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskWumpusNorth()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:475:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:475:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:475:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:475:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:477:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:484:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:484:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:484:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:484:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:486:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:491:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskVisitedNorth()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:496:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:496:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:496:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:496:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:499:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:506:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:506:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:506:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:506:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:509:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:515:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskPitSouth()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:520:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:520:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:520:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:520:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:523:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:530:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:530:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:530:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:530:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:533:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:538:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskWumpusSouth()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:543:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:543:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:543:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:543:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:545:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:552:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:552:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:552:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:552:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:554:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:559:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskVisitedSouth()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:564:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:564:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:564:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:564:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:567:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:574:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:574:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:574:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:574:43: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:577:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:584:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskPitEast()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:589:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:589:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:589:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:589:44: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:592:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:599:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:599:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:599:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:599:45: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:602:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:607:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskWumpusEast()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:612:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:612:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:612:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:612:44: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:614:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:621:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:621:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:621:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:621:45: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:623:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:628:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskVisitedEast()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:633:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:633:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:633:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:633:44: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:635:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:642:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:642:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:642:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:642:45: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:644:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:650:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskPitWest()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:655:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:655:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:655:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:655:44: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:658:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:665:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:665:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:665:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:665:45: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:668:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:673:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskWumpusWest()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:678:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:678:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:678:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:678:44: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:680:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:687:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:687:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:687:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:687:45: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:689:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:694:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskVisitedWest()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:699:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:699:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:699:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:699:44: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:701:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:708:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:708:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:708:34: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:708:45: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:710:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:715:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskNextSafe()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:717:6: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:720:7: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:720:18: error: ‘NORTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:720:18: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:15: note:   ‘eebb::NORTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:726:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:726:23: error: ‘SOUTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:726:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:24: note:   ‘eebb::SOUTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:729:63: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:732:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:732:23: error: ‘EAST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:732:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:33: note:   ‘eebb::EAST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:735:60: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:738:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:738:23: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:738:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:741:60: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:747:7: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:747:18: error: ‘NORTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:747:18: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:15: note:   ‘eebb::NORTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:753:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:753:23: error: ‘SOUTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:753:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:24: note:   ‘eebb::SOUTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:759:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:759:23: error: ‘EAST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:759:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:33: note:   ‘eebb::EAST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:765:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:765:23: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:765:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:775:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskNextVisited()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:778:7: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:778:18: error: ‘NORTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:778:18: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:15: note:   ‘eebb::NORTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:784:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:784:23: error: ‘SOUTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:784:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:24: note:   ‘eebb::SOUTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:790:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:790:23: error: ‘EAST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:790:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:33: note:   ‘eebb::EAST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:796:12: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:796:23: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:796:23: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:804:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskVisited(int, int)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:809:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:809:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:811:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:817:17: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:817:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:819:12: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:824:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskNextWall()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:826:6: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:826:17: error: ‘NORTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:826:17: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:15: note:   ‘eebb::NORTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:826:26: error: ‘y’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:826:29: error: ‘maxy’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:826:29: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:18:6: note:   ‘eebb::maxy’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:827:11: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:827:22: error: ‘SOUTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:827:22: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:24: note:   ‘eebb::SOUTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:827:34: error: ‘miny’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:827:34: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:17:6: note:   ‘eebb::miny’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:828:11: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:828:22: error: ‘EAST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:828:22: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:33: note:   ‘eebb::EAST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:828:30: error: ‘x’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:829:11: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:829:22: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:829:22: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:835:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool ChangeDirection(int)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:837:6: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:837:19: error: ‘NORTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:837:19: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:15: note:   ‘eebb::NORTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:840:20: error: ‘SOUTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:840:20: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:24: note:   ‘eebb::SOUTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:842:5: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:842:24: error: ‘TURN_RIGHT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:842:24: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:59: note:   ‘eebb::TURN_RIGHT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:845:20: error: ‘EAST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:845:20: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:33: note:   ‘eebb::EAST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:845:27: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:845:46: error: ‘TURN_RIGHT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:845:46: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:59: note:   ‘eebb::TURN_RIGHT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:846:20: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:846:20: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:846:27: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:846:46: error: ‘TURN_LEFT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:846:46: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:72: note:   ‘eebb::TURN_LEFT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:848:11: error: ‘dir’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:848:18: error: ‘SOUTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:848:18: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:24: note:   ‘eebb::SOUTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:852:5: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:852:24: error: ‘TURN_RIGHT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:852:24: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:59: note:   ‘eebb::TURN_RIGHT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:856:20: error: ‘EAST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:856:20: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:33: note:   ‘eebb::EAST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:856:27: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:856:46: error: ‘TURN_LEFT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:856:46: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:72: note:   ‘eebb::TURN_LEFT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:857:20: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:857:20: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:857:27: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:857:46: error: ‘TURN_RIGHT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:857:46: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:59: note:   ‘eebb::TURN_RIGHT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:859:11: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:859:24: error: ‘EAST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:859:24: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:33: note:   ‘eebb::EAST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:861:23: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:861:42: error: ‘TURN_LEFT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:861:42: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:72: note:   ‘eebb::TURN_LEFT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:862:28: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:862:47: error: ‘TURN_RIGHT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:862:47: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:59: note:   ‘eebb::TURN_RIGHT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:864:20: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:864:20: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:866:5: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:866:24: error: ‘TURN_RIGHT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:866:24: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:59: note:   ‘eebb::TURN_RIGHT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:870:18: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:870:18: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:872:23: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:872:42: error: ‘TURN_RIGHT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:872:42: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:59: note:   ‘eebb::TURN_RIGHT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:873:28: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:873:47: error: ‘TURN_LEFT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:873:47: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:72: note:   ‘eebb::TURN_LEFT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:876:5: error: ‘actqueue’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:876:24: error: ‘TURN_RIGHT’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:876:24: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:59: note:   ‘eebb::TURN_RIGHT’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:883:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskLocalNothing()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:887:16: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:887:16: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:887:33: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:887:42: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:889:11: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:892:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskAllNothing()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:895:9: error: ‘minx’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:895:9: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:15:6: note:   ‘eebb::minx’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:895:17: error: ‘maxx’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:895:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:16:6: note:   ‘eebb::maxx’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:897:10: error: ‘miny’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:897:10: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:17:6: note:   ‘eebb::miny’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:897:17: error: ‘maxy’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:897:17: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:18:6: note:   ‘eebb::maxy’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:901:18: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:901:18: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:903:13: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:909:7: error: ‘Birgitte’ has not been declared
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskShoot()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:911:6: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:911:19: error: ‘NORTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:911:19: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:15: note:   ‘eebb::NORTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:914:10: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:914:20: error: ‘maxy’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:914:20: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:18:6: note:   ‘eebb::maxy’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:919:19: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:919:19: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:919:36: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:922:14: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:929:19: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:929:19: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:929:37: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:932:14: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:939:11: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:939:24: error: ‘SOUTH’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:939:24: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:24: note:   ‘eebb::SOUTH’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:943:10: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:943:20: error: ‘miny’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:943:20: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:17:6: note:   ‘eebb::miny’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:948:19: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:948:19: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:948:36: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:951:14: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:958:19: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:958:19: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:958:37: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:961:14: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:968:11: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:968:24: error: ‘EAST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:968:24: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:33: note:   ‘eebb::EAST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:971:10: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:971:20: error: ‘maxx’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:971:20: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:16:6: note:   ‘eebb::maxx’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:976:19: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:976:19: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:976:39: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:979:14: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:986:19: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:986:19: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:986:40: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:989:14: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:996:11: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:996:24: error: ‘WEST’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:996:24: note: suggested alternative:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.h:13:41: note:   ‘eebb::WEST’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1000:10: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1000:20: error: ‘minx’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1000:20: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:15:6: note:   ‘eebb::minx’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1005:19: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1005:19: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1005:39: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1008:14: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1015:19: error: ‘buf’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1015:19: note: suggested alternative:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:13:14: note:   ‘eebb::buf’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1015:40: error: invalid use of ‘this’ in non-member function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1018:14: error: ‘eeb’ was not declared in this scope
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:1028:1: error: expected declaration before ‘}’ token
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskNextWall()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:831:2: warning: control reaches end of non-void function [-Wreturn-type]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In function ‘bool AskNextVisited()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:803:2: warning: control reaches end of non-void function [-Wreturn-type]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp: In member function ‘bool eebb::Birgitte::goalsearch()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/WumpusWorld/eebbirgitte.cpp:359:3: warning: control reaches end of non-void function [-Wreturn-type]
+make[3]: *** [00obj-o/eebbirgitte.o] Error 1
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+make[2]: *** [install] Error 2
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+for d in PL_Test PL_Shell PL_Dragons PL_Dragons_2012; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/FOLTest'
+for d in FOL_Test; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/FOLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/FOLTest'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/FOLTest'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+for d in Rectangle RectangleSolver; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Candy'
+for d in CandyAgent; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Candy'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Candy'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Candy'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/CCheckers'
+for d in CA_Test; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/CCheckers'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/CCheckers'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/CCheckers'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/TicTacToe'
+for d in TicTacToeAgent; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/TicTacToe'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/TicTacToe'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/TicTacToe'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Mancala'
+for d in MancalaAgent; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Mancala'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Mancala'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Mancala'
+make[1]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog'

@@ -1,0 +1,1217 @@
+(x=`pwd`; x=`dirname $x`; x=`dirname $x`; \
+	 sed 's?^PREFIX_DIR *:=.*$?PREFIX_DIR := '$x'?' Makefile.top > Makefile.top.tmp; \
+	 mv Makefile.top.tmp Makefile.top)
+(x=`pwd`; x=`dirname $x`; x=`dirname $x`; x=`dirname $x`; \
+	 sed 's?^AI_PREFIX_DIR *:=.*$?AI_PREFIX_DIR := '$x'/ai?' Makefile.top > Makefile.top.tmp; \
+	 mv Makefile.top.tmp Makefile.top)
+(cd prog; make install)
+make[1]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog'
+for d in utils ScavengerWorld WumpusWorld PLTest FOLTest Rectangle Candy CCheckers TicTacToe Mancala; do \
+		(cd $d; make -j install) \
+	done
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/utils'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/utils'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+for d in SA_Test Genesis; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+building .depend-o.eebzstate.d
+building .depend-o.eebzaction.d
+building .depend-o.eebzproblem.d
+building .depend-o.eebzmodel.d
+building .depend-o.eebzmagikarp.d
+building .depend-o.AgentProgramSelect.d
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+g++ -I/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include -Wall -DUSE_GLUT  -O2 -c /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp -o 00obj-o/AgentProgramSelect.o
+g++ -I/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include -Wall -DUSE_GLUT  -O2 -c /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp -o 00obj-o/eebzmagikarp.o
+g++ -I/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include -Wall -DUSE_GLUT  -O2 -c /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp -o 00obj-o/eebzmodel.o
+g++ -I/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include -Wall -DUSE_GLUT  -O2 -c /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp -o 00obj-o/eebzproblem.o
+g++ -I/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include -Wall -DUSE_GLUT  -O2 -c /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp -o 00obj-o/eebzaction.o
+g++ -I/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include -Wall -DUSE_GLUT  -O2 -c /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.cpp -o 00obj-o/eebzstate.o
+g++ -I/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include -Wall -DUSE_GLUT  -O2 -c /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.cpp -o 00obj-o/eebmodel.o
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:9:85: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:9:85: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:9:85: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:9:85: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:9:85: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:9:85: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:9:85: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp: In constructor ‘eeb::SS::Cell::Cell()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:10:23: error: ‘None’ is not a member of ‘eeb::SS::Cell’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp: In copy constructor ‘eeb::SS::Cell::Cell(const eeb::SS::Cell&)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:11:39: error: no match for ‘operator=’ in ‘*(eeb::SS::Cell*)this = & rhs’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:11:39: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:17:9: note: eeb::SS::Cell& eeb::SS::Cell::operator=(const eeb::SS::Cell&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:17:9: note:   no known conversion for argument 1 from ‘const eeb::SS::Cell*’ to ‘const eeb::SS::Cell&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:22:10: error: prototype for ‘double eeb::SS::Cell::getx()’ does not match any in class ‘eeb::SS::Cell’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:24:11: error: candidate is: double eeb::SS::Cell::getx() const
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:23:10: error: prototype for ‘double eeb::SS::Cell::gety()’ does not match any in class ‘eeb::SS::Cell’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:25:11: error: candidate is: double eeb::SS::Cell::gety() const
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:24:10: error: prototype for ‘double eeb::SS::Cell::getz()’ does not match any in class ‘eeb::SS::Cell’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:26:11: error: candidate is: double eeb::SS::Cell::getz() const
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:32:10: error: prototype for ‘double eeb::SS::Model::getcharge() const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:41:11: error: candidate is: double eeb::SS::Model::getcharge()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:33:10: error: prototype for ‘double eeb::SS::Model::gethp() const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:42:11: error: candidate is: double eeb::SS::Model::gethp()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:34:10: error: prototype for ‘double eeb::SS::Model::getcurx() const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:43:11: error: candidate is: double eeb::SS::Model::getcurx()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:35:10: error: prototype for ‘double eeb::SS::Model::getcury() const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:44:11: error: candidate is: double eeb::SS::Model::getcury()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:36:10: error: prototype for ‘double eeb::SS::Model::getcurz() const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:45:11: error: candidate is: double eeb::SS::Model::getcurz()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:37:10: error: prototype for ‘double eeb::SS::Model::getendx() const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:46:11: error: candidate is: double eeb::SS::Model::getendx()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:38:10: error: prototype for ‘double eeb::SS::Model::getendy() const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:47:11: error: candidate is: double eeb::SS::Model::getendy()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:39:10: error: prototype for ‘double eeb::SS::Model::getendz() const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:48:11: error: candidate is: double eeb::SS::Model::getendz()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:42:8: error: prototype for ‘bool eeb::SS::Model::setcharge(const double&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:50:9: error: candidate is: bool eeb::SS::Model::setcharge(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:47:8: error: prototype for ‘bool eeb::SS::Model::sethp(const double&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:51:9: error: candidate is: bool eeb::SS::Model::sethp(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:52:8: error: prototype for ‘bool eeb::SS::Model::setcurx(const double&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:52:9: error: candidate is: bool eeb::SS::Model::setcurx(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:57:8: error: prototype for ‘bool eeb::SS::Model::setcury(const double&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:53:9: error: candidate is: bool eeb::SS::Model::setcury(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:62:8: error: prototype for ‘bool eeb::SS::Model::setcurz(const double&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:54:9: error: candidate is: bool eeb::SS::Model::setcurz(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:67:8: error: prototype for ‘bool eeb::SS::Model::setendx(const double&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:55:9: error: candidate is: bool eeb::SS::Model::setendx(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:72:8: error: prototype for ‘bool eeb::SS::Model::setendy(const double&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:56:9: error: candidate is: bool eeb::SS::Model::setendy(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:77:8: error: prototype for ‘bool eeb::SS::Model::setendz(const double&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:57:9: error: candidate is: bool eeb::SS::Model::setendz(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp: In member function ‘eeb::SS::Cell eeb::SS::Model::GetCell(double&, double&)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:97:38: error: ‘None’ is not a member of ‘eeb::SS::Cell’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:100:8: error: prototype for ‘bool eeb::SS::Model::Display(std::ostream&) const’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:61:9: error: candidate is: bool eeb::SS::Model::Display(std::ostream&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:116:7: error: prototype for ‘int eeb::SS::Model::CellToKey(const eeb::SS::Cell&)’ does not match any in class ‘eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:63:8: error: candidate is: int eeb::SS::Model::CellToKey(eeb::SS::Cell&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp: In function ‘std::ostream& eeb::SS::operator<<(std::ostream&, const eeb::SS::Model&)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.cpp:133:18: error: passing ‘const eeb::SS::Model’ as ‘this’ argument of ‘bool eeb::SS::Model::Display(std::ostream&)’ discards qualifiers [-fpermissive]
+make[3]: *** [00obj-o/eebzmodel.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:4:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:22: error: declaration of ‘operator=’ as non-function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:20: error: expected ‘;’ at end of member declaration
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:30: error: expected ‘)’ before ‘&’ token
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp: In constructor ‘eeb::SS::Problem::Problem(ai::Search::State*, eeb::SS::Model*)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:11:62: error: class ‘eeb::SS::Problem’ does not have any field named ‘goal_state’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp: In destructor ‘virtual eeb::SS::Problem::~Problem()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:15:13: error: ‘class eeb::SS::Problem’ has no member named ‘goal_state’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:17:18: error: ‘class eeb::SS::Problem’ has no member named ‘goal_state’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:18:11: error: ‘class eeb::SS::Problem’ has no member named ‘goal_state’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp: At global scope:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:21:8: error: prototype for ‘bool eeb::SS::Problem::GoalTest(const ai::Search::State*) const’ does not match any in class ‘eeb::SS::Problem’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:16:18: error: candidate is: virtual bool eeb::SS::Problem::GoalTest(ai::Search::State*)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:26:8: error: prototype for ‘bool eeb::SS::Problem::FindSuccessors(const ai::Search::State*, std::vector<ai::Search::ActionStatePair>&) const’ does not match any in class ‘eeb::SS::Problem’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:17:18: error: candidate is: virtual bool eeb::SS::Problem::FindSuccessors(ai::Search::State*, std::vector<ai::Search::ActionStatePair>&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp: In member function ‘bool eeb::SS::Problem::SetGoal(eeb::SS::State*)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.cpp:77:10: error: ‘class eeb::SS::Problem’ has no member named ‘goal_state’
+make[3]: *** [00obj-o/eebzproblem.o] Error 1
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.cpp: In copy constructor ‘eeb::SS::Cell::Cell(const eeb::SS::Cell&)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.cpp:11:39: error: no match for ‘operator=’ in ‘*(eeb::SS::Cell*)this = & rhs’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.cpp:11:39: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:24:10: note: eeb::SS::Cell& eeb::SS::Cell::operator=(const eeb::SS::Cell&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:24:10: note:   no known conversion for argument 1 from ‘const eeb::SS::Cell*’ to ‘const eeb::SS::Cell&’
+make[3]: *** [00obj-o/eebmodel.o] Error 1
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:22: error: declaration of ‘operator=’ as non-function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:20: error: expected ‘;’ at end of member declaration
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:30: error: expected ‘)’ before ‘&’ token
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:9:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:9:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:9:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:9:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:9:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:11:3: error: prototype for ‘eeb::SS::Action::Action(const eeb::SS::Action&)’ does not match any in class ‘eeb::SS::Action’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:17:4: error: candidates are: eeb::SS::Action::Action(eeb::SS::Action&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:10:3: error:                 eeb::SS::Action::Action()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:13:11: error: prototype for ‘eeb::SS::Action& eeb::SS::Action::operator=(eeb::SS::Action&)’ does not match any in class ‘eeb::SS::Action’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:9:9: error: candidate is: eeb::SS::Action& eeb::SS::Action::operator=(const eeb::SS::Action&)
+make[3]: *** [00obj-o/eebzaction.o] Error 1
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.cpp:12:8: error: prototype for ‘void eeb::SS::State::Display() const’ does not match any in class ‘eeb::SS::State’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:28:9: error: candidates are: bool eeb::SS::State::Display(std::ostream&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:15:17: error:                 virtual void eeb::SS::State::Display()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.cpp:42:8: error: prototype for ‘bool eeb::SS::State::sethp(double&)’ does not match any in class ‘eeb::SS::State’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:26:9: error: candidate is: bool eeb::SS::State::sethp(const double&)
+make[3]: *** [00obj-o/eebzstate.o] Error 1
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:6:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:22: error: declaration of ‘operator=’ as non-function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:20: error: expected ‘;’ at end of member declaration
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:30: error: expected ‘)’ before ‘&’ token
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:25:22: error: prototype for ‘ai::Agent::Action* eeb::Magikarp::Program(const ai::Agent::Percept*)’ does not match any in class ‘eeb::Magikarp’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:17:31: error: candidate is: virtual ai::Agent::Action* eeb::Magikarp::Program(ai::Agent::Percept*)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:56:7: error: prototype for ‘bool eeb::Magikarp::ParsePercepts(const ai::Agent::Percept*)’ does not match any in class ‘eeb::Magikarp’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:20:8: error: candidate is: bool eeb::Magikarp::ParsePercepts(ai::Agent::Percept*)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp: In member function ‘bool eeb::Magikarp::SearchForGoal()’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:143:12: error: ‘class eeb::Magikarp’ has no member named ‘fringe_type’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:145:16: error: ‘class eeb::Magikarp’ has no member named ‘max_depth’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:149:39: error: cannot allocate an object of abstract type ‘eeb::SS::State’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:9:9: note:   because the following virtual functions are pure within ‘eeb::SS::State’:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_search.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:6,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/Search/State.h:23:20: note: 	virtual bool ai::Search::State::IsEqual(const ai::Search::State*) const
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:150:42: error: no matching function for call to ‘eeb::SS::State::setx(double)’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:150:42: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:22:9: note: bool eeb::SS::State::setx(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:22:9: note:   no known conversion for argument 1 from ‘double’ to ‘double&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:151:42: error: no matching function for call to ‘eeb::SS::State::sety(double)’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:151:42: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:23:9: note: bool eeb::SS::State::sety(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:23:9: note:   no known conversion for argument 1 from ‘double’ to ‘double&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:152:42: error: no matching function for call to ‘eeb::SS::State::setz(double)’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:152:42: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:24:9: note: bool eeb::SS::State::setz(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:24:9: note:   no known conversion for argument 1 from ‘double’ to ‘double&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:153:49: error: no matching function for call to ‘eeb::SS::State::setcharge(double)’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:153:49: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:25:9: note: bool eeb::SS::State::setcharge(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:25:9: note:   no known conversion for argument 1 from ‘double’ to ‘double&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:156:38: error: cannot allocate an object of abstract type ‘eeb::SS::State’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:9:9: note:   since type ‘eeb::SS::State’ has pure virtual functions
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:157:41: error: no matching function for call to ‘eeb::SS::State::setx(double)’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:157:41: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:22:9: note: bool eeb::SS::State::setx(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:22:9: note:   no known conversion for argument 1 from ‘double’ to ‘double&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:158:41: error: no matching function for call to ‘eeb::SS::State::sety(double)’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:158:41: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:23:9: note: bool eeb::SS::State::sety(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:23:9: note:   no known conversion for argument 1 from ‘double’ to ‘double&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:159:41: error: no matching function for call to ‘eeb::SS::State::setz(double)’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:159:41: note: candidate is:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:24:9: note: bool eeb::SS::State::setz(double&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:24:9: note:   no known conversion for argument 1 from ‘double’ to ‘double&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:161:60: error: cannot allocate an object of abstract type ‘eeb::SS::Problem’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:11:9: note:   because the following virtual functions are pure within ‘eeb::SS::Problem’:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_search.h:8:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:6,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/Search/Problem.h:18:22: note: 	virtual bool ai::Search::Problem::GoalTest(const ai::Search::State*) const
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/Search/Problem.h:19:22: note: 	virtual bool ai::Search::Problem::FindSuccessors(const ai::Search::State*, std::vector<ai::Search::ActionStatePair>&) const
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/Search/Problem.h:22:22: note: 	virtual double ai::Search::Problem::StepCost(const ai::Search::State*, const ai::Search::Action*, const ai::Search::State*) const
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:166:25: error: expected ‘;’ before ‘}’ token
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: error: no match for ‘operator<<’ in ‘std::cout << *(const eeb::SS::Action*)action’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note: candidates are:
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:106:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:106:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.7/ostream:115:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+/usr/include/c++/4.7/ostream:115:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.7/ostream:125:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:125:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.7/ostream:164:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:164:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘long int’
+/usr/include/c++/4.7/ostream:168:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:168:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘long unsigned int’
+/usr/include/c++/4.7/ostream:172:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:172:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘bool’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/ostream.tcc:93:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:93:5: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘short int’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:179:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:179:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/ostream.tcc:107:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:107:5: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘int’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:190:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:190:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘unsigned int’
+/usr/include/c++/4.7/ostream:199:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:199:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘long long int’
+/usr/include/c++/4.7/ostream:203:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:203:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘long long unsigned int’
+/usr/include/c++/4.7/ostream:218:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:218:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘double’
+/usr/include/c++/4.7/ostream:222:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:222:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘float’
+/usr/include/c++/4.7/ostream:230:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:230:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘long double’
+/usr/include/c++/4.7/ostream:243:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:243:7: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘const void*’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/ostream.tcc:121:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:121:5: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/valarray:1164:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const _Tp&, const std::valarray<_Tp>&)
+/usr/include/c++/4.7/valarray:1164:1: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘const eeb::SS::Action’ is not derived from ‘const std::valarray<_Tp>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/valarray:1164:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const _Tp&)
+/usr/include/c++/4.7/valarray:1164:1: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<_Tp>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/valarray:1164:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+/usr/include/c++/4.7/valarray:1164:1: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<_Tp>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<typename _Dom::value_type>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘const eeb::SS::Action’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:237:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+/usr/include/c++/4.7/iomanip:237:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘std::_Setw’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:207:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+/usr/include/c++/4.7/iomanip:207:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘std::_Setprecision’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:177:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+/usr/include/c++/4.7/iomanip:177:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘eeb::SS::Action’ is not derived from ‘std::_Setfill<_CharT>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:142:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+/usr/include/c++/4.7/iomanip:142:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘std::_Setbase’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:108:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+/usr/include/c++/4.7/iomanip:108:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘std::_Setiosflags’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:78:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+/usr/include/c++/4.7/iomanip:78:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘std::_Resetiosflags’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:546:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+/usr/include/c++/4.7/ostream:546:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘const unsigned char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:541:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+/usr/include/c++/4.7/ostream:541:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘const signed char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+/usr/include/c++/4.7/ostream:528:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘const char*’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+/usr/include/c++/4.7/bits/ostream.tcc:323:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘const char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:511:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+/usr/include/c++/4.7/ostream:511:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   mismatched types ‘const _CharT*’ and ‘eeb::SS::Action’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:491:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+/usr/include/c++/4.7/ostream:491:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘unsigned char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:486:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+/usr/include/c++/4.7/ostream:486:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘signed char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:480:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+/usr/include/c++/4.7/ostream:480:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:474:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+/usr/include/c++/4.7/ostream:474:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   cannot convert ‘*(const eeb::SS::Action*)action’ (type ‘const eeb::SS::Action’) to type ‘char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:469:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+/usr/include/c++/4.7/ostream:469:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘eeb::SS::Action’)
+In file included from /usr/include/c++/4.7/string:54:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/basic_string.h:2750:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+/usr/include/c++/4.7/bits/basic_string.h:2750:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:181:19: note:   ‘const eeb::SS::Action’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:34:17: note: std::ostream& eeb::SS::operator<<(std::ostream&, eeb::SS::State&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:34:17: note:   no known conversion for argument 2 from ‘const eeb::SS::Action’ to ‘eeb::SS::State&’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:6:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:32:17: note: std::ostream& eeb::SS::operator<<(std::ostream&, eeb::SS::Action&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:32:17: note:   no known conversion for argument 2 from ‘const eeb::SS::Action’ to ‘eeb::SS::Action&’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:71:17: note: std::ostream& eeb::SS::operator<<(std::ostream&, eeb::SS::Model&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:71:17: note:   no known conversion for argument 2 from ‘const eeb::SS::Action’ to ‘eeb::SS::Model&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:33:17: note: std::ostream& eeb::SS::operator<<(std::ostream&, const eeb::SS::Cell&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:33:17: note:   no known conversion for argument 2 from ‘const eeb::SS::Action’ to ‘const eeb::SS::Cell&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: error: no match for ‘operator<<’ in ‘std::cout << *(const eeb::SS::State*)state’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note: candidates are:
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:106:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:106:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.7/ostream:115:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+/usr/include/c++/4.7/ostream:115:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.7/ostream:125:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:125:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.7/ostream:164:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:164:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘long int’
+/usr/include/c++/4.7/ostream:168:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:168:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘long unsigned int’
+/usr/include/c++/4.7/ostream:172:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:172:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘bool’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/ostream.tcc:93:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:93:5: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘short int’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:179:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:179:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/ostream.tcc:107:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:107:5: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘int’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:190:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:190:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘unsigned int’
+/usr/include/c++/4.7/ostream:199:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:199:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘long long int’
+/usr/include/c++/4.7/ostream:203:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:203:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘long long unsigned int’
+/usr/include/c++/4.7/ostream:218:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:218:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘double’
+/usr/include/c++/4.7/ostream:222:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:222:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘float’
+/usr/include/c++/4.7/ostream:230:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:230:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘long double’
+/usr/include/c++/4.7/ostream:243:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:243:7: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘const void*’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/ostream.tcc:121:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:121:5: note:   no known conversion for argument 1 from ‘const eeb::SS::State’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/valarray:1164:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const _Tp&, const std::valarray<_Tp>&)
+/usr/include/c++/4.7/valarray:1164:1: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘const eeb::SS::State’ is not derived from ‘const std::valarray<_Tp>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/valarray:1164:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const _Tp&)
+/usr/include/c++/4.7/valarray:1164:1: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<_Tp>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/valarray:1164:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+/usr/include/c++/4.7/valarray:1164:1: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<_Tp>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<typename _Dom::value_type>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘const eeb::SS::State’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+In file included from /usr/include/c++/4.7/valarray:589:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/detail/get_data.hpp:24,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/serialization/vector.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+/usr/include/c++/4.7/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:237:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+/usr/include/c++/4.7/iomanip:237:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘std::_Setw’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:207:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+/usr/include/c++/4.7/iomanip:207:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘std::_Setprecision’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:177:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+/usr/include/c++/4.7/iomanip:177:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘eeb::SS::State’ is not derived from ‘std::_Setfill<_CharT>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:142:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+/usr/include/c++/4.7/iomanip:142:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘std::_Setbase’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:108:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+/usr/include/c++/4.7/iomanip:108:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘std::_Setiosflags’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/basic_text_oprimitive.hpp:27:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/boost/archive/text_oarchive.hpp:30,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_boost.h:5,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:11,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/iomanip:78:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+/usr/include/c++/4.7/iomanip:78:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘std::_Resetiosflags’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:546:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+/usr/include/c++/4.7/ostream:546:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘const unsigned char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:541:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+/usr/include/c++/4.7/ostream:541:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘const signed char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+/usr/include/c++/4.7/ostream:528:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘const char*’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+/usr/include/c++/4.7/bits/ostream.tcc:323:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘const char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:511:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+/usr/include/c++/4.7/ostream:511:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   mismatched types ‘const _CharT*’ and ‘eeb::SS::State’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:491:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+/usr/include/c++/4.7/ostream:491:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘unsigned char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:486:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+/usr/include/c++/4.7/ostream:486:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘signed char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:480:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+/usr/include/c++/4.7/ostream:480:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:474:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+/usr/include/c++/4.7/ostream:474:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   cannot convert ‘*(const eeb::SS::State*)state’ (type ‘const eeb::SS::State’) to type ‘char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_agent.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_xy.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:8,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ostream:469:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+/usr/include/c++/4.7/ostream:469:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘eeb::SS::State’)
+In file included from /usr/include/c++/4.7/string:54:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/bits/basic_string.h:2750:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+/usr/include/c++/4.7/bits/basic_string.h:2750:5: note:   template argument deduction/substitution failed:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:187:19: note:   ‘const eeb::SS::State’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzproblem.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:4:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:34:17: note: std::ostream& eeb::SS::operator<<(std::ostream&, eeb::SS::State&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzstate.h:34:17: note:   no known conversion for argument 2 from ‘const eeb::SS::State’ to ‘eeb::SS::State&’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:6:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:32:17: note: std::ostream& eeb::SS::operator<<(std::ostream&, eeb::SS::Action&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:32:17: note:   no known conversion for argument 2 from ‘const eeb::SS::State’ to ‘eeb::SS::Action&’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:71:17: note: std::ostream& eeb::SS::operator<<(std::ostream&, eeb::SS::Model&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:71:17: note:   no known conversion for argument 2 from ‘const eeb::SS::State’ to ‘eeb::SS::Model&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:33:17: note: std::ostream& eeb::SS::operator<<(std::ostream&, const eeb::SS::Cell&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:33:17: note:   no known conversion for argument 2 from ‘const eeb::SS::State’ to ‘const eeb::SS::Cell&’
+In file included from /usr/include/x86_64-linux-gnu/c++/4.7/./bits/c++allocator.h:34:0,
+                 from /usr/include/c++/4.7/bits/allocator.h:48,
+                 from /usr/include/c++/4.7/string:43,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai/include/ai_scavenger.h:4,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:3,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/usr/include/c++/4.7/ext/new_allocator.h: In instantiation of ‘void __gnu_cxx::new_allocator<_Tp>::construct(__gnu_cxx::new_allocator<_Tp>::pointer, const _Tp&) [with _Tp = eeb::SS::Action; __gnu_cxx::new_allocator<_Tp>::pointer = eeb::SS::Action*]’:
+/usr/include/c++/4.7/bits/stl_list.h:485:6:   required from ‘std::list<_Tp, _Alloc>::_Node* std::list<_Tp, _Alloc>::_M_create_node(const value_type&) [with _Tp = eeb::SS::Action; _Alloc = std::allocator<eeb::SS::Action>; std::list<_Tp, _Alloc>::_Node = std::_List_node<eeb::SS::Action>; std::list<_Tp, _Alloc>::value_type = eeb::SS::Action]’
+/usr/include/c++/4.7/bits/stl_list.h:1525:42:   required from ‘void std::list<_Tp, _Alloc>::_M_insert(std::list<_Tp, _Alloc>::iterator, const value_type&) [with _Tp = eeb::SS::Action; _Alloc = std::allocator<eeb::SS::Action>; std::list<_Tp, _Alloc>::iterator = std::_List_iterator<eeb::SS::Action>; std::list<_Tp, _Alloc>::value_type = eeb::SS::Action]’
+/usr/include/c++/4.7/bits/stl_list.h:997:9:   required from ‘void std::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = eeb::SS::Action; _Alloc = std::allocator<eeb::SS::Action>; std::list<_Tp, _Alloc>::value_type = eeb::SS::Action]’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:182:43:   required from here
+/usr/include/c++/4.7/ext/new_allocator.h:120:9: error: no matching function for call to ‘eeb::SS::Action::Action(const eeb::SS::Action&)’
+/usr/include/c++/4.7/ext/new_allocator.h:120:9: note: candidates are:
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:6:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.cpp:3:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:17:4: note: eeb::SS::Action::Action(eeb::SS::Action&)
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:17:4: note:   no known conversion for argument 1 from ‘const eeb::SS::Action’ to ‘eeb::SS::Action&’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:16:4: note: eeb::SS::Action::Action()
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:16:4: note:   candidate expects 0 arguments, 1 provided
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:6:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:22: error: declaration of ‘operator=’ as non-function
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:20: error: expected ‘;’ at end of member declaration
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:19:30: error: expected ‘)’ before ‘&’ token
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:11: error: conflicting declaration ‘I_MIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:4: error: ‘eeb::SS::I_MIN’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_MIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:21: error: conflicting declaration ‘I_CLIFF’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:13: error: ‘eeb::SS::I_CLIFF’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_CLIFF’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:29: error: conflicting declaration ‘I_MUD’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:23: error: ‘eeb::SS::I_MUD’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_MUD’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:39: error: conflicting declaration ‘I_PLAIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:31: error: ‘eeb::SS::I_PLAIN’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_PLAIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:49: error: conflicting declaration ‘I_ROCKS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:41: error: ‘eeb::SS::I_ROCKS’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_ROCKS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:58: error: conflicting declaration ‘I_WALL’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:51: error: ‘eeb::SS::I_WALL’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_WALL’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:66: error: conflicting declaration ‘I_ICE’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:60: error: ‘eeb::SS::I_ICE’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_ICE’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:74: error: conflicting declaration ‘I_MAX’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:68: error: ‘eeb::SS::I_MAX’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_MAX’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:12:76: error: conflicting declaration ‘I_OUT_OF_BOUNDS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:12:76: error: ‘eeb::SS::I_OUT_OF_BOUNDS’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::I_OUT_OF_BOUNDS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:15:11: error: conflicting declaration ‘D_MIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:15:4: error: ‘eeb::SS::D_MIN’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::D_MIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:15:21: error: conflicting declaration ‘D_NORTH’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:15:13: error: ‘eeb::SS::D_NORTH’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::D_NORTH’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:15:31: error: conflicting declaration ‘D_SOUTH’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:15:23: error: ‘eeb::SS::D_SOUTH’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::D_SOUTH’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:15:40: error: conflicting declaration ‘D_EAST’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:15:33: error: ‘eeb::SS::D_EAST’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::D_EAST’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:15:49: error: conflicting declaration ‘D_WEST’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:15:42: error: ‘eeb::SS::D_WEST’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::D_WEST’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:15:57: error: conflicting declaration ‘D_MAX’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:15:51: error: ‘eeb::SS::D_MAX’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::D_MAX’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:15:59: error: conflicting declaration ‘D_OUT_OF_BOUNDS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:15:59: error: ‘eeb::SS::D_OUT_OF_BOUNDS’ has a previous declaration as ‘eeb::SS::<anonymous enum> eeb::SS::D_OUT_OF_BOUNDS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:17:9: error: redefinition of ‘class eeb::SS::Cell’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:17:9: error: previous definition of ‘class eeb::SS::Cell’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebmodel.h:41:9: error: redefinition of ‘class eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:5:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmodel.h:35:9: error: previous definition of ‘class eeb::SS::Model’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:6:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebaction.h:9:9: error: redefinition of ‘class eeb::SS::Action’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:6:0,
+                 from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzaction.h:9:9: error: previous definition of ‘class eeb::SS::Action’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:9:7: error: conflicting declaration ‘ALG_MIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:9:7: error: ‘eeb::ALG_MIN’ has a previous declaration as ‘eeb::<anonymous enum> eeb::ALG_MIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:9:15: error: conflicting declaration ‘ALG_TREE’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:9:15: error: ‘eeb::ALG_TREE’ has a previous declaration as ‘eeb::<anonymous enum> eeb::ALG_TREE’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:9:24: error: conflicting declaration ‘ALG_GRAPH’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:9:24: error: ‘eeb::ALG_GRAPH’ has a previous declaration as ‘eeb::<anonymous enum> eeb::ALG_GRAPH’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:9:34: error: conflicting declaration ‘ALG_MAX’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:9:34: error: ‘eeb::ALG_MAX’ has a previous declaration as ‘eeb::<anonymous enum> eeb::ALG_MAX’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:10:7: error: conflicting declaration ‘FRINGE_MIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:10:7: error: ‘eeb::FRINGE_MIN’ has a previous declaration as ‘eeb::<anonymous enum> eeb::FRINGE_MIN’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:10:18: error: conflicting declaration ‘FRINGE_BFS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:10:18: error: ‘eeb::FRINGE_BFS’ has a previous declaration as ‘eeb::<anonymous enum> eeb::FRINGE_BFS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:10:29: error: conflicting declaration ‘FRINGE_UCS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:10:29: error: ‘eeb::FRINGE_UCS’ has a previous declaration as ‘eeb::<anonymous enum> eeb::FRINGE_UCS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:10:40: error: conflicting declaration ‘FRINGE_DFS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:10:40: error: ‘eeb::FRINGE_DFS’ has a previous declaration as ‘eeb::<anonymous enum> eeb::FRINGE_DFS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:10:51: error: conflicting declaration ‘FRINGE_DLS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:10:51: error: ‘eeb::FRINGE_DLS’ has a previous declaration as ‘eeb::<anonymous enum> eeb::FRINGE_DLS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:10:62: error: conflicting declaration ‘FRINGE_IDS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:10:62: error: ‘eeb::FRINGE_IDS’ has a previous declaration as ‘eeb::<anonymous enum> eeb::FRINGE_IDS’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:8:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebgyarados.h:10:73: error: conflicting declaration ‘FRINGE_MAX’
+In file included from /net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:7:0:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/eebzmagikarp.h:10:73: error: ‘eeb::FRINGE_MAX’ has a previous declaration as ‘eeb::<anonymous enum> eeb::FRINGE_MAX’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp: In function ‘ai::Agent::AgentProgram* ai::Agent::AgentProgramSelect(ai::Agent::Options*)’:
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:29:31: error: expected type-specifier
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:29:31: error: cannot convert ‘int*’ to ‘ai::Agent::AgentProgram*’ in assignment
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:29:31: error: expected ‘;’
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:32:31: error: expected type-specifier
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:32:31: error: cannot convert ‘int*’ to ‘ai::Agent::AgentProgram*’ in assignment
+/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/prog/ScavengerWorld/AgentProgramSelect.cpp:32:31: error: expected ‘;’
+make[3]: *** [00obj-o/eebzmagikarp.o] Error 1
+make[3]: *** [00obj-o/AgentProgramSelect.o] Error 1
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/ScavengerWorld'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+for d in WumpusAgent; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/WumpusWorld'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+for d in PL_Test PL_Shell PL_Dragons PL_Dragons_2012; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/PLTest'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/FOLTest'
+for d in FOL_Test; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/FOLTest'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/FOLTest'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/FOLTest'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+for d in Rectangle RectangleSolver; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Rectangle'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Candy'
+for d in CandyAgent; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Candy'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Candy'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Candy'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/CCheckers'
+for d in CA_Test; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/CCheckers'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/CCheckers'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/CCheckers'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/TicTacToe'
+for d in TicTacToeAgent; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/TicTacToe'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/TicTacToe'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/TicTacToe'
+make[2]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Mancala'
+for d in MancalaAgent; do \
+		make -f Makefile.$d install ; \
+	done
+make[3]: Entering directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Mancala'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Mancala'
+make[2]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog/Mancala'
+make[1]: Leaving directory `/net/144.38.192.86/data/home/e/ebeilmann/Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux/prog'
