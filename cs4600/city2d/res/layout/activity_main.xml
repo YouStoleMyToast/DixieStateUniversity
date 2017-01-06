@@ -1,0 +1,25 @@
+<RelativeLayout android:id="@+id/rellay" xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="match_parent" android:gravity="top" android:orientation="vertical" >
+    
+    <TableRow android:id="@+id/action_row" android:layout_width="match_parent" android:layout_height="60dp" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" 
+        android:layout_marginBottom="15dp" android:drawablePadding="5dp" android:gravity="bottom" >
+        
+        <Button android:id="@+id/river_button" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="3dp"
+            android:drawableRight="@drawable/black_river" android:background="@drawable/button" android:gravity="bottom"/> 
+        <Button android:id="@+id/ocean_button" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="3dp"
+            android:drawableRight="@drawable/black_ocean" android:background="@drawable/button" android:gravity="bottom"/> 
+        <Button android:id="@+id/pasture_button" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="3dp"
+            android:drawableRight="@drawable/black_pasture" android:background="@drawable/button" android:gravity="bottom"/> 
+        <Button android:id="@+id/forest_button" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="3dp"
+            android:drawableRight="@drawable/black_forest" android:background="@drawable/button" android:gravity="bottom"/>   
+        <Button android:id="@+id/town_button" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="3dp"
+            android:drawableRight="@drawable/black_town" android:background="@drawable/button" android:gravity="bottom"/> 
+        <Button android:id="@+id/city_button" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="3dp"
+            android:drawableRight="@drawable/black_city" android:background="@drawable/button" android:gravity="bottom"/> 
+        
+        <Button android:id="@+id/money_count" android:layout_width="150dp" android:layout_height="60dp" android:layout_margin="3dp"
+            android:drawableLeft="@drawable/ore" android:background="@drawable/button" android:gravity="bottom"
+            android:text="@string/money_count_text"
+            /> 
+        
+    </TableRow>
+</RelativeLayout>

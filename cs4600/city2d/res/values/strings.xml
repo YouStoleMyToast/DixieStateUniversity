@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">city2d</string>
+    <string name="action_settings">Settings</string>
+	<string name="money_count_text">0</string>
+
+	<string name="splash_text">CITYSCAPE</string>
+	
+	<string name="river_job_toast">You get fish from the river</string>
+	<string name="ocean_job_toast">You get fish from the ocean</string>
+	<string name="pasture_job_toast">You let sheperds feed their sheep for a small fee</string>
+	<string name="forest_job_toast">You make money from your lumber production</string>
+	<string name="town_job_toast">You start collecting taxes from your town</string>
+	<string name="city_job_toast">You start collecting taxes from your city</string>
+	
+	<string name="tile_buy_toast">You Buy A Tile</string>
+	<string name="tile_buy_fail_toast">You Do Not Have Enough Money</string>
+	<string name="tile_wrong_buy_toast">You Can Not Get That Yet</string>
+	
+	<string name="river_button_buy_toast">You decide to put in a river</string>
+	<string name="ocean_button_buy_toast">You decide to put in an ocean</string>
+	<string name="pasture_button_buy_toast">You Decide To Clear A Pasture, Pick An Available Tile</string>
+	<string name="forest_button_buy_toast">You Buy Seeds For A Forest, Plant It On An Available Tile</string>
+	<string name="town_button_buy_toast">You Buy A Town, Place It On An Available Tile</string>
+	<string name="city_button_buy_toast">You Buy A City, Place It On An Available Tile</string>
+	<string name="buy_fail_toast">You Can Not Afford That</string>
+
+	<string name="river_placement_toast">You Place Your river</string>
+	<string name="ocean_placement_toast">You Place Your ocean</string>
+	<string name="pasture_placement_toast">You Place Your Pasture</string>
+	<string name="forest_placement_toast">You Place Your Forest</string>
+	<string name="town_placement_toast">You Place Your Town</string>
+	<string name="city_placement_toast">You Place Your City</string>
+	
+	<string name="dialog_test">Push the button Max</string>
+	
+	<string name="forest">forest</string>
+</resources>
