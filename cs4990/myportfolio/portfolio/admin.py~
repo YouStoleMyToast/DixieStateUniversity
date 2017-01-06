@@ -1,0 +1,12 @@
+from django.contrib import admin
+from portfolio.models import CaseStudy
+
+class CaseStudyAdmin(admin.ModelAdmin):
+    search_fields = ['title', 'description']
+    list_display = ('title', 'description', )
+
+class ComentAdmin(admin.ModelAdmin):
+	list_display = ('message','author','pub_date')
+	
+admin.site.register(CaseStudy, CaseStudyAdmin)
+

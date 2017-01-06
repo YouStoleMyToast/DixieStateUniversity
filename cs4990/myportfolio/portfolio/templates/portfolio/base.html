@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/portfolio.css' %}" />
+<title>{% block title %}Welcom to my portfolio{% endblock %}</title>
+{% block extrascripts %}{% endblock %}
+</head>
+
+<body>
+<h1>My Portfolio 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eric Beilmann</h1>
+	
+{% block content %}
+
+{% endblock %}
+</body>
+
+</html>
+
+

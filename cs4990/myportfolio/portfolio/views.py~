@@ -1,0 +1,114 @@
+# Create your views here.
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
+from django.core.urlresolvers import reverse
+from django.core import serializers
+
+from portfolio.models import CaseStudy
+from portfolio.forms import ComentForm
+
+def index(request):
+    studies = CaseStudy.objects.all()
+    context = {'studies' : studies}
+    return render(request, 'portfolio/index.html', context)
+
+def comment(request, study_id):
+    study = get_object_or_404(CaseStudy, pk=study_id)
+    context={'study':study}
+    return render(request, 'portfolio/comment_success.html',context)
+    
+    
+    
+def detail(request, study_id):
+    study = get_object_or_404(CaseStudy, pk=study_id)
+    
+    if request.method=='POST':
+    	comment_form=CommentForm(request.POST)
+    	if comment_form.is_valid():
+    		cd=comment_form.cleaned_data
+    		c=Comment(message=cd.get('message'), author=cd.get('author'), casestudy=study)
+    		c.save()
+    		return HttpResponseRedirect(reverse('portfolio:detail'), args=(study_id))
+    		
+    	else:
+    		context={
+    			'study':study,
+    			'form':comment_form,
+    			'error':'error with your form, fix it',
+    		}
+    		return render(request, 'portfolio/detail.html',context)
+
+    #comment_form=ComentForm(initial={'author':'john doe','message':'your message here'})
+	context={'study' : study, 'form' : comment_form}
+    return render(request, 'portfolio/detail.html', context)
+
+def detail_ajx(request, study_id):
+    study = get_object_or_404(CaseStudy, pk=study_id)
+    
+    if request.method=='POST':
+    	comment_form=CommentForm(request.POST)
+    	if comment_form.is_valid():
+    		cd=comment_form.cleaned_data
+    		
+    		c=Comment(message=cd.get('message'), author=cd.get('author'), casestudy=study)
+    		c.save()
+
+    		return HttpResponseRedirect(reverse('portfolio:detail'), args=(study_id))
+
+    	else:
+    		context={'study':study,'form':comment_form,'error':'error with your form, fix it'}
+    		return render(request, 'portfolio/detail_ajax.html',context)
+    
+    #comment_form=ComentForm(initial={'author':'john doe','message':'your message here'}
+    context = {
+    	'study' : study, 
+    	'form' : comment_form,
+    	}
+    
+    
+    return render(request, 'portfolio/detail_ajax.html', context)
+
+def get_comments_ajax(request, study_id):
+	study = get_object_or_404(CaseStudy, pk=study_id)
+	comments=serializers.serialize('json',Comment.objects.filter(casestudy=study), fields="message","author","date")
+	return HttpResponse(comments)
+
+
+def category_add(request):
+	messages=""
+	if request.method=='POST':
+		category_form=CategoryForm(request.POST)
+		if category_form.is_valid(): #shortcut for bellow: djengos get_or_create
+			cd=category_form.clean_data #cd=clean data #cd is now a dictionary of items from his form
+			#if not Category.objects.filter(name=cd.get('name')): #if catagory doesn't exist make a new one
+				#new_category=Category(name=cd.get('name'), description=cd.get('description'))
+				#new_category.save()
+			
+			#shortcut way
+			new_category, created=Category.objects.get_or_create(name=cd.get('name'), defaults={'description':cd.get('description'),})
+			if not created:
+				messages="that category allready exists."
+			else:
+				messages="Category saved."
+				new_category.save()
+				
+			context={
+				'form'
+			}
+	else:		
+		category_form=CategoryForm()
+	context={
+		'form':category_form,
+		'messages':messages,
+	}
+	return render(request, 'inventory/category_add.html',)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

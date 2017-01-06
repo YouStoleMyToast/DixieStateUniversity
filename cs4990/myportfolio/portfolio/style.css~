@@ -1,0 +1,106 @@
+html{
+    background:#dffdca;
+}
+
+title{
+
+}
+
+body{ 
+    margin-top:75px;
+    margin-right:150px;
+    margin-bottom:75px;
+    margin-left:150px;
+    background:#b2f7b2;
+    background-image:url("images/brushedsteel.jpg");
+
+    padding:50px;
+    font-family:arial;
+    font-weight:500;
+    font-size:20px;
+    color:black;
+    text-align:center;
+    text-style:justify;
+    border-style:solid;
+    border-width:5px;
+    border-color:#305d7b;
+
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+input{
+    margin-top:20px;
+    width:100px;
+}
+
+li{
+    
+    list-style:none;
+    margin-top:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+    margin-left:10px;
+    
+}
+
+h1{
+    font-family:arial;
+    margin-left:20px;
+    letter-spacing:3px;
+    font-weight:500;
+    font-size:30px;
+    color:#790000;
+}
+
+h2{
+    font-family:arial;
+    font-weight:500;
+    font-size:25px;
+    color:#790000;
+}
+
+table{
+    width:80%;
+    margin:10px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#790000;
+
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+td{
+    border-style:solid;
+    border-width:1px;
+    border-color:#790000;
+    text-align:center;
+}
+
+tr{
+    border-style:solid;
+    border-width:1px;
+    border-color:#790000;
+    text-align:center;
+}
+
+a:link{
+    color:#790000;
+}
+
+a:visited{
+    color:#790000;
+}
+
+a:hover{
+    color:#790000;
+}
+
+a:active {
+    color:#790000;
+}

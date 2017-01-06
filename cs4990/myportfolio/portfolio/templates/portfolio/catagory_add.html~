@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Add A new Category{% endblock %}
+
+{% block content%}
+
+{% if messages %}
+<h1>Add a new catagory</h1>
+<form method="POST" action="." id="new-category-form">
+<table class="table">
+{% csrf_token %}
+{{ form }}
+
+

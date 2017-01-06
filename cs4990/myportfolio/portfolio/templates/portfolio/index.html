@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+{% load staticfiles %}
+{% load portfolio_tags %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/portfolio.css' %}" />
+
+{% block title %}{% endblock %}
+
+{% block content %}
+	<table><tr>
+	{% for study in studies %}
+		<td>
+			<div id=pic>
+			<img src="{{ MEDIA_URL }}{{ study.picture }}" height="100" width="120">
+			</div>
+			<div id=job><h2><a href="{% url 'portfolio:detail' study.id %}">{{ study.title }}</a></h2></div>
+			<div id=desc><p>{{ study.description|slice:":250" }}...</p></div>
+		</td>
+		{% if forloop.last %}
+			</tr>
+		{% else %}
+			{% if forloop.counter|divisibleby:"3" %}
+				</tr><tr>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+	</table>
+{% endblock %}

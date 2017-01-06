@@ -1,0 +1,16 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+    {% if study %}
+    <h3>{{ study.title }}</h3>
+    <img src="{{ MEDIA_URL }}{{ study.picture }}" height="300" width="400"><br/>
+    <p>{{ study.description|safe }}</p>
+    {% else %}
+    <p>No studies here, bud.</p>
+    {% endif %}
+    
+
+	
+{% endblock %}
+
