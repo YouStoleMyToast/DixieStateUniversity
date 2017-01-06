@@ -1,0 +1,10 @@
+<li class="pin">
+    <img src="{{ MEDIA_URL }}{{ pin.image }}" class="pin-image">
+    <hr>
+        <span class="board-name"><a href="">{{ board.name }}</a></span>
+    </div>
+    <div style="clear: both;"></div>
+</li>
+
+
+

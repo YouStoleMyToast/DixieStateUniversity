@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Create Board{% endblock %}
+
+{% block content %}
+<h1 id="pin-top">Latest Pins</h1>
+{% if pins %}
+<ul id="pin-list-head">
+    {% include page_template %}
+</ul>
+{% else %}
+<p>No pins have been uploaded. Sorry.</p>
+{% endif %}
+{% endblock %}

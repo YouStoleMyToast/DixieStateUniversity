@@ -1,0 +1,42 @@
+{% load staticfiles %}
+{% load gravatar %}
+
+{% block content %}
+	{% for pin in pins %}
+		{% if pin.is_public %}
+			<li class="pin">
+				<a href="{% url 'jigsaw:pindetails' pin.id %}"><img src="{{ MEDIA_URL }}{{ pin.image }}" class="pin-image" alt="error"></a>
+				<hr>
+				<div>
+					<span class="user">Pinned by: {{pin.created_by.username }}</span><br/>
+					<span class="user">{% gravatar_img_for_user pin.created_by pin.created_by.username %}</span><br/>
+					<span class="user">{{ pin.pub_date }}</span><br/>
+					<span class="board-name">{{ pin.board.name }}</span>
+				</div>
+				{{ pin.description|linebreaks }}
+				{% if pin.comment_set.all %}
+					<hr>
+					{% for comment in pin.comment_set.all %}
+						<p><span class="user">{{ comment.user }} says:</span></p>
+						<div style="width:200px;">
+							<p>{{ comment.comment|linebreaksbr }}</p>
+						</div>
+						{% if user.is_authenticated %}
+							{% if user == comment.user %}
+								<p>
+								<a href="{% url 'jigsaw:commentdelete' comment.id %}">Delete</a>
+								&nbsp;&nbsp;
+								<a href="{% url 'jigsaw:commentedit' comment.id %}">Edit</a>
+							{% endif %}
+						{% endif %}
+						<hr>
+					{% endfor %}
+				{% endif %}
+				<p><a href="{% url 'jigsaw:repin' pin.id %}">Add to your boards</a>
+				<p><a href="{% url 'jigsaw:commentcreate' pin.id %}">Create A Comment</a>
+				<div style="clear: both;"></div>
+			</li>
+		{% endif %}
+	{% endfor %}
+{% endblock content %}
+

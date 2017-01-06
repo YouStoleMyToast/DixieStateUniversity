@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="input">
+<h1>Delete {{board.name}}</h1>
+<form action="." method="post">
+	{% csrf_token %}
+	<p>Are you sure you want to delete "{{ board.name }}"?</p>
+	<input type="submit" value="Confirm" />
+</form>
+</div>
+{% endblock %}

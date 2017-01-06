@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load gravatar %}
+
+{% block title %}Jigsaw Main Page{% endblock %}
+
+{% block extrascripts %}
+	<script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+	<script>
+	$(window).load(function() {
+		var $container = $('#pin-list-head');
+		$container.masonry({
+		    itemSelector: '.pin'
+		}).imagesLoaded(function() {
+			$('#content').masonry('reload');
+		});
+	});
+	</script>
+
+	<style type="text/css">
+	.pin {
+		float: left;
+		list-style-type: none;
+		width: 200px;
+		border: 1px solid #ccc;
+		box-shadow: 0px 5px 5px 2px #ccc;
+		margin: 10px;
+		padding: 5px;
+	}
+	.pin:hover {
+		border: 1px solid black;
+	}
+	.pin-image {
+		width:190px;
+		text-align: center;
+	}
+	.user {
+		font-weight: bold;
+	}
+	.board-name {
+		color: #ccc;
+	}
+	</style>
+{% endblock extrascripts %}
+
+{% block content %}
+	<h1 id="pin-top">Your Pins</h1>
+	<a href="{% url 'jigsaw:pincreate' pin.id %}">Create Pin</a>
+	{% if pins %}
+	<ul id="pin-list-head">
+		{% include page_template %}
+	</ul>
+	{% else %}
+	<p>No pins have been created.</p>
+	{% endif %}
+{% endblock content %}

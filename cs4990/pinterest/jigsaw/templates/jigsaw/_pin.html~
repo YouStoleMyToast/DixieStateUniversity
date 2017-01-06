@@ -1,0 +1,18 @@
+<li class="pin">
+    <img src="{{ MEDIA_URL }}{{ pin.image }}" class="pin-image">
+    <hr>
+    <div>
+        By <span class="user">{{ pin.created_by.username }}</span>{{ pin.pub_date }}<br/>
+        <span class="board-name">{{ pin.board.name }}</span>
+    </div>
+    {{ pin.description|linebreaks }}
+    {% if pin.comment_set.all %}
+        <hr>
+        {% for comment in pin.comment_set %}
+        <span class="user">{{ comment.user }}</span> said:<br/>
+        {{ comment.comment|linebreaksbr }}
+        {% endfor %}
+    {% endif %}
+    <div style="clear: both;"></div>
+</li>
+

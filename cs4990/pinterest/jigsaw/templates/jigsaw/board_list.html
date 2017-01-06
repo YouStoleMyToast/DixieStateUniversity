@@ -1,0 +1,20 @@
+{% load staticfiles %}
+{% load gravatar %}
+
+{% block content %}
+	{% for board in boards %}
+		<li class="pin">
+			<div>
+				<p><span class="user"><a href="{% url 'jigsaw:pins' board.id %}">{{ board.name }}</a></span>
+				{% if user.is_authenticated %}
+					{% if user == board.created_by %}
+						<form method="post" action=".">
+							<p><span class="board-name"><a href="{% url 'jigsaw:boarddelete' board.id %}">Delete</a></span>
+						</form>
+					{% endif %}
+				{% endif %}
+			</div>
+			<div style="clear: both;"></div>
+		</li>
+	{% endfor %}
+{% endblock content %}

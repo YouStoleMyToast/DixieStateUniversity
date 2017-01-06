@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load gravatar %}
+
+{% block title %}Create Comment{% endblock %}
+
+{% block content %}
+<form method="POST" action=".">
+{% csrf_token %}
+<table>
+	<tr><th>Create A Comment</th></tr>
+	<tr hidden><td>{{form.user}}</td></tr>
+	<tr hidden><td>{{form.pin}}</td></tr>
+	<tr><td>{{form.comment}}</td></tr>
+	<tr><td><button class="btn btn-info">Create</td></tr>
+</table>
+</form>
+{% endblock content %}
