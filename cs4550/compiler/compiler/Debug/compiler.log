@@ -1,0 +1,40 @@
+﻿Build started 4/28/2014 3:08:51 PM.
+     1>Project "U:\Desktop\sem7spr2014\cs4550\compiler\compiler\compiler.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\compiler.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\compiler.exe.embed.manifest.res" Debug\compiler_manifest.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"U:\Desktop\sem7spr2014\cs4550\compiler\Debug\compiler.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\compiler.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"U:\Desktop\sem7spr2014\cs4550\compiler\Debug\compiler.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"U:\Desktop\sem7spr2014\cs4550\compiler\Debug\compiler.lib" /MACHINE:X86 Debug\compiler.exe.embed.manifest.res
+         Debug\instructions_starter.obj
+         Debug\main.obj
+         Debug\node.obj
+         Debug\parser.obj
+         Debug\scanner.obj
+         Debug\statemachine.obj
+         Debug\symbol.obj
+         Debug\token.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\compiler.exe.embed.manifest" /manifest Debug\compiler.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\compiler.exe.embed.manifest.res" Debug\compiler_manifest.rc 
+       LinkEmbedManifest:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"U:\Desktop\sem7spr2014\cs4550\compiler\Debug\compiler.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\compiler.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"U:\Desktop\sem7spr2014\cs4550\compiler\Debug\compiler.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"U:\Desktop\sem7spr2014\cs4550\compiler\Debug\compiler.lib" /MACHINE:X86 Debug\compiler.exe.embed.manifest.res
+         Debug\instructions_starter.obj
+         Debug\main.obj
+         Debug\node.obj
+         Debug\parser.obj
+         Debug\scanner.obj
+         Debug\statemachine.obj
+         Debug\symbol.obj
+         Debug\token.obj
+         compiler.vcxproj -> U:\Desktop\sem7spr2014\cs4550\compiler\Debug\compiler.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\compiler.unsuccessfulbuild".
+         Touching "Debug\compiler.lastbuildstate".
+     1>Done Building Project "U:\Desktop\sem7spr2014\cs4550\compiler\compiler\compiler.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.58

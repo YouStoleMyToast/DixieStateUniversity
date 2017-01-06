@@ -1,0 +1,114 @@
+////////////////////////////////////////////.cpp
+#include <cstdlib>
+using namespace std;
+#include "symbol.h"
+
+SymbolTableClass::SymbolTableClass(){vector <Symbol *> mSymbolvec;}
+SymbolTableClass::~SymbolTableClass(){}
+bool SymbolTableClass::Exists(string var)
+{
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		if(mSymbolvec[i]->mVariable==var) {return true;}
+	}
+	return false;
+}
+void SymbolTableClass::AddEntry(string var)
+{
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		if(mSymbolvec[i]->mVariable==var)
+		{
+			cerr<<"variable "<<var<<" already exist\n";
+			exit(1);
+			return;
+		}
+	}
+	int val=0;
+	int scp=0;
+	Symbol *sym=new Symbol(var,val,scp);
+	mSymbolvec.push_back(sym);
+	return;
+}
+
+
+int SymbolTableClass::GetValue(string var)
+{
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		if(mSymbolvec[i]->mVariable==var)
+		{
+			return mSymbolvec[i]->mValue;
+		}
+	}
+	cerr<<"variable "<<var<<" doesn't exist\n";
+	exit(1);
+}
+void SymbolTableClass::SetValue(string var, int val)
+{
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		if(mSymbolvec[i]->mVariable==var)
+		{
+			mSymbolvec[i]->mVariable=val;
+			return;
+		}
+	}
+	cerr<<"variable "<<var<<" doesn't exist\n";
+	exit(1);
+}
+int SymbolTableClass::GetIndex(string var)
+{
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		if(mSymbolvec[i]->mVariable==var)
+		{
+			return i;
+		}
+	}
+	cerr<<"variable "<<var<<" doesn't exist\n";
+	exit(1);
+}
+int SymbolTableClass::GetCount() {return mSymbolvec.size();}
+
+////////////////////////////////.h
+#pragma once
+
+#include <fstream>
+#include <iostream>
+#include <vector>
+#include <utility>
+#include <string>
+using namespace std;
+#include "debug.h"
+
+class Symbol
+{
+public:
+	Symbol(string mVariable, int mValue, int mScope);
+
+	string mVariable;
+	int mValue;
+	int mScope;
+};
+
+class SymbolTableClass
+{
+public:
+	SymbolTableClass();
+	~SymbolTableClass();
+	bool Exists(string mVariable);
+	void AddEntry(string mVariable);
+	Symbol GetSymbol(string mVariable); 
+
+
+	int GetValue(string mVariable);
+	void SetValue(string mVariable, int mValue);
+
+
+	int GetIndex(string mVariable);
+	int GetCount();
+
+private:
+	vector <Symbol *> mSymbolvec;
+};

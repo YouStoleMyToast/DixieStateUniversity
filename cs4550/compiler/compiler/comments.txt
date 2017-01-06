@@ -1,0 +1,10 @@
+void main()
+{
+	//commented line
+	int sum;
+	sum = 35 + 400;
+	cout << sum;
+	/*
+	commented Block
+	*/
+}

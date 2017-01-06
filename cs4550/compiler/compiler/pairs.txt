@@ -1,0 +1,103 @@
+kept because good example of using pairs(plus source control)
+////////////////////////////////////////symbol.h////////////////////////////////////////
+#pragma once
+
+#include <fstream>
+#include <iostream>
+#include <vector>
+#include <utility>
+#include <string>
+#include "debug.h"
+
+class SymbolTableClass
+{
+public:
+	bool Exists(std::string mVariable);
+	void AddEntry(std::string mVariable);
+
+	int GetValue(std::string s);
+	void SetValue(std::string s, int v);
+	int GetIndex(std::string s);
+
+
+	int GetCount();
+
+
+private:
+	std::vector<std::pair<std::string,int> > mSymbolvec;
+};
+
+
+////////////////////////////////////////symbol.cpp////////////////////////////////////////
+#include <cstdlib>
+#include "symbol.h"
+
+bool SymbolTableClass::Exists(std::string s)
+{
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		std::pair<std::string,int> couple;
+		couple=std::make_pair(mSymbolvec[i].first,mSymbolvec[i].second);
+		if(couple.first==s) {return true;}
+	}
+	return false;
+}
+void SymbolTableClass::AddEntry(std::string s)
+{
+	std::pair<std::string,int> couple;
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		couple=std::make_pair(mSymbolvec[i].first,mSymbolvec[i].second);
+		if(couple.first==s) 
+		{
+			std::cerr<<"variable "<<s<<" already exist\n";
+			exit(1);
+			return;
+		}
+	}
+	couple=std::make_pair(s,0);
+	mSymbolvec.push_back(couple);
+	return;
+}
+int SymbolTableClass::GetValue(std::string s)
+{
+	std::pair<std::string,int> couple;
+	for(unsigned int i=mSymbolvec.size();i>0;i--)
+	{
+		couple=std::make_pair(mSymbolvec[i].first,mSymbolvec[i].second);
+		if(couple.first==s) {return mSymbolvec[i].second;}
+	}
+	std::cerr<<"variable "<<s<<" doesn't exist\n";exit(1);
+}
+/*
+int SymbolTableClass::GetValue(std::string s)
+{
+	std::pair<std::string,int> couple;
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		couple=std::make_pair(mSymbolvec[i].first,mSymbolvec[i].second);
+		if(couple.first==s) {return mSymbolvec[i].second;}
+	}
+	std::cerr<<"variable "<<s<<" doesn't exist\n";exit(1);
+}*/
+void SymbolTableClass::SetValue(std::string s, int v)
+{
+	std::pair<std::string,int> couple;
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		couple=std::make_pair(mSymbolvec[i].first,mSymbolvec[i].second);
+		if(couple.first==s) {mSymbolvec[i].second=v;return;}
+	}
+	std::cerr<<"variable "<<s<<" doesn't exist\n";exit(1);
+}
+int SymbolTableClass::GetIndex(std::string s)
+{
+	std::pair<std::string,int> couple;
+	for(unsigned int i=0;i<mSymbolvec.size();i++)
+	{
+		couple=std::make_pair(mSymbolvec[i].first,mSymbolvec[i].second);
+		if(couple.first==s){return i;}
+	}
+	std::cerr<<"variable "<<s<<" doesn't exist\n";exit(1);
+}
+int SymbolTableClass::GetCount() {return mSymbolvec.size();}
