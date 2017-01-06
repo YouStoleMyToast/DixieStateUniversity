@@ -1,0 +1,6 @@
+{% load staticfiles %}
+{% load review_tags %}
+
+{% for review in review_list %}
+	<p>{{review}}</p>
+{% endfor %}

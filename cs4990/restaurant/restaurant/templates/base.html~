@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+	html { 
+		height: 100%;
+	
+	}
+	body { 
+		height:50%; 
+		margin:0; 
+		padding:0;
+		text-align:center;
+		background-color:#6DF6FF;
+		padding:30px;
+		font-family:arial;
+		font-weight:500;
+		font-size:25px;
+		color:#010D26;
+
+	}
+	table{
+	
+	}
+	#map-canvas { 
+		height: 100%;
+		border-style:solid;
+		border-width:7px;
+		border-color:#FFAF72;
+
+		border-top-left-radius:10px;
+		border-top-right-radius:10px;
+		border-bottom-left-radius:10px;
+		border-bottom-right-radius:10px;
+	}
+	hr{
+		width:50%;
+	}
+	a:link{
+		font-size:22px;
+		color:#2973B2;
+		float:left;
+		text-decoration:none;
+	}
+
+	a:visited{
+		font-size:22px;
+		color:#2973B2;
+		float:left;
+		text-decoration:none;
+	}
+	a:hover{
+		font-size:22px;
+		color:#2973B2;
+		float:left;
+		text-decoration:none;
+	}
+	a:active {
+		font-size:22px;
+		color:#2973B2;
+		float:left;
+		text-decoration:none;
+	}
+</style>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-A73teZ6WfI6kv9_RIU5SCoEPJjjX5bY&sensor=false">
+</script>
+{% content block %}
+{% endblock content %}
+</html>
+

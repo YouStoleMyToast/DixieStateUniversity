@@ -1,0 +1,15 @@
+from django import template
+from django.contrib.auth.models import User
+
+from rar.models import Review
+
+register = template.Library()
+
+@register.inclusion_tag('rar/restaurant_detail.html', takes_context=True)
+
+def review_list(context):
+	print context
+	review_list=[]
+	for review in Review.objects.all():
+		reviews_list.append(review)
+	return reviews_list

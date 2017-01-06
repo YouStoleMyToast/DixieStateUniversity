@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+	html { 
+		height: 120%;
+	}
+	body { 
+		height:50%; 
+		margin:0; 
+		padding:0;
+		text-align:center;
+		background-color:#6DF6FF;
+		padding:30px;
+		font-family:arial;
+		font-weight:500;
+		font-size:25px;
+		color:#010D26;
+	}
+	#map-canvas { 
+		height: 100%;
+		border-style:solid;
+		border-width:7px;
+		border-color:#FFAF72;
+		border-top-left-radius:10px;
+		border-top-right-radius:10px;
+		border-bottom-left-radius:10px;
+		border-bottom-right-radius:10px;
+	}
+	hr{
+		width:50%;
+	}
+	a:link{
+		font-size:22px;
+		color:#2973B2;
+		float:left;
+		text-decoration:none;
+	}
+	a:visited{
+		font-size:22px;
+		color:#2973B2;
+		float:left;
+		text-decoration:none;
+	}
+	a:hover{
+		font-size:22px;
+		color:#2973B2;
+		float:left;
+		text-decoration:none;
+	}
+	a:active {
+		font-size:22px;
+		color:#2973B2;
+		float:left;
+		text-decoration:none;
+	}
+</style>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-A73teZ6WfI6kv9_RIU5SCoEPJjjX5bY&sensor=false"></script>
+<script type="text/javascript">
+	function initialize() {
+		var myLatlng = new google.maps.LatLng(37.363882,-113.044922);
+		var mapOptions = {
+			zoom: 5,
+			center: myLatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		
+	{% for restaurant in restaurants %}
+		var infowindow{{ forloop.counter }} = new google.maps.InfoWindow({
+			content: '{{ restaurant.restaurant }}'
+		});
+		var marker{{ forloop.counter }} = new google.maps.Marker({
+			position: new google.maps.LatLng({{restaurant.latitude}},{{restaurant.longitude}}),
+			map: map,
+			title: '{{restaurant.name|safe}}'
+		});
+		google.maps.event.addListener(marker{{ forloop.counter }}, 'click', function() {
+			infowindow{{ forloop.counter }}.open(map,marker{{ forloop.counter }});
+		});
+	{% endfor %}
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<title>{% block title %}RAR{% endblock %}</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale: 1.0">
+{% block extrascripts %}{% endblock %}
+<table style="width:100%;position:relative;bottom:30px;background:#FFAF72;
+		border-style:solid;border-width:3px;border-color:black;
+		border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;">
+	<tr>
+		<th style="width:100px;"></th>
+		<th><a href="/">Home</a></th>
+		<td style="color:#2973B2;">Restaurants And Reviews</td>
+		<th style="width:250px;"></th>
+	</tr>
+</table>
+<div id="map-canvas" style="margin:0px 100px 0px 100px;height:80%;position:relative;"></div>
+</head>
+<body>
+<div>
+	<table style="width:100%;">
+		<tr>
+		<td style="width:100px;"></td>
+		<th colspan=2>Restaurant<hr></th>
+		<th>Description<hr></th>
+		<th>City<hr></th>
+		<th>State<hr></th>
+		<th style="width:100px;"></th>
+		</tr>
+		{% for restaurant in restaurants %}
+			<tr>
+			<td style="width:100px;"></td>
+			<td style="width:100px;"></td>
+			<td><a href="{% url 'rar:details' restaurant.id %}">{{restaurant}}</a></td>
+			<td>{{restaurant.description}}</td>
+			<td>{{restaurant.city}}</td>
+			<td>{{restaurant.state}}</td>
+			<td style="width:100px;"></td>
+			</tr>
+		{% endfor %}
+	</table>
+</div>
+</body>
+</html>
+

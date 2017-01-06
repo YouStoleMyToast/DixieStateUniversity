@@ -1,0 +1,13 @@
+from django.contrib import admin
+from rar.models import Restaurant, Review
+
+class RestaurantAdmin(admin.ModelAdmin):
+	list_display = ('name', 'description', 'address','city','state','zipcode','latitude','longitude',)
+
+
+class ReviewAdmin(admin.ModelAdmin):
+	list_display = ('restaurant','name','rating','comment',)
+
+
+admin.site.register(Restaurant, RestaurantAdmin)
+admin.site.register(Review, ReviewAdmin)
