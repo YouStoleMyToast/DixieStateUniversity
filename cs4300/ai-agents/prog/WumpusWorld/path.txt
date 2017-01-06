@@ -1,0 +1,30 @@
+ctrl m
+ctrl shft m
+
+
+Compile: 
+cd Desktop/sem6/cs4300/ai-release-y13m08d30/ai-agents/build/linux
+
+make >& make.out
+egrep -i 'warn|error|\*\*\*' make.out
+  
+  
+  
+  
+  
+Run: 
+cd Desktop/sem6/cs4300/ai-release-y13m08d30/ai/bin/00bin-o
+
+teachers: python RunWumpusWorld2012.py    or    ./RunWumpusWorld2012.py
+mine: ./runwumpus
+
+
+
+
+Agent.out:
+cd Desktop/sem6/cs4300/ai-release-y13m08d30/ai/bin/00bin-o$ 
+
+
+
+
+cleanup: rm .depend* Makefile.agents 

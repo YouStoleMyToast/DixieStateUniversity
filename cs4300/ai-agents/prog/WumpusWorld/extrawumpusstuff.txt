@@ -1,0 +1,847 @@
+		//int a,b;
+		//int c,d;
+		//int m,n;
+		/*
+		std::string statement1, statement2;
+		for(a=this->minx;a<this->maxx+1;a++)
+		{
+			for(b=this->miny;b<this->maxy+1;b++)
+			{
+				std::string strx = "W_";
+				std::string stra = static_cast<std::ostringstream*>( &(std::ostringstream() << a))->str();
+				std::string stry = "_";
+				std::string strb = static_cast<std::ostringstream*>( &(std::ostringstream() << b))->str();
+				std::string strz = " | ";
+				if(a!=this->maxx || b!=this->maxy) {statement1.append(strx+stra+stry+strb+strz);}
+				else {statement1.append(strx+stra+stry+strb);}
+			}
+		}
+		eeb.AddSentence(statement1);
+		std::cout<<"statement1: "<<statement1<<std::endl;
+		for(c=this->minx;c<this->maxx+1;c++)
+		{
+			for(d=this->miny;d<this->maxy+1;d++)
+			{
+		
+				std::string strq = "G_";
+				std::string strc = static_cast<std::ostringstream*>( &(std::ostringstream() << c))->str();
+				std::string strw = "_";
+				std::string strd = static_cast<std::ostringstream*>( &(std::ostringstream() << d))->str();
+				std::string stre = " | ";
+				if(c!=this->maxx || d!=this->maxy) {statement2.append(strq+strc+strw+strd+stre);}
+				else {statement2.append(strq+strc+strw+strd);}
+			}
+		}
+		eeb.AddSentence(statement2);
+		std::cout<<"statement2: "<<statement2<<std::endl;
+		*/
+		
+
+		//individual combo original
+		/*
+		int a,b,c,d;
+		sprintf(buf,"W_1_2 | W_1_3 | W_1_4 | W_2_1 | W_2_2 | W_2_3 | W_2_4 | W_3_1 | W_3_2 | W_3_3 | W_3_4 | W_4_1 | W_4_2 | W_4_3 | W_4_4");	
+		std::cout<<buf<<std::endl;
+		eeb.AddSentence(buf);
+		
+		
+		for(m=minx;m<=maxx;m++)
+		{
+			for(n=miny;n<=maxy;n++)
+			{
+				a=m+1;
+				b=m-1;
+				c=n+1;
+				d=n-1;
+				sprintf(buf,"S_%d_%d <=> W_%d_%d", m, n, a, n);
+				if(a!=1 || n!=1)
+				{
+					if(a<5)
+					{
+						std::cout<<buf<<std::endl;
+						eeb.AddSentence(buf);
+					}
+				}
+				sprintf(buf,"S_%d_%d <=> W_%d_%d", m, n, b, n);
+				if(b!=1 || n!=1)
+				{
+					if(b>0)
+					{
+						std::cout<<buf<<std::endl;
+						eeb.AddSentence(buf);
+					}
+				}
+				sprintf(buf,"S_%d_%d <=> W_%d_%d", m, n, m, c);
+				if(c!=1 || m!=1)
+				{
+					if(c<5)
+					{
+						std::cout<<buf<<std::endl;
+						eeb.AddSentence(buf);
+					}
+				}
+				sprintf(buf,"S_%d_%d <=> W_%d_%d", m, n, m, d);
+				if(d!=1 || m!=1)
+				{
+					if(d>0)
+					{
+						std::cout<<buf<<std::endl;
+						eeb.AddSentence(buf);
+					}
+				}
+				sprintf(buf,"B_%d_%d <=> P_%d_%d", m, n, a, n);
+				if(a!=1 || n!=1)
+				{
+					if(a<5)
+					{
+						std::cout<<buf<<std::endl;
+						eeb.AddSentence(buf);
+					}
+				}
+				sprintf(buf,"B_%d_%d <=> P_%d_%d", m, n, b, n);
+				if(b!=1 || n!=1)
+				{
+					if(b>0)
+					{
+						std::cout<<buf<<std::endl;
+						eeb.AddSentence(buf);
+					}
+				}
+				sprintf(buf,"B_%d_%d <=> P_%d_%d", m, n, m, c);
+				if(c!=1 || m!=1)
+				{
+					if(c<5)
+					{
+						std::cout<<buf<<std::endl;
+						eeb.AddSentence(buf);
+					}
+				}
+				sprintf(buf,"B_%d_%d <=> P_%d_%d", m, n, m, d);
+				if(d!=1 || m!=1)
+				{
+					if(d>0)
+					{
+						std::cout<<buf<<std::endl;
+						eeb.AddSentence(buf);
+					}
+					
+				}
+			}
+		}
+		return true;
+		*/
+		
+		//original
+		/*
+		int m,n;
+		int a,b,c,d;
+		for(m=minx;m<=maxx;m++)
+		{
+			for(n=miny;n<=maxy;n++)
+			{
+				a=m+1;
+				b=m-1;
+				c=n+1;
+				d=n-1;
+				sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d | W_%d_%d | W_%d_%d", m, n, a, n, b, n, m, c, m, d);
+				std::cout<<buf<<std::endl;
+				eeb.AddSentence(buf);
+				sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d | P_%d_%d | P_%d_%d", m, n, a, n, b, n, m, c, m, d);
+				std::cout<<buf<<std::endl;
+				eeb.AddSentence(buf);
+			}
+		}
+		return true;
+		*/
+		/*
+		std::string statement1, statement2;
+		for(a=this->minx;a<this->maxx+1;a++)
+		{
+			for(b=this->miny;b<this->maxy+1;b++)
+			{
+				std::string strx = "W_";
+				std::string stra = static_cast<std::ostringstream*>( &(std::ostringstream() << a))->str();
+				std::string stry = "_";
+				std::string strb = static_cast<std::ostringstream*>( &(std::ostringstream() << b))->str();
+				std::string strz = " | ";
+				if(a!=this->maxx || b!=this->maxy) {statement1.append(strx+stra+stry+strb+strz);}
+				else {statement1.append(strx+stra+stry+strb);}
+			}
+		}*/
+		
+		
+		
+						
+				/*
+				if(a<5)
+			 	{
+					strf = " W_";
+					strg = static_cast<std::ostringstream*>( &(std::ostringstream() << a))->str();
+					strh = "_";
+					stri = static_cast<std::ostringstream*>( &(std::ostringstream() << n))->str();
+					stench2=strf+strg+strh+stri;
+				}
+				//&
+				std::string strj = " |";
+				//3
+			 	if(b>0)
+			 	{
+					strk = " W_";
+					strl = static_cast<std::ostringstream*>( &(std::ostringstream() << b))->str();
+					strm = "_";
+					strn = static_cast<std::ostringstream*>( &(std::ostringstream() << n))->str();
+					stench3=strk+strl+strm+strn;
+				}
+				//&
+				std::string stro = " |";
+				//4
+			 	if(c<5)
+			 	{
+					strp = " W_";
+					strq = static_cast<std::ostringstream*>( &(std::ostringstream() << m))->str();
+					strr = "_";
+					strs = static_cast<std::ostringstream*>( &(std::ostringstream() << c))->str();
+					stench4=strp+strq+strr+strs;
+				}
+				//&
+			 	strt = " |";
+			 	//5
+			 	if(d>0)
+			 	{
+					stru = " W_";
+					strv = static_cast<std::ostringstream*>( &(std::ostringstream() << m))->str();
+					strw = "_";
+					strx = static_cast<std::ostringstream*>( &(std::ostringstream() << d))->str();
+					stench5=stru+strv+strw+strx;
+				}*/
+				
+				/*
+				if(stench2!="" && stench3=="" && stench4=="" && stench5==""){stench=stench1+stench2;}
+				else if(stench2=="" && stench3!="" && stench4=="" && stench5==""){stench=stench1+stench3;}
+				else if(stench2=="" && stench3=="" && stench4!="" && stench5==""){stench=stench1+stench4;}
+				else if(stench2=="" && stench3=="" && stench4=="" && stench5!=""){stench=stench1+stench5;}
+				
+				else if(stench2=="" && stench3=="" && stench4!="" && stench5!=""){stench=stench1+stench4+strj+stench5;}
+				else if(stench2=="" && stench3!="" && stench4=="" && stench5!=""){stench=stench1+stench3+strj+stench5;}
+				else if(stench2=="" && stench3!="" && stench4!="" && stench5==""){stench=stench1+stench3+strj+stench4;}
+				
+				else if(stench2=="" && stench3=="" && stench4!="" && stench5!=""){stench=stench1+stench4+strj+stench5;}
+				else if(stench2!="" && stench3=="" && stench4=="" && stench5!=""){stench=stench1+stench2+strj+stench5;}
+				else if(stench2!="" && stench3=="" && stench4!="" && stench5==""){stench=stench1+stench2+strj+stench4;}
+				
+				else if(stench2=="" && stench3!="" && stench4=="" && stench5!=""){stench=stench1+stench3+strj+stench5;}
+				else if(stench2!="" && stench3=="" && stench4=="" && stench5!=""){stench=stench1+stench2+strj+stench5;}
+				else if(stench2!="" && stench3!="" && stench4=="" && stench5==""){stench=stench1+stench2+strj+stench3;}
+				
+				else if(stench2=="" && stench3!="" && stench4!="" && stench5==""){stench=stench1+stench3+strj+stench4;}
+				else if(stench2!="" && stench3=="" && stench4!="" && stench5==""){stench=stench1+stench2+strj+stench4;}
+				else if(stench2!="" && stench3!="" && stench4=="" && stench5==""){stench=stench1+stench2+strj+stench3;}
+				
+				else if(stench2=="" && stench3!="" && stench4!="" && stench5!=""){stench=stench1+stench3+strj+stench4+strj+stench5;}
+				else if(stench2!="" && stench3=="" && stench4!="" && stench5!=""){stench=stench1+stench2+strj+stench4+strj+stench5;}
+				else if(stench2!="" && stench3!="" && stench4=="" && stench5!=""){stench=stench1+stench2+strj+stench3+strj+stench5;}
+				else if(stench2!="" && stench3!="" && stench4!="" && stench5==""){stench=stench1+stench2+strj+stench3+strj+stench4;}
+
+				else if(stench2!="" && stench3!="" && stench4!="" && stench5!=""){stench=stench1+stench2+strj+stench3+strj+stench4+strj+stench5;}
+				
+				std::cout<<stench<<std::endl;
+				eeb.AddSentence(stench);
+
+			}
+		}
+		stra="";
+		strb="";
+		strc="";
+		strd="";
+		stre="";
+		strf="";
+		strg="";
+		strh="";
+		stri="";
+		strj="";
+		strk="";
+		strl="";
+		strm="";
+		strn="";
+		stro="";
+		strp="";
+		strq="";
+		strr="";
+		strs="";
+		strt="";
+		stru="";
+		strv="";
+		strw="";
+		strx="";
+		for(m=minx;m<=maxx;m++)
+		{
+			for(n=miny;n<=maxy;n++)
+			{
+				a=m+1;
+				b=m-1;
+				c=n+1;
+				d=n-1;
+				stra = "B_";
+				strb = static_cast<std::ostringstream*>( &(std::ostringstream() << m))->str();
+				strc = "_";
+				strd = static_cast<std::ostringstream*>( &(std::ostringstream() << n))->str();
+				stre = " <=>";
+				strf = " P_";
+				strg = static_cast<std::ostringstream*>( &(std::ostringstream() << a))->str();
+				strh = "_";
+				stri = static_cast<std::ostringstream*>( &(std::ostringstream() << n))->str();
+				strj = " |";
+				strk = " P_";
+				strl = static_cast<std::ostringstream*>( &(std::ostringstream() << b))->str();
+				strm = "_";
+				strn = static_cast<std::ostringstream*>( &(std::ostringstream() << n))->str();
+				stro = " |";
+				strp = " P_";
+				strq = static_cast<std::ostringstream*>( &(std::ostringstream() << m))->str();
+				strr = "_";
+				strs = static_cast<std::ostringstream*>( &(std::ostringstream() << c))->str();
+			 	strt = " |";
+				stru = " P_";
+				strv = static_cast<std::ostringstream*>( &(std::ostringstream() << m))->str();
+				strw = "_";
+				strx = static_cast<std::ostringstream*>( &(std::ostringstream() << d))->str();
+				breeze="";
+				breeze1="";
+				breeze2="";
+				breeze3="";
+				breeze4="";
+				breeze1 = stra+strb+strc+strd+stre;
+				if(a<5){breeze2=strf+strg+strh+stri;}
+				if(b>0){breeze3=strk+strl+strm+strn;}
+				if(c<5){breeze4=strp+strq+strr+strs;}
+				if(d>0){breeze5=stru+strv+strw+strx;}
+
+
+				if(breeze2!="" && breeze3=="" && breeze4=="" && breeze5==""){breeze=breeze1+breeze2;}
+				else if(breeze2=="" && breeze3!="" && breeze4=="" && breeze5==""){breeze=breeze1+breeze3;}
+				else if(breeze2=="" && breeze3=="" && breeze4!="" && breeze5==""){breeze=breeze1+breeze4;}
+				else if(breeze2=="" && breeze3=="" && breeze4=="" && breeze5!=""){breeze=breeze1+breeze5;}
+
+				else if(breeze2=="" && breeze3=="" && breeze4!="" && breeze5!=""){breeze=breeze1+breeze4+strj+breeze5;}
+				else if(breeze2=="" && breeze3!="" && breeze4=="" && breeze5!=""){breeze=breeze1+breeze3+strj+breeze5;}
+				else if(breeze2=="" && breeze3!="" && breeze4!="" && breeze5==""){breeze=breeze1+breeze3+strj+breeze4;}
+				
+				else if(breeze2=="" && breeze3=="" && breeze4!="" && breeze5!=""){breeze=breeze1+breeze4+strj+breeze5;}
+				else if(breeze2!="" && breeze3=="" && breeze4=="" && breeze5!=""){breeze=breeze1+breeze2+strj+breeze5;}
+				else if(breeze2!="" && breeze3=="" && breeze4!="" && breeze5==""){breeze=breeze1+breeze2+strj+breeze4;}
+				
+				else if(breeze2=="" && breeze3!="" && breeze4=="" && breeze5!=""){breeze=breeze1+breeze3+strj+breeze5;}
+				else if(breeze2!="" && breeze3=="" && breeze4=="" && breeze5!=""){breeze=breeze1+breeze2+strj+breeze5;}
+				else if(breeze2!="" && breeze3!="" && breeze4=="" && breeze5==""){breeze=breeze1+breeze2+strj+breeze3;}
+				
+				else if(breeze2=="" && breeze3!="" && breeze4!="" && breeze5==""){breeze=breeze1+breeze3+strj+breeze4;}
+				else if(breeze2!="" && breeze3=="" && breeze4!="" && breeze5==""){breeze=breeze1+breeze2+strj+breeze4;}
+				else if(breeze2!="" && breeze3!="" && breeze4=="" && breeze5==""){breeze=breeze1+breeze2+strj+breeze3;}
+				
+				else if(breeze2=="" && breeze3!="" && breeze4!="" && breeze5!=""){breeze=breeze1+breeze3+strj+breeze4+strj+breeze5;}
+				else if(breeze2!="" && breeze3=="" && breeze4!="" && breeze5!=""){breeze=breeze1+breeze2+strj+breeze4+strj+breeze5;}
+				else if(breeze2!="" && breeze3!="" && breeze4=="" && breeze5!=""){breeze=breeze1+breeze2+strj+breeze3+strj+breeze5;}
+				else if(breeze2!="" && breeze3!="" && breeze4!="" && breeze5==""){breeze=breeze1+breeze2+strj+breeze3+strj+breeze4;}
+				
+				
+				else if(breeze2!="" && breeze3!="" && breeze4!="" && breeze5!=""){breeze=breeze1+breeze2+strj+breeze3+strj+breeze4+strj+breeze5;}
+
+				
+				std::cout<<breeze<<std::endl;
+				eeb.AddSentence(breeze);
+			}
+		}
+		return true;*/
+		/*
+		for(m=this->minx;m<=this->maxx;m++)
+		{
+			for(n=this->miny;n<=this->maxy;n++)
+			{
+				if((m>this->minx && m<this->maxx) && (n>this->miny && n<this->maxy))
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d | W_%d_%d | W_%d_%d", n, m, m+1, n, m-1, n, m, n+1, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d | P_%d_%d | P_%d_%d", n, m, m+1, n, m-1, n, m, n+1, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+				else if(m==this->minx && (n>this->miny && n<this->maxy))
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d | W_%d_%d", n, m, m+1, n, m, n+1, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d | P_%d_%d", n, m, m+1, n, m, n+1, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+				else if(m==this->maxx && (n>this->miny && n<this->maxy))
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d | W_%d_%d", n, m, m-1, n, m, n+1, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d | P_%d_%d", n, m, m-1, n, m, n+1, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+				else if((m>this->minx && m<this->maxx) && n==this->miny)
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d | W_%d_%d", n, m, m+1, n, m-1, n, m, n+1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d | P_%d_%d", n, m, m+1, n, m-1, n, m, n+1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+				else if((m>this->minx && m<this->maxx) && n==this->maxy)
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d | W_%d_%d", n, m, m+1, n, m-1, n, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d | P_%d_%d", n, m, m+1, n, m-1, n, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+				else if(m==this->minx && n==this->miny)
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d", n, m, m+1, n, m, n+1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d", n, m, m+1, n, m, n+1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+				else if(m==this->maxx && n==this->miny)
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d", n, m, m-1, n, m, n+1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d", n, m, m-1, n, m, n+1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+				else if(m==this->minx && n==this->maxy)
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d", n, m, m+1, n, m, n+1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d", n, m, m+1, n, m, n+1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+				else if(m==this->maxx && n==this->maxy)
+				{
+					sprintf(buf,"S_%d_%d <=> W_%d_%d | W_%d_%d", n, m, m-1, n, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+					sprintf(buf,"B_%d_%d <=> P_%d_%d | P_%d_%d", n, m, m-1, n, m, n-1);
+					eeb.AddSentence(buf);
+					std::cout<<buf<<std::endl;
+				}
+			}
+		}
+		return true;
+		*/
+
+		//combined breeze
+		/*
+		sprintf(buf,"B_1_1 <=> P_2_1 | P_1_2");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_1 <=> P_3_1 | P_2_2");						
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_3_1 <=> P_4_1 | P_2_1");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_1 <=> P_3_2");								
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_4_1 <=> P_3_1 | P_4_2");						
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_1_2 <=>P_2_2 | P_1_1 | P_1_3");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_2 <=> P_1_2 | P_3_2 | P_2_1 | P_2_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_2 <=> P_2_2 | P_4_2 | P_3_1 | P_3_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_2 <=> P_3_2 | P_4_1 | P_4_3");				
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_1_3 <=> P_2_3 | P_1_2 | P_1_4");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_3 <=> P_1_3 | P_3_3 | P_2_2 | P_2_4");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_3 <=> P_2_3 | P_4_3 | P_3_2 | P_3_4");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_3 <=> P_3_3 |  P_4_2 | P_4_4");			
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_1_4 <=> P_2_4 | P_1_3");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_4 <=> P_1_4 | P_3_4 | P_2_3");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_4 <=> P_2_4 | P_4_4 | P_3_3");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_4 <=> P_3_4 | P_4_3");						
+		eeb.AddSentence(buf);
+		
+		//combined stench
+		sprintf(buf,"S_1_1 <=> W_2_1 | W_1_2");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_1 <=> W_3_1 | W_2_2");						
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_3_1 <=> W_4_1 | W_2_1");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_1 <=> W_3_2");								
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_4_1 <=> W_3_1 | W_4_2");						
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_1_2 <=>W_2_2 | W_1_1 | W_1_3");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_2 <=> W_1_2 | W_3_2 | W_2_1 | W_2_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_2 <=> W_2_2 | W_4_2 | W_3_1 | W_3_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_2 <=> W_3_2 | W_4_1 | W_4_3");				
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_1_3 <=> W_2_3 | W_1_2 | W_1_4");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_3 <=> W_1_3 | W_3_3 | W_2_2 | W_2_4");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_3 <=> W_2_3 | W_4_3 | W_3_2 | W_3_4");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_3 <=> W_3_3 |  W_4_2 | W_4_4");			
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_1_4 <=> W_2_4 | W_1_3");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_4 <=> W_1_4 | W_3_4 | W_2_3");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_4 <=> W_2_4 | W_4_4 | W_3_3");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_4 <=> W_3_4 | W_4_3");						
+		eeb.AddSentence(buf);*/
+
+
+		//sprintf(buf,"W_1_1 | W_1_2 | W_1_3 | W_1_4 | W_2_1 | W_2_2 | W_2_3 | W_2_4 | W_3_1 | W_3_2 | W_3_3 | W_3_4 | W_4_1 | W_4_2 | W_4_3 | W_4_4");	
+		//eeb.AddSentence(buf);
+		
+		// S_col_row
+		//stech
+		/*
+		sprintf(buf,"S_1_1 <=> W_1_2");					
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_1_1 <=> W_2_1");						
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_2_1 <=> W_3_1 ");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_1 <=> W_2_2");					
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_3_1 <=> W_2_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_1 <=> W_4_1");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_1 <=> W_3_2");			
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_4_1 <=> W_3_1");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_1 <=> W_4_2");							
+		eeb.AddSentence(buf);
+		
+		
+		sprintf(buf,"S_1_2 <=> W_2_2");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_1_2 <=> W_1_3");							
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_2_2 <=> W_1_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_2 <=> W_3_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_2 <=> W_2_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_2 <=> W_2_3");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_3_2 <=> W_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_2 <=> W_4_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_2 <=> W_3_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_2 <=> W_3_3");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_4_2 <=> W_3_2");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_2 <=> W_4_1");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_2 <=> W_4_3");				
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_1_3 <=> W_2_3");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_1_3 <=> W_1_2");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_1_3 <=> W_1_4");				
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_2_3 <=> W_1_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_3 <=> W_3_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_3 <=> W_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_3 <=> W_2_4");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_3_3 <=> W_2_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_3 <=> W_4_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_3 <=> W_3_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_3 <=> W_3_4");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_4_3 <=> W_4_4");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_3 <=> W_4_2");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_3 <=> W_3_3");				
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_1_4 <=> W_2_4");							
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_1_4 <=> W_1_3");							
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_2_4 <=> W_1_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_4 <=> W_3_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_2_4 <=> W_2_3");			
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_3_4 <=> W_4_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_4 <=> W_2_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_4 <=> W_4_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_3_4 <=> W_3_3");			
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"S_4_4 <=> W_4_3");					
+		eeb.AddSentence(buf);
+		sprintf(buf,"S_4_4 <=> W_3_4");					
+		eeb.AddSentence(buf);
+		
+		
+		
+		
+		
+		//BREEZE
+		sprintf(buf,"B_1_1 <=> P_1_2");					
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_1_1 <=> P_2_1");						
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_2_1 <=> P_3_1 ");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_1 <=> P_2_2");					
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_3_1 <=> P_2_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_1 <=> P_4_1");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_1 <=> P_3_2");			
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_4_1 <=> P_3_1");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_1 <=> P_4_2");							
+		eeb.AddSentence(buf);
+		
+		
+		sprintf(buf,"B_1_2 <=> P_2_2");						
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_1_2 <=> P_1_3");							
+		eeb.AddSentence(buf);
+		
+		
+		sprintf(buf,"B_2_2 <=> P_1_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_2 <=> P_3_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_2 <=> P_2_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_2 <=> P_2_3");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_3_2 <=> P_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_2 <=> P_4_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_2 <=> P_3_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_2 <=> P_3_3");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_4_2 <=> P_3_2");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_2 <=> P_4_1");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_2 <=> P_4_3");				
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_1_3 <=> P_2_3");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_1_3 <=> P_1_2");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_1_3 <=> P_1_4");				
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_2_3 <=> P_1_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_3 <=> P_3_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_3 <=> P_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_3 <=> P_2_4");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_3_3 <=> P_2_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_3 <=> P_4_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_3 <=> P_3_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_3 <=> P_3_4");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_4_3 <=> P_4_4");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_3 <=> P_4_2");				
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_3 <=> P_3_3");				
+		eeb.AddSentence(buf);
+		
+		
+		sprintf(buf,"B_1_4 <=> P_2_4");							
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_1_4 <=> P_1_3");							
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_2_4 <=> P_1_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_4 <=> P_3_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_4 <=> P_2_3");			
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_3_4 <=> P_4_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_4 <=> P_2_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_4 <=> P_4_4");			
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_4 <=> P_3_3");			
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_4_4 <=> P_4_3");					
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_4 <=> P_3_4");					
+		eeb.AddSentence(buf);*/
+
+		/*
+		sprintf(buf,"B_1_1 <=> P_2_1 | P_1_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_1 <=> P_1_1 | P_3_1 | P_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_1 <=> P_2_1 | P_4_1");// | P_3_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_1 <=> P_3_1 | P_2_4");
+		eeb.AddSentence(buf);
+
+		sprintf(buf,"B_1_2 <=> P_2_2");// | P_1_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_2 <=> P_1_2 | P_3_2");// | P_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_2 <=> P_2_2 | P_4_2 | P_2_3 | P_3_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_2 <=> P_3_2");// | P_2_4");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_1_3 <=> P_2_3");// | P_1_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_3 <=> P_1_3 | P_3_3 | P_2_2 | P_2_4");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_3 <=> P_2_3 | P_4_3");// | P_2_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_3 <=> P_3_3");// | P_2_4");
+		eeb.AddSentence(buf);
+		
+		sprintf(buf,"B_1_4 <=> P_2_4");// | P_1_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_4 <=> P_1_4 | P_3_4");// | P_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_4 <=> P_2_4 | P_4_4");// | P_2_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_4 <=> P_3_4");// | P_2_4");
+		eeb.AddSentence(buf);
+		*/
+		
+		//Generated rules
+		/*
+		sprintf(buf,"B_1_1 <=> P_2_1 | P_1_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_1_2 <=> P_2_2 | P_1_3 | P_1_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_1_3 <=> P_2_3 | P_1_4 | P_1_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_1_4 <=> P_2_4 | P_1_5");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_1 <=> P_3_1 | P_1_1 | P_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_2 <=> P_3_2 | P_1_2 | P_2_3 | P_2_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_3 <=> P_3_3 | P_1_3 | P_2_4 | P_2_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_4 <=> P_3_4 | P_1_4 | P_2_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_1 <=> P_4_1 | P_2_1 | P_3_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_2 <=> P_4_2 | P_2_2 | P_3_3 | P_3_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_3 <=> P_4_3 | P_2_3 | P_3_4 | P_3_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_4 <=> P_4_4 | P_2_4 | P_3_3");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_1 <=> P_3_1 | P_4_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_2 <=> P_3_2 | P_4_3 | P_4_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_3 <=> P_3_3 | P_4_4 | P_4_2");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_4 <=> P_3_4 | P_4_3");
+		eeb.AddSentence(buf);*/
+		/*
+		sprintf(buf,"B_1_1 <=> P_2_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_2_1 <=> P_1_1 | P_3_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_3_1 <=> P_2_1 | P_4_1");
+		eeb.AddSentence(buf);
+		sprintf(buf,"B_4_1 <=> P_3_1");
+		eeb.AddSentence(buf);*/
+		//return true;
+	//}
