@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load friendpost_tags %}
+{% load friend_tags %}
+{% load friendbtn_tags %}
+{% load userpost_tags %}
+
+{% block title %}Your Chirps{% endblock title %}
+
+{% block content %}
+	
+	{% if profile.user == user %}
+		<h1>Your Profile</h1>
+	{% else %}
+		<h1>User Profile</h1>
+	{% endif %}
+		<table class="table">
+			<tr>
+				<th>Image</th>
+				<th></th>
+				<th>Name</th>
+			</tr>
+				<tr>
+					<td rowspan=2 ><img src="{{ MEDIA_URL }}{{ profile.image }}" height='70' width='50' /></td>
+					{% friendbtn_tags %}
+					<td>{{ profile.user }}</td>
+				</tr>
+				<tr>
+					<td>{{ profile.bio }}</td>
+				</tr>
+		</table>
+	{% if profile.user == user %}
+		<h1>Your Chirps</h1>
+	{% else %}
+		<h1>User Chirps</h1>
+	{% endif %}
+		<table class="table">
+			<tr>
+				<th>Image</th>
+				<th>Name</th>
+				<th>Recent Post</th>
+			</tr>
+
+			{% friendpost_tags %}
+
+		</table>
+{% endblock content %}
+

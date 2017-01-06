@@ -1,0 +1,8 @@
+dear {{ name }},
+
+This email is here to inform you that {{ post.profile.company_name|safe }} has posted a new job on the job board site titled {{ post.title|safe }}.
+
+You can check out more details at {% url 'jobboard:detail' post.id %}.
+
+Sincerely,
+The Dixie Job Board People

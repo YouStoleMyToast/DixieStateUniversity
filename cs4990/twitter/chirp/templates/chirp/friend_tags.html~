@@ -1,0 +1,7 @@
+{% load staticfiles %}
+
+{% block friends %}
+	{% for friend in friend_tags %}
+		<p><a href="{% url 'chirp:profile' friend.id %}">{{ friend.user }}</a></p><br>
+	{% endfor %}
+{% endblock %}

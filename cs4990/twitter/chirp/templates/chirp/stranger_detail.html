@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block title %}Users Chirps{% endblock title %}
+
+{% block content %}
+	<h1>Users Profile</h1>
+	<table class="table">
+		<tr>
+			<th>Image</th>
+			<th>Name</th>
+		</tr>
+			<tr>
+				<td rowspan=2 ><img src="{{ MEDIA_URL }}{{ stranger.profile.image }}" height='70' width='50' /></td>
+				<td>{{ stranger }}</td>
+			</tr>
+			<tr>
+				<td>{{ stranger.bio }}</td>
+			</tr>
+	</table>
+	<h1>Users Chirps</h1>
+	<table class="table">
+		<tr>
+			<th>Recent Post</th>
+		</tr>
+
+
+		
+	</table>
+{% endblock content %}

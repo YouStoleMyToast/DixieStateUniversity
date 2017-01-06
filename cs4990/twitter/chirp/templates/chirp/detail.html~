@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Your Chirps{% endblock %}
+
+{% block content %}
+	<h1>Your Chirps</h1>
+	<table class="table">
+		<tr>
+			<th>Image</th>
+			<th>Name</th>
+			<th>Recent Post</th>
+
+		</tr>
+		{% for msg in posts %}
+		<tr>
+			<td><img src="{{ MEDIA_URL }}{{ msg.image }}" height='70' width='50' /></td>
+			<td>{{ msg.profile }}</td>
+			<td>{{ msg.body }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	
+	{% url 'chirpL' %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block postform %}
+<p>hello</p>
+<form style="width:100%;" action='.' method='POST' id="post-form">
+	<table style="width:100%;">
+		<tr><th>Post A Message</th></tr>
+		{% csrf_token %}<br>
+		<tr><td>{{ form }}</td></tr>
+		<input type='submit' value="update qty"><br>
+	</table>
+</form>
+{% endblock postform %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Top Chirps{% endblock %}
+
+{% block content %}
+	<h1>All Recent Chirps</h1>
+	<table class="table">
+		<tr>
+			<th>Image</th>
+			<th>Name</th>
+			<th>Bio</th>
+			<th>Post</th>
+		</tr>
+		{% for pros in profiles %}
+		<tr>
+			<td><img src="{{ MEDIA_URL }}{{ pros.image }}" height='70' width='50' /></td>
+			<td>{{ pros.username }}</td>
+			<td>{{ pros.bio|truncatechars:50 }}...</td>
+			
+			<td>
+			{% for post in posts %}
+				{% if pros.username == post.username %}
+					{{ post.body|linebreaksbr }}
+				{% endif %}
+			{% endfor %}
+			</td>
+			
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
+
+
+

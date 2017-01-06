@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Top Chirps{% endblock %}
+
+{% block content %}
+	<h1>All Recent Chirps</h1>
+	<table class="table">
+		<tr>
+			<th>Image</th>
+			<th>Name</th>
+			<th>Bio</th>
+		</tr>
+		{% for post in posts %}
+		<tr>
+			<td><img src="{{ MEDIA_URL }}{{ post.user.profile_set.all.0.image }}" height='70' width='50' /></td><!-- _set gets all models pointing to it -->
+			<td><a href="{% url 'chirp:profile' post.user.id %}">{{ post.user }}</a></td>
+			<td>{{ post.message|linebreaksbr }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
+
+
+

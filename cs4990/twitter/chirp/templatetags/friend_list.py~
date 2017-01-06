@@ -1,0 +1,13 @@
+from django import template
+from chirp.models import Profile
+
+register = template.Library()
+
+@register.inclusion_tag('friend_tags.html')
+def category_links():
+	category_list=[]
+	for category in Category.objects.all():
+		category_list.append(category)
+		
+	return {'category_list':category_list}
+
