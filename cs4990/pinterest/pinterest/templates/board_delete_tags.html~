@@ -1,0 +1,3 @@
+{% block deletetags %}
+<p><span class="board-name"><a href="{% url 'jigsaw:boarddelete' board.id %}">Delete</a></span>
+{% endblock deletetags %}

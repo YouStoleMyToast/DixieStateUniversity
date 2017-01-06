@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}Jigsaw{% endblock %}</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css"><!-- Latest compiled and minified CSS -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script><!-- Latest compiled and minified JavaScript -->
+		<meta name="viewport" content="width=device-width, initial-scale: 1.0">
+		{% block extrascripts %}{% endblock %}
+    </head>
+    <body>
+    	<table hiden style="height:10px;"><tr><td></td></tr></table>
+        <div class="container">
+            <div class="navbar navbar-inverse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                </ul>
+                {% if user.is_authenticated %}
+                    <a class="navbar-brand" style="float:right;" href="{% url 'auth_logout' %}" class="btn btn-default navbar-btn pull-right">Log Out</a></button>
+                    <a class="navbar-brand" style="float:right;" href="{% url 'jigsaw:boards' user.id %}" class="btn btn-default navbar-btn pull-right">{{ user.username }}</a></button>
+                {% else %}
+                    <a class="navbar-brand" style="float:right;" href="{% url 'auth_login' %}" class="btn btn-default navbar-btn pull-right">Log In</a></button>
+                {% endif %}
+                </ul>
+            </div>
+            <div class="body-content">
+                <div class="row">
+                    <!-- main content area -->
+                    <div class="col-lg-12">
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li class="alert alert-success">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% block content %}
+                    {% endblock content %}
+                    </div>
+                </div>
+            </div><!-- body-content -->
+            <hr>
+            <footer>
+                Copyright &copy;2013 Eric Beilmann. All rights reserved.
+            </footer>
+        </div><!-- container -->
+    </body>
+<html>
