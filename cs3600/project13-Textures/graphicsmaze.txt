@@ -1,0 +1,313 @@
+//Writen by Eric Beilmann
+//with a lot of help from Professor Bart Stander
+//CS 3600
+//Spring 2013
+
+#include <cmath>
+#include <cstring>
+#include <stdio.h>
+#include <time.h>
+#include <algorithm>
+#include <iostream>
+#include "Maze.h"
+#include "glut.h"
+#include "Perry.h"
+
+double screen_x = 700;
+double screen_y = 500;
+
+bool leftbuttondown=false;
+bool middlebuttondown=false;
+bool rightbuttondown=false;
+bool topview=false;
+bool sideview=true;
+bool personview=false;
+
+Maze amazing;
+Rat perry;
+
+void DrawRectangle(double x1, double y1, double x2, double y2)
+{
+	glBegin(GL_QUADS);
+	glVertex2d(x1,y1);
+	glVertex2d(x2,y1);
+	glVertex2d(x2,y2);
+	glVertex2d(x1,y2);
+	glEnd();
+}
+
+double getdeltatime()
+{
+	static clock_t starttime=clock();//built in function clock() problem default is 17 clicks a second while we need about 100 so we made changes
+	static int currentframe=0;
+	clock_t currenttime=clock();
+	currentframe+=1;
+	double totaltime=double(currenttime-starttime)/CLOCKS_PER_SEC;//CLOCKS_PER_SEC is a built in function
+	if (totaltime==0)//prevents dividing by zero
+	{
+		totaltime=.0001;
+	}
+	double framespersecond=(double)currentframe/totaltime;
+	double DT=1.0/framespersecond;
+	return DT;
+}
+double field_of_view=50;//orig=60
+double aspect_ratio=(double)screen_x/screen_y;
+double zNear=2;//orig=2
+double zFar=(M+N)*2;//orig=(M+N)*2
+
+//be sure to offset some angles so that all sides have depth
+double eyex=-M*.2;//orig=M/4
+double eyey=-N*.2;//orig=N/4
+double eyez=M*.7;//orig=M
+//where the eye will be focused - the center of the maze in this case
+double atx=M/2;
+double aty=N/2;
+double atz=0;
+//sets the up direction
+double upx=0;
+double upy=0;
+double upz=1;//orig=1
+
+double povfield_of_view=60;
+double povaspect_ratio=(double)screen_x/screen_y;
+double povzNear=0.1;
+double povzFar=(M+N)*2;
+
+void display(void)
+{	
+	double DT=getdeltatime();
+	double X=perry.GetX();
+	double Y=perry.GetY();
+	double Degrees=perry.GetDegrees();
+
+	double theta = (double)Degrees/180.0 * 3.1415926;
+	double dx = cos(theta);
+	double dy = sin(theta);
+	double nextx=X+dx*cells_per_second*DT;
+	double nexty=Y+dy*cells_per_second*DT;
+	//be sure to offset some angles so that all sides have depth
+	double poveyex=perry.GetX();
+	double poveyey=perry.GetY();
+	double poveyez=.2;
+	//where the eye will be focused
+	double povatx=nextx;
+	double povaty=nexty;
+	double povatz=.2;
+	//sets the up direction
+	double povupx=0;
+	double povupy=0;
+	double povupz=1;
+
+	static clock_t starttime=clock();//built in function clock() problem default is 17 clicks a second while we need about 100 so we made changes
+	static int currentframe=0;
+	clock_t currenttime=clock();
+	currentframe+=1;
+	double h=((double(currenttime)-starttime)/CLOCKS_PER_SEC);
+	double Z=.5*sin(double(h))+.5;
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+
+	if (topview==true)
+	{
+		gluOrtho2D(-.5, M+.5, -.5, N+.5);//orig just .5
+	}
+	else if (sideview==true)
+	{
+		gluPerspective(field_of_view, aspect_ratio, zNear, zFar);
+	}
+	else if(personview==true)
+	{
+		gluPerspective(field_of_view, aspect_ratio, povzNear, zFar);
+	}
+	glMatrixMode(GL_MODELVIEW);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glEnable(GL_DEPTH_TEST);
+	glLoadIdentity();
+
+	if (sideview==true)
+	{
+		gluLookAt(eyex,eyey,eyez,atx,aty,atz,upx,upy,upz);
+	}
+	else if(personview==true)
+	{
+		gluLookAt(poveyex,poveyey,poveyez,povatx,povaty,povatz,povupx,povupy,povupz);
+	}
+	if (leftbuttondown)
+	{
+		perry.Spinleft(DT);
+	}
+	if (rightbuttondown)
+	{
+		perry.Spinright(DT);
+	}
+	if (middlebuttondown)
+	{
+		perry.Moveforeward(amazing,DT);
+	}
+	amazing.DrawTable();
+	amazing.Drawfloor();
+	amazing.Draw();
+	if (personview==false)
+	{
+		perry.Draw(amazing, DT, perry.moving, Z, topview);
+	}
+	if (personview==true)
+	{
+		perry.DrawBill(amazing, DT, perry.moving, topview);
+	}
+	glutSwapBuffers();
+	glutPostRedisplay();
+}
+
+void keyboard(unsigned char c, int x, int y)
+{
+	if(c==27) // escape character means to quit the program
+	{
+		exit(0);
+	}
+	else if(c=='t')
+	{
+		topview=true;
+		amazing.topview=true;
+		sideview=false;
+		personview=false;
+	}
+	else if(c=='p')
+	{
+		topview=false;
+		amazing.topview=false;
+		sideview=true;
+		personview=false;
+	}
+	else if(c=='r')
+	{
+		topview=false;
+		amazing.topview=false;
+		sideview=false;
+		personview=true;
+	}
+	else
+	{
+		return; // if we don't care, return without glutPostRedisplay()
+	}
+	glutPostRedisplay();
+}
+//in 2d
+void setOrthographicProjection()
+{
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(-.5, M+.5, -.5, N+.5);//orig just .5
+	glMatrixMode(GL_MODELVIEW);
+}
+//in 3d
+void setPerspectiveProjection(int w, int h)
+{
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+
+	double field_of_view=60;
+	double aspect_ratio=(double)w/h;
+
+	double zNear=10;//orig=2
+	double zFar=(M+N)*2;
+	gluPerspective(field_of_view, aspect_ratio, zNear, zFar);
+	glMatrixMode(GL_MODELVIEW);
+}
+
+void reshape(int w, int h)
+{
+	screen_x = w;
+	screen_y = h;
+	glViewport(0, 0, w, h);
+
+	// Set the projection mode to 2D orthographic, and set the world coordinates:
+	if (topview==true && sideview==false)
+	{
+		setOrthographicProjection();
+	}
+
+	// Set the projection mode to 3D orthographic, and set the world coordinates:
+	else if (sideview==true && topview==false)
+	{
+		setPerspectiveProjection(w, h);
+	}
+}
+
+void mouse(int mouse_button, int state, int x, int y)
+{
+	if (mouse_button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) 
+	{
+		leftbuttondown=true;
+	}
+	if (mouse_button == GLUT_LEFT_BUTTON && state == GLUT_UP) 
+	{
+		leftbuttondown=false;
+	}
+	if (mouse_button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) 
+	{
+		middlebuttondown=true;
+	}
+	if (mouse_button == GLUT_MIDDLE_BUTTON && state == GLUT_UP) 
+	{
+		middlebuttondown=false;
+	}
+	if (mouse_button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) 
+	{
+		rightbuttondown=true;
+	}
+	if (mouse_button == GLUT_RIGHT_BUTTON && state == GLUT_UP) 
+	{
+		rightbuttondown=false;
+	}
+	if (rightbuttondown==true || middlebuttondown==true || leftbuttondown==true)
+	{
+		perry.moving=true;
+	}
+	else if (rightbuttondown==false && middlebuttondown==false && leftbuttondown==false)
+	{
+		perry.moving=false;
+	}
+	glutPostRedisplay();
+}
+
+void InitializeMyStuff()
+{
+	amazing.Create();
+	perry.Initialize(amazing);
+}
+
+int main(int argc, char **argv)
+{
+	srand(time(0));
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+	glutInitWindowSize(screen_x, screen_y);
+	glutInitWindowPosition(50, 50);
+	int fullscreen = 0;
+
+	if (fullscreen) 
+	{
+		glutGameModeString("800x600:32");
+		glutEnterGameMode();
+	} 
+	else 
+	{
+		glutCreateWindow("The Amazing Maze");
+	}
+
+	glutDisplayFunc(display);
+	glutKeyboardFunc(keyboard);
+	glutReshapeFunc(reshape);
+	glutMouseFunc(mouse);
+
+	glColor3d(0,0,0); // forground color
+	glClearColor(1, .9, .9, 0); // background color
+	InitializeMyStuff();
+
+	glutMainLoop();
+
+	return 0;
+}
