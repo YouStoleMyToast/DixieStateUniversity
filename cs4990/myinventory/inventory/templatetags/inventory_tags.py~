@@ -1,0 +1,13 @@
+from django import template
+from inventory.models import Inventory
+
+register = template.Library()
+
+@register.inclusion_tag('inventory/inventory_links.html')
+def inventory_links():
+	inventory_list=[]
+	for inventory in Inventory.objects.all():
+		inventory_list.append(inventory)
+		
+	return {'inventory_list':inventory_list}
+

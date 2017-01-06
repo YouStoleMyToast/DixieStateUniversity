@@ -1,0 +1,12 @@
+{% load staticfiles %}
+
+{% block invlinks %}
+
+	{% for inv in inventory_list %}
+	
+		<p><a href="http://127.0.0.1:8007/inventory/index/{{ inv.id }}">{{ inv.title }}</a></p><br>
+		
+	{% endfor %}
+	
+{% endblock %}
+

@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% load thumbnail %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'inventory/inventory.css' %}" />
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<td>
+<div id=inventorybody>
+{% for inventoryentry in inventoryentries %}
+	{% if inventoryentry.active %}
+		{% if forloop.counter <= 10 %}
+		<div id=bodytitle>{{ inventoryentry.title }}</div>
+		<div id=bodyauthor>By: {{ inventoryentry.author }}</div>
+		<div id=bodydate>Date: {{ inventoryentry.date }}</div>
+		<div id=bodytext><p>{{ inventoryentry.body }}</p></div>
+		{% endif %}
+	{% endif %}
+{% endfor %}
+</div>
+</td>
+{% endblock %}

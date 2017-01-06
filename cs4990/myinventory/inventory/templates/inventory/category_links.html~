@@ -1,0 +1,8 @@
+{% load staticfiles %}
+
+{% block catlinks %}
+	{% for cat in category_list %}
+		<p><a href="{% url 'inventory:item_detail'' %}{{ cat.id }}">{{ cat.title }}</a></p><br>
+	{% endfor %}
+{% endblock %}
+

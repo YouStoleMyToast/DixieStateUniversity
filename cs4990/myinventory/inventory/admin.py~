@@ -1,0 +1,18 @@
+from django.contrib import admin
+from inventory.models import Category,Inventory#,Comment
+
+class CategoryAdmin(admin.ModelAdmin):
+	search_fields = ['title','description','picture',]
+	list_display = ('title','description','picture',)
+	
+class InventoryAdmin(admin.ModelAdmin):
+	search_fields = ['category','title','description','picture','count']
+	list_display = ('category','title','description','picture','count',)
+
+#class CommentAdmin(admin.ModelAdmin):
+#	search_fields = ['message','author','date']
+#	list_display = ('message','author','date',)
+	
+admin.site.register(Inventory, InventoryAdmin)
+admin.site.register(Category, CategoryAdmin)
+#admin.site.register(Comment, CommentAdmin)

@@ -1,0 +1,77 @@
+{% extends 'inventory/index.html' %}
+{% load staticfiles %}
+
+<div id="titlespace">{% block title %}{{ inventoryentry.title }}{% endblock %}</div>
+{% block extrascripts %}
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+
+<script>
+$function updateqty(){
+	$.ajax({
+		url:{% url 'inventory:get_qty % item.id' %},//
+		type: 'get',
+		success: function(data){
+			$('#current-qty').html(data);//id for item quantity when displayed below
+		},
+	});
+}
+
+$(function(){
+	updateqty();,
+	$('#comment-form').submit(
+		function (evt) {
+			alert('Just tried to submit');
+			evt.perventDefault();
+			
+			$.ajax({
+				url:$(this).attr('action'),
+				type:'post',
+				data:$(this).serialize(),
+				success:function(data){
+					//alert('Successfully posted your comment.');
+					updateqty();
+				},
+				error:function(){
+					alert('Can\'t post your comment.');
+				},
+			});
+			return false;
+		});
+});
+</script>
+{% endblock %}
+
+
+{% block inventorycontent %}
+<td>
+<div id=inventorybody>
+	{% if inventoryentry %}
+	<img src="{{ MEDIA_URL }}{{ inventoryentry.picture }}" height="100" width="70"/><br/>
+	<p>{{ inventoryentry.description}}</p>
+</div>
+</td>	
+
+	<form action="." method="POST" id="comment-form">
+	<table>
+	{% csrf_token %}
+	{{ form }}
+	</table>
+	<button>Leave a comment</button>
+	</form>
+
+	{% else %}
+	<p>No studies here, bud.</p>
+	{% endif %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

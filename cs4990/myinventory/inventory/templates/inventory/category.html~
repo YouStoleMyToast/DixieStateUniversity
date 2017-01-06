@@ -1,0 +1,24 @@
+{% extends 'inventory/base.html' %}
+{% load staticfiles %}
+
+
+<div id="titlespace">{% block title %}Inventory Home{% endblock %}</div>
+
+{% block content %}
+
+<div id=inventorybody>
+	{% for cat in categoryentries %}
+		<table width="100%">
+		<td width="100%">
+		<div id=bodytitle>{{ cat.title }}</div>
+		<div id=bodydescription>{{ cat.description }}</div>
+
+		<div id=bodyimage><img src="{{ MEDIA_URL }}{{ cat.picture }}" height="100" width="70"></div>
+		</td>
+		</table>
+		<hr>
+	{% endfor %}
+</div>
+
+{% endblock %}
+

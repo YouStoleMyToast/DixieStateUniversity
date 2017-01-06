@@ -1,0 +1,48 @@
+{% extends 'inventory/base.html' %}
+{% load staticfiles %}
+
+{% block extrascripts %}
+<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+$(function(){
+	$('#update-form').submit(
+		function (evt) {
+			alert('Just tried to submit quantity change');
+			evt.perventDefault();
+			$.ajax({
+				url:$(this).attr('action'),
+				type:'post',
+				data:$(this).serialize(),
+				success:function(data){alert('Successfully updated quantity.');},
+				error:function(){alert('Can\'t update quantity.');},
+			});
+			return false;
+		});
+});
+</script>
+{% endblock %}
+  
+
+<div id="titlespace">{% block title %}{{ category }}{% endblock %}</div>
+  
+  
+{% block content %}
+	{% for inv in inventoryentries %}
+		{% if inv.category == category %}
+			<td>
+				<a href="{% url 'inventory:item_detail' inv.id %}"><img src="{{ MEDIA_URL }}{{ inv.picture }}" height="150" width="110"/></a>
+				{{ inv.title }}<br>
+				Qty={{ inv.count }}<br>
+			</td>
+			{% if forloop.last %}
+				</tr>
+			{% else %}
+				 {% if forloop.counter|divisibleby:3 %}
+					</tr><tr>
+				{% endif %}
+			{% endif %}
+
+		{% endif %}
+	{% endfor %}
+{% endblock %}
+
+

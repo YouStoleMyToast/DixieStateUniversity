@@ -1,0 +1,41 @@
+{% load staticfiles %}
+{% load category_tags %}
+
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'inventory/inventory.css' %}" />
+	{% block extrascripts %}{% endblock %}
+	
+	<div id="header">
+		<p>My Inventory</p>
+		<p>By Eric Beilmann</p>
+	</div>
+	
+	<div id="titlespace">{% block title %}Inventory{% endblock %}</div>
+</head>
+
+
+<body>
+	<table width="100%">
+	{% block catlinks %}
+		<td width="150px">
+		<p><a href="{% url 'inventory:category_display' %}">Home</a></p><br>
+		{% category_links %}
+		</td>
+	{% endblock %}
+	<td>
+	{% block content %}
+
+	{% endblock %}	
+	</td>
+	</table>
+
+</body>
+	<div id="footer">
+	<img src="http://media.djangopony.com/img/small/badge.png" width="210" height="65" alt="pony powered" style="float:right"></a>
+	</div>
+	<br><br>
+</html>
+
+

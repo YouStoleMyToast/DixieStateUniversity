@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<ul>
+{% block links %}
+	{% for inv in inventory_list %}
+		{% if blog.active %}
+			<li>
+			<div id=datelink>
+			<a href="http://127.0.0.1:8007/invindex/{{ inventory.id }}">
+			{{ inventory.date | date:"d M Y" }} - {{ inventory.topic}}
+			</a>
+			</div>
+			</li>
+		{% endif %}
+	{% endfor %}
+{% endblock %}
+</ul>
