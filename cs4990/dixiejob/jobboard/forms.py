@@ -1,0 +1,20 @@
+from django import forms
+from django.forms import ModelForm, Textarea
+
+from jobboard.models import Employer, Employee, Post
+
+class EmployeeForm(ModelForm):
+	class Meta:
+		model=Employee
+		fields=['email','reciever']
+
+class EmployerForm(ModelForm):
+	class Meta:
+		model=Employer
+		fields=['company','compdesc','compwebsite','compemail','compcontact']
+		
+class PostForm(ModelForm):
+	class Meta:
+		model=Post
+
+				

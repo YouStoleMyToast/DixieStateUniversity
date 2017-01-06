@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="inc/jobs.css"><center><br>
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<table>
+	<tr><th colspan=2>About the Job</th></tr>
+</table>
+<table>
+	<tr><th>Employer</th><td><a href="/company/{{ post.employer.id }}/">{{ postdetail.employer }}</a></td></tr>
+	<tr><th>Job Title</th><td>{{ postdetail.title }}</td></tr>
+	<tr><th>Description</th><td>{{ postdetail.postdesc }}</td></tr>
+	<tr><th>Type</th><td>{{ postdetail.posttype }}</td></tr>
+	<tr><th>Wage</th><td>{{ postdetail.wage }}</td></tr>
+	<tr><th>Post Date</th><td>{{ postdetail.pubdate }}</td></tr>
+	<tr><th>Expiration Date</th><td>{{ postdetail.expdate }}</td></tr>
+	<tr><th>Active</th><td>{{ postdetail.active }}</td></tr>
+</table>
+<p>
+<table>
+	<tr><th colspan=2>About the company</th></tr>
+</table>
+<table>
+	<tr><th>Employer</th><td>{{ postdetail.employer.company }}</td></tr>
+	<tr><th>Description</th><td>{{ postdetail.employer.compdesc }}</td></tr>
+	<tr><th>Website</th><td>{{ postdetail.employer.compwebsite }}</td></tr>
+	<tr><th>Email</th><td>{{ postdetail.employer.compemail }}</td></tr>
+	<tr><th>Contact</th><td>{{ postdetail.employer.compcontact }}</td></tr>
+</table>	
+
+{% endblock %}
+

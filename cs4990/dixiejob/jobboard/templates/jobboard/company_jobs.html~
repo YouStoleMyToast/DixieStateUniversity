@@ -1,0 +1,8 @@
+{% load staticfiles %}
+
+{% block empcontent %}
+	{% for job in company_list %}
+		<p><a href="{% url 'jobboard:company' job.employer.id %}">{{ job.title }}</a></p><br>
+	{% endfor %}
+{% endblock %}
+

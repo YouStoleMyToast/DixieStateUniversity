@@ -1,0 +1,347 @@
+{% load staticfiles %}
+{% load company_tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Dixie State CIT :: CIT Jobs Board</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="http://cit.dixie.edu/style/style.css" />
+<link rel="icon" href="http://cit.dixie.edu/favicon.png"/>
+<link rel="shortcut icon" href="http://cit.dixie.edu/favicon.png"/>
+<script type="text/javascript" src="http://cit.dixie.edu/js/jquery.js"></script>
+<script type="text/javascript" src="http://cit.dixie.edu/js/hover.js"></script>
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-26698825-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+</script>
+</head>
+<body>
+<div id="header-wrapper">
+<div id="header">
+<!-- ********* BREADCRUMS ********* -->
+<div id="breadcrums">
+	<div>
+		<a href="/">CIT</a> &raquo; 
+		<a href="/citjobs">citjobs</a> &raquo; 
+		<a href="/citjobs/index.php">Index</a>
+	</div>
+</div>
+	<div id="search_form">
+		<form method="post" id="search_form" action="https://cit.dixie.edu/search.php">
+			<fieldset class="search">
+				<input type="text" placeholder="Search..." name="search_term" />
+				<button title="Submit Search">Search</button>
+			</fieldset>
+		</form>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+<div id="lower-head" style="clear:both;display:none;"><a href="http://dixie.edu/" target="_blank" title="Dixie State University Home"><img src="http://cit.dixie.edu/images/dsu_logo_new2.png" border="0"/></a></div></div>
+<div id="cit_nav_wapper">
+<ul id="cit_nav">
+<!-- ********* DIXIE.EDU ********* -->
+<li><a href="http://cit.dixie.edu/">CIT</a></li>
+<!-- ********* DEGREES ********* -->
+<li><a href="http://cit.dixie.edu/degrees/">Degrees</a>
+	<ul>
+		<li><a href="http://cit.dixie.edu/degrees">2013-14 Requirements</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2013-14/BS_CS_2013_2014.pdf">CS Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2013-14/BS_CIT_2013_2014.pdf">CIT Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2013-14/BS_CIT_CS_2013_2014.pdf">CS Emphasis</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2013-14/BS_CIT_IT_2013_2014.pdf">IT Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2013-14/BS_CIT_VT_2013_2014.pdf">VT Emphasis</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/degrees">2012-13 Requirements</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2012-13/BS_CS_2012_2013.pdf">CS Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2012-13/BS_CIT_2012_2013.pdf">CIT Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2012-13/BS_CIT_CS_2012_2013.pdf">CS Emphasis</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2012-13/BS_CIT_IT_2012_2013.pdf">IT Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2012-13/BS_CIT_VT_2012_2013.pdf">VT Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2012-13/CERT_VT_2012_2013.pdf">VT Certificate</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/degrees">2011-12 Requirements</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2011-12/BS_CS_2011_2012.pdf">CS Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2011-12/BS_CIT_2011_2012.pdf">CIT Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2011-12/BS_CIT_CS_2011_2012.pdf">CS Emphasis</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2011-12/BS_CIT_IT_2011_2012.pdf">IT Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2011-12/BS_CIT_VT_2011_2012.pdf">VT Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2011-12/CERT_VT_2011_2012.pdf">VT Certificate</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/degrees">2010-11 Requirements</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2010-11/BS_CIT_2010_2011.pdf">CIT Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2010-11/BS_CIT_CS_2010_2011.pdf">CS Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2010-11/BS_CIT_IT_2010_2011.pdf">IT Emphasis</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2010-11/BS_CIT_VT_2010_2011.pdf">VT Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2010-11/CERT_VT_2010_2011.pdf">VT Certificate</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/degrees">2009-10 Requirements</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2009-10/BS_CIT_2009_2010.pdf">CIT Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2009-10/BS_CIT_CS_2000_2010.pdf">CS Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2009-10/BS_CIT_IT_2009_2010.pdf">IT Emphasis</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2009-10/BS_CIT_VT_2009_2010.pdf">VT Emphasis</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/degrees">2008-09 Requirements</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2008-09/BS_CIT_2008_2009.pdf">CIT Degree</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2008-09/BS_CIT_CS_2008_2009.pdf">CS Emphasis</a></li>
+				<li><a href="http://cit.dixie.edu/degrees/2008-09/BS_CIT_IT_2008_2009.pdf">IT Emphasis</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/degrees/2008-09/BS_CIT_VT_2008_2009.pdf">VT Emphasis</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<!--********* COURSES *********-->
+<li><a href="http://cit.dixie.edu/courses/">Courses</a>
+	<ul>
+		<li><a href="http://cit.dixie.edu/cs/">Computer Science</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/cs/1010/">CS 1010</a></li>
+				<li><a href="http://cit.dixie.edu/cs/1400/">CS 1400</a></li>
+				<li><a href="http://cit.dixie.edu/cs/1410/">CS 1410</a></li>
+				<li><a href="http://cit.dixie.edu/cs/2420/">CS 2420</a></li>
+				<li><a href="http://cit.dixie.edu/cs/2450/">CS 2450</a></li>
+				<li><a href="http://cit.dixie.edu/cs/2810/">CS 2810</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3000/">CS 3000</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3005/">CS 3005</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3100/">CS 3100</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/cs/3310/">CS 3310</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3400/">CS 3400</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3410/">CS 3410</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3500/">CS 3500</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3510/">CS 3510</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3520/">CS 3520</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3530/">CS 3530</a></li>
+				<li><a href="http://cit.dixie.edu/cs/3600/">CS 3600</a></li>
+				<li><a href="http://cit.dixie.edu/cs/4000/">CS 4000</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/cs/4010/">CS 4010</a></li>
+				<li><a href="http://cit.dixie.edu/cs/4100/">CS 4100</a></li>
+				<li><a href="http://cit.dixie.edu/cs/4300/">CS 4300</a></li>
+				<li><a href="http://cit.dixie.edu/cs/4550/">CS 4550</a></li>
+				<li><a href="http://cit.dixie.edu/cs/4600/">CS 4600</a></li>
+				<li><a href="http://cit.dixie.edu/cs/4990/">CS 4990</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/it/">Information Technology</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/it/1001/">IT 1001</a></li>
+				<li><a href="http://cit.dixie.edu/it/1100/">IT 1100</a></li>
+				<li><a href="http://cit.dixie.edu/it/2400/">IT 2400</a></li>
+				<li><a href="http://cit.dixie.edu/it/3100/">IT 3100</a></li>
+				<li><a href="http://cit.dixie.edu/it/3110/">IT 3110</a></li>
+				<li><a href="http://cit.dixie.edu/it/3500/">IT 3500</a></li>
+				<li><a href="http://cit.dixie.edu/it/3550/">IT 3550</a></li>
+				<li><a href="http://cit.dixie.edu/it/4200/">IT 4200</a></li>
+				<li><a href="http://cit.dixie.edu/it/4300/">IT 4300</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/it/4400/">IT 4400</a></li>
+				<li><a href="http://cit.dixie.edu/it/4500/">IT 4500</a></li>
+				<li><a href="http://cit.dixie.edu/it/4600/">IT 4600</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/vt/">Visual Technologies</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/vt/1300/">VT 1300</a></li>
+				<li><a href="http://cit.dixie.edu/vt/1400/">VT 1400</a></li>
+				<li><a href="http://cit.dixie.edu/vt/2060/">VT 2060</a></li>
+				<li><a href="http://cit.dixie.edu/vt/2500/">VT 2500</a></li>
+				<li><a href="http://cit.dixie.edu/vt/2600/">VT 2600</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3000/">VT 3000</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3060/">VT 3060</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3100/">VT 3100</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3200/">VT 3200</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/vt/3300/">VT 3300</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3600/">VT 3600</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3620/">VT 3620</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3650/">VT 3650</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3710/">VT 3710</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3750/">VT 3750</a></li>
+				<li><a href="http://cit.dixie.edu/vt/3780/">VT 3780</a></li>
+				<li><a href="http://cit.dixie.edu/vt/4000/">VT 4000</a></li>
+				<li><a href="http://cit.dixie.edu/vt/4010/">VT 4010</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/vt/4100/">VT 4100</a></li>
+				<li><a href="http://cit.dixie.edu/vt/4600/">VT 4600</a></li>
+				<li><a href="http://cit.dixie.edu/vt/4700/">VT 4700</a></li>
+				<li><a href="http://cit.dixie.edu/vt/4900/">VT 4900</a></li>
+				<li><a href="http://cit.dixie.edu/vt/4920/">VT 4920</a></li>
+				<li><a href="http://cit.dixie.edu/vt/4990/">VT 4990</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/art/">Art Courses</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/art/2060/">ART 2060</a></li>
+				<li><a href="http://cit.dixie.edu/art/3060/">ART 3060</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<!-- ********* FACULTY ********* -->
+<li><a href="http://cit.dixie.edu/faculty/">Faculty</a>
+	<ul>
+		<li><a href="http://cit.dixie.edu/faculty/">CIT Faculty</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/faculty/francom.php">Joe Francom - CS & IT</a></li>
+				<li><a href="http://cit.dixie.edu/faculty/larsen.php">Curtis Larsen - CS & IT</a></li>
+				<li><a href="http://cit.dixie.edu/faculty/nielson.php">Bob Nielson - CS & IT</a></li>
+				<li><a href="http://cit.dixie.edu/faculty/pedersen.php">Eric Pedersen - IT & VT</a></li>
+				<li><a href="http://cit.dixie.edu/faculty/kearl.php">Matt Kearl - IT & VT</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://cit.dixie.edu/faculty/ramsay.php">Rachel Ramsay - VT</a></li>
+				<li><a href="http://cit.dixie.edu/faculty/ross.php">Russ Ross - CS</a></li>
+				<li><a href="http://cit.dixie.edu/faculty/stander.php">Bart Stander - CS</a></li>
+				<li><a href="http://cit.dixie.edu/faculty/woodland.php">Ron Woodland - VT & CS</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/faculty/">CIT Adjunct Instructors</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/faculty/wastlund.php">Kraig Wastlund - CS & VT</a></li>
+				<li><a href="http://cit.dixie.edu/faculty/walker.php">Jonathan Walker - IT</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/faculty/">CIT Advising</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/faculty/cstander.php">Carol Stander</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/faculty/">CIT Staff</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/faculty/walker.php">Jonathan Walker</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<!-- ********* RESOURCES ********* -->
+<li><a href="http://cit.dixie.edu/resources/">Resources</a>
+	<ul>
+		<li><a href="http://cit.dixie.edu/facilities/">Facilities</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/facilities/passwd/passwd.php">Change Password</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/maya-renderview/maya-renderview.php">Maya Render FIX</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/reset_windows_registry/reset_windows_registry.php">Reset Windows Registry</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/reset_photoshop_cs6/reset_photoshop_cs6.php">Reset OSX Photoshop Preferences</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/machelp/">MAC Help</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/lab_schedule.php">Lab Schedule</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/notes/scp.php">CIT Disk Space</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/diskusage.php">Find Large Files</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/notes/webspace.php">CIT Webspace</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/notes/mysql.php">Using your MySQL account</a></li>
+				<li><a href="http://cit.dixie.edu/facilities/notes/adobe_illustrator.php">Adobe Illustrator (insufficient memory)</a></li>
+				<li><a href="https://vm.cs.dixie.edu/">Virtual Machine Server</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/citjobs/">Jobs</a><hr />
+			<ul>
+				<li><a href="http://cit.dixie.edu/citjobs/">Job Listings</a></li>
+				<li><a href="http://cit.dixie.edu/citjobs/post.php">Post a Job</a></li>
+				<li><a href="http://cit.dixie.edu/citjobs/register.php">Register</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/scholarships/">Scholarships</a><hr />
+			<ul>
+				<li><a href="https://dixie.edu/financial/scholarships/">DSC Scholarships</a></li>
+				<li><a href="http://cit.dixie.edu/scholarships/">CIT Scholoarships</a></li>
+			</ul>
+		</li>
+		<li><a href="http://cit.dixie.edu/resources/">Other Resources</a><hr />
+			<ul>
+				<li><a href="https://canvas.dixie.edu/">Canvas</a></li>
+				<li><a href="https://cit.dixie.edu/grades/">CIT Grades</a></li>
+				<li><a href="http://helpdesk.cs.dixie.edu">CIT Helpdesk</a></li>	
+				<li><a href="http://cit.dixie.edu/newsletter/">CIT Newsletter</a></li>
+				<li><a href="http://dmail.dixie.edu/" target="_blank">DMAIL</a></li>
+				<li><a href="https://submit.cs.dixie.edu/">Submit Homework</a></li>
+				<li><a href="http://cit.dixie.edu/video/">Videos from Voddov</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<!-- ********* CONTACT ********* -->
+<li><a href="http://cit.dixie.edu/contact/">Contact</a></li>
+</ul>
+<div id="main_container">
+<div class="main">
+<link rel="stylesheet" type="text/css" href="inc/jobs.css"><center><br>
+</center><center>
+<table>
+<tr style="height:40px;font-size:20px;">
+	<td style="background:#980000;text-align:center;">
+		<a href="/" style="color:#f0f0f0;">Home</a>
+	</td> 
+    <th style="width:80%;background:#980000;color:#f0f0f0;">Recent Jobs</th>
+    {% if user.is_authenticated %}
+		{% if user.is_staff %}
+			<td style="background:#980000;color:#f0f0f0;text-align:center;">
+				<a href="/admin/" style="color:#f0f0f0;">Admin</a>
+			</td>
+		
+		{% elif user in employer_list %}
+			<td style="background:#980000;color:#f0f0f0;text-align:center;">
+				<a href="/employer/{{user.id}}"style="color:#f0f0f0;">{{ user }}</a>
+			</td>
+		{% else %}
+			<td style="background:#980000;color:#f0f0f0;text-align:center;">
+				<a href="/profile/{{user.id}}"style="color:#f0f0f0;">{{ user }}</a>
+			</td>
+		{% endif %}
+		
+		<td style="background:#980000;color:#f0f0f0;text-align:center;">
+    		<a href="{% url 'auth_logout' %}"style="color:#f0f0f0;">Log Out</a>
+    	</td>
+    {% else %}
+    	<td style="background:#980000;color:#f0f0f0;text-align:center;">
+    		<a href="{% url 'auth_login' %}" style="color:#f0f0f0;">Log In</a>
+    	</td>
+    {% endif %}
+</tr>
+</table>
+{% block content %}{% endblock %}
+<hr>
+<footer>Copyright &copy;2013 Eric Beilmann. All rights reserved.</footer>
+</div><!-- main -->
+</table></center>
+<div style="clear:both;"></div>
+</div><!-- main_container -->
+</div>
+	<script type="text/javascript" src="http://cit.dixie.edu/js/jquery.syntaxhighlighter.min.js"></script>
+	<script type="text/javascript" src="http://cit.dixie.edu/js/fancybox/jquery.fancybox-1.3.4.js"></script>
+	<script type="text/javascript" src="http://cit.dixie.edu/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://cit.dixie.edu/js/fancybox/jquery.fancybox-1.3.4.css" />
+	<script type="text/javascript" src="http://cit.dixie.edu/js/jquery.textarea.js"></script>
+	<script type="text/javascript" src="http://cit.dixie.edu/js/site.js"></script>
+	<script type="text/javascript" src="http://cit.dixie.edu/grid/JS/modal.js"></script>
+</body>
+
+</html>
+
+

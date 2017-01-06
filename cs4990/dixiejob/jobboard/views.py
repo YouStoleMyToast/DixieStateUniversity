@@ -1,0 +1,280 @@
+import os
+from django import forms
+from registration.backends.simple.views import RegistrationView
+from django.template import RequestContext, loader
+from django.utils.decorators import method_decorator
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseForbidden
+from django.shortcuts import render, get_object_or_404
+from django.forms import ModelForm, Textarea
+from django.views.generic.detail import SingleObjectMixin, BaseDetailView, SingleObjectTemplateResponseMixin
+from django.views.generic import View, FormView, TemplateView, ListView, DetailView, CreateView
+from django.views.generic.base import RedirectView
+from django.views.generic.edit import FormMixin
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
+from django.core.mail import send_mail
+from django.core import serializers
+from django.db import models
+
+from jobboard.models import Employer, Post, Employee
+from jobboard.forms import EmployerForm, PostForm, EmployeeForm
+
+#added from templateview lesson
+
+class employercheck(models.Model):
+	employers=Employer.objects.all()
+	def employerreturn(self):
+		username=request.user
+		for emp in employers:
+			if emp.user==username:
+				return True
+			else:
+				return False
+		
+class MyTemplateView(TemplateView):
+	@method_decorator(login_required)
+	def dispatch(self,*args,**kwargs):
+		return super(MyTemplateView, self)
+	
+class PostList(ListView):	
+	model=Post
+	template_name='post_list.html'
+	context_object_name='postlist'
+	def get_qeury_set(self):
+		return Post.objects.all()
+
+class PostDetail(DetailView):
+	model=Post
+	template_name='Post_detail.html'
+	context_object_name='postdetail'
+	def get_object(self):
+		return get_object_or_404(Post, pk=self.kwargs['pk'])
+	
+class ProfileDetail(CreateView):
+    model=Employee
+    form_class=EmployeeForm
+    
+    def get_form(self, form_class):
+        form=super(ProfileDetail, self).get_form(form_class)
+        form.instance.user=self.request.user
+        return form
+        
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ProfileDetail, self).dispatch(*args, **kwargs)	
+
+class EmployerDetail(CreateView):
+    model=Employer
+    form_class=EmployerForm
+    
+    def get_form(self, form_class):
+        form=super(EmployerDetail, self).get_form(form_class)
+        form.instance.user=self.request.user
+        return form
+        
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(EmployerDetail, self).dispatch(*args, **kwargs)	
+
+class EmployerLogin(models.Model):
+	def getemployers(self):
+		employers=Employers.objects.all()
+		return "employers"
+	
+class CompanyDetail(DetailView):
+	model=Employer
+	template_name='employer_detail.html'
+	context_object_name='companydetail'
+	def get_object(self):
+		return get_object_or_404(Employer, pk = self.kwargs['pk'])
+
+        
+class LogedIn(DetailView):
+	model=Employer
+	template_name='loged_in.html'
+	context_object_name='logedin'
+	def get_object(self):
+		return get_object_or_404(Employer, pk = self.kwargs['pk'])
+		
+#def LogedIn(request):
+#	username=request.user
+#	employers=Employer.objects.all()
+#	context={
+#		'employers':employers,
+#		'username':username,
+#	}
+#	return render(request, 'base.html', context)
+
+
+#class ProfileDetail(FormView):
+#	model=Employee
+#	form_class=EmployeeForm
+#	template_name='jobboard/profile_detail.html'
+#	def get_success_url(self):
+#		return reverse('profiledetail', kwargs={'pk': self.object.pk})
+#	def get_context_data(self, **kwargs):
+#		context=super(ProfileDetail, self).get_context_data(**kwargs)
+#		form_class=self.get_form_class()
+#		context['form']=self.get_form(form_class)
+#		return context
+#	def post(self, request, *args, **kwargs):
+#		self.object=get_object_or_404(Employee, pk=self.kwargs['pk'])
+#		#form_class=self.get_form_class()
+#		#form=self.get_form(form_class)
+#		form=EmployeeForm(request.POST or None, instance=self.object)
+#		print form
+#		if form.is_valid():
+#			return self.form_valid(form)
+#		else:
+#			return self.form_invalid(form)
+#	def form_valid(self, form):
+#		form.save()
+#		return super(ProfileDetail, self).form_valid(form)	
+
+
+#added from email lesson
+#class MyRegistrationBackend(RegistrationView):
+#	def get_success_url(self,request,user):
+#		return reverse('jobboard:index')	
+#def getuserinfo(request, user_id):
+#	seeker=get_object_or_404(User, pk=user_id)
+#	return HttpResponse(jobboard)
+#def notify_subscriber(post):
+#	if post.active:
+#		for employee in Employee.objects.all():
+#			template=loader.get_template('jobboard/email.txt')
+#			context=RequestContext(request, {
+#				'name':	employee.user,
+#				#'post': post
+#			})
+#			body=template.render(context)
+#			send_mail('New Job Posting: ' + {{ post.title }}, body, 'no-reply@betterjobboard.com', [subscriber.email], fail_silently=False)
+#	return True#just in case you need to return something
+#def newpost(request):
+#	try:
+#		profile=Employee.Objects.get(user=request.user)
+#	except:
+#		return HttpResponseRedirect(reverse('jobboard:profile'))
+#	if method=="POST":
+#		job_form=JobForm(request.POST)
+#		job_instance=job_form.save()
+#		notify_subscriber(request,job_instance)
+#		messages.success(request,'Your post is saved')
+#		return HttpResponseRedirect(reverse('jobboard:profile'))
+#	else:
+#		job_form=JobForm()
+#		context={'job_form':job_form,}
+#	return render(request,'jobboard/newpost.html')
+	
+#class ProfileDetail(View):
+#	form_class=EmployeeForm
+#	model=Employee
+#	template_name="profile.html"
+#	success_url = '/thanks/'
+#	def form_valid(self, form):
+#		return super(ProfileDetail,self).form_valid(form)
+	#def get_object(self):
+	#	return get_object_or_404(Employee, pk=employee_id)
+		
+#class ProfileFormView(FormView):
+#	model=Employee
+#	if request.method=='POST':
+#		form=EmployeeForm(request.POST)
+#		if form.is_valid():
+#			form.save()
+#			return HttpResponseRedirect('profile.html')
+#	else:
+#		form=EmployeeForm()
+#	return render_to_response('profile.html',{'form':form})
+#class ProfileDetail(View):#edits the dataset produced in urls
+#	model=Employee
+#	form_class=EmployeeForm
+#	template_name='profile.html'
+#	def get_success_url(self):
+#		return reverse('profiledetail', kwargs={'pk': self.object.pk})
+#	def get_context_data(self, **kwargs):
+#		context = super(ProfileDetail, self).get_context_data(**kwargs)
+#		form_class = self.get_form_class()
+#		context['form'] = self.get_form(form_class)
+#		return context
+#	def post(self, request, *args, **kwargs):
+#		if not request.user.is_authenticated():
+#			return HttpResponseForbidden()
+#		self.object = self.get_object()
+#		form_class = self.get_form_class()
+#		form = self.get_form(form_class)
+#		if form.is_valid():
+#			return self.form_valid(form)
+#		else:
+#			return self.form_invalid(form)
+#	def form_valid(self, form):
+#		return super(ProfileDetail, self).form_valid(form)	
+#class EmployeeInfo(SingleObjectMixin, FormView):
+#	model=Employee
+#	form_class=EmployeeForm
+#	template_name='profile.html'
+#	def post(self, request, *args, **kwargs):
+#		if not request.user.is_authenticated():
+#			return HttpResponseForbidden()
+#		self.object=self.get_object()
+#		form_class=self.get_form_class()
+#		return super(ProfileDetail, self).post(request,*args, **kwargs)
+#	def get_success_url(self):
+#		return reverse('profiledetail', kwargs={'pk':self.object.pk})
+#class ProfileDetail(View):
+#	def post(self, request, *args, **kwargs):
+#		view=EmployeeInfo.as_view()
+#		return view(request,*args, **kwargs)		
+#	def get(self, request, *args, **kwargs):
+#		view=EmployeeInfo.as_view()
+#		return view(request,*args, **kwargs)
+#def profile(request, user_id):
+#	seeker=get_object_or_404(User, pk=user_id)
+#	employer=get_object_or_404(User, pk=user_id)
+#	seeker_form=EmployeeForm(request.POST or None, instance=seeker)
+#	employer_form=EmployerForm(request.POST or None, instance=employer)
+#	if seeker_form.is_valid():
+#		seeker_form.save()
+#	if employer_form.is_valid():
+#		employer_form.save()
+#	context={
+#		'username':seeker,
+#		'useremail':seeker.email,
+#		'seeker': seeker,
+#		'employer': employer,
+#		'seeker_form':seeker_form,
+#		'employer_form':employer_form,
+#	}
+#	return render(request, 'jobboard/profile.html', context)	
+#def employerregister(request):
+#	context={'employer_form':employer_form}
+#	print 'hello'
+#	if request.method=="POST":
+#		employer_form=EmployerForm()
+#		print employer_form
+#		if employer_form.is_valid():
+#			employer_form.save()
+#			return HttpResponseRedirect('')
+#		return render(request, 'jobboard/profile.html', context)
+#json
+#class JSONResponseMixin(object):
+#	def render_to_json_response(self,context,**response_kwargs):
+#		return HttpResponse(
+#			self.convert_context_to_json(context),
+#			content_type='aplication/json',
+#			**response_kwargs)
+#	def convert_context_to_json(self, context):
+#		return json.dumps(context)
+#class JSONView(JSONResponseMixin, TemplateView):
+#    def render_to_response(self, context, **response_kwargs):
+#        return self.render_to_json_response(context, **response_kwargs)
+#class JSONDetailView(JSONResponseMixin, BaseDetailView):
+#    def render_to_response(self, context, **response_kwargs):
+#        return self.render_to_json_response(context, **response_kwargs)
+#class HybridDetailView(JSONResponseMixin, SingleObjectTemplateResponseMixin, BaseDetailView):
+#    def render_to_response(self, context):
+#        if self.request.GET.get('format') == 'json':
+#            return self.render_to_json_response(context)
+#        else:
+#            return super(HybridDetailView, self).render_to_response(context)

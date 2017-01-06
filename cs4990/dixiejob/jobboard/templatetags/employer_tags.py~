@@ -1,0 +1,13 @@
+from django import template
+from jobboars.models import Job
+
+register = template.Library()
+
+@register.inclusion_tag('jobboard/company_jobs.html')
+def company_jobs():
+	company_list=[]
+	for job in Job.objects.all():
+		company_list.append(job)
+		
+	return {'company_list':company_list}
+

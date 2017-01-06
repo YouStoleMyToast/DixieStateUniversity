@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load company_tags %}
+
+<link rel="stylesheet" type="text/css" href="inc/jobs.css"><center><br>
+
+{% block content %}
+<table>
+	<tr><th>Employer</th><td>{{ companydetail.company }}</td></tr>
+	<tr><th>Description</th><td>{{ companydetail.compdesc }}</td></tr>
+	<tr><th>Website</th><td>{{ companydetail.compwebsite }}</td></tr>
+	<tr><th>Email</th><td>{{ companydetail.compemail }}</td></tr>
+	<tr><th>Contact</th><td>{{ companydetail.compcontact }}</td></tr>
+</table>
+
+
+{% endblock %}
+

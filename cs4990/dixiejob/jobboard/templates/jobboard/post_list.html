@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="inc/jobs.css"><center><br>
+	<table style="text-align:left;">
+	
+	{% if postlist %}
+		<tr>
+			<th>Job Title</th>
+			<th>Employer</th>
+			<th>Job Type</th>
+			<th>Wage</th>
+			<th>Post Date</th>
+		</tr>
+		{% for post in postlist %}
+		<tr>
+			<td><a href="/jobboard/{{ post.id }}/">{{ post.title }}</a></td>
+			<td><a href="/company/{{ post.employer.id }}/">{{ post.employer }}</a></td>
+			<td>{{ post.posttype }}</a></li>
+			<td>{{ post.wage }}</a></li>
+			<td>{{ post.pubdate|date:"d M Y" }}</a></td>
+		</tr>
+		{% endfor %}
+		
+	</table>
+	{% else %}
+		<p>No jobs are available.</p>
+	{% endif %}
+
+{% endblock %}
+
+
+
+
+
+
+

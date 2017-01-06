@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block employercheck %}
+	{% for emp in employer_list %}
+		{% if emp == user %}
+			<td style="background:#980000;color:#f0f0f0;text-align:center;">
+				<a href="/employer/{{user.id}}"style="color:#f0f0f0;">{{ user }}</a>
+			</td>
+		{% else %}
+			<td style="background:#980000;color:#f0f0f0;text-align:center;">
+				<a href="/profile/{{user.id}}"style="color:#f0f0f0;">{{ user }}</a>
+			</td>
+		{% endif %}
+	{% endfor %}
+
+{% endblock %}
+

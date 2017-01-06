@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+{% block loged_in %}
+	{% if user.is_staff %}
+		<td style="background:#980000;color:#f0f0f0;text-align:center;">
+			<a href="/admin/" style="color:#f0f0f0;">Admin</a>
+		</td>
+	{% elif employer in employer_list %}
+		<td style="background:#980000;color:#f0f0f0;text-align:center;">
+			<a href="/employer/{{user.id}}"style="color:#f0f0f0;">{{ user }}</a>
+		</td>
+	{% else %}
+		<td style="background:#980000;color:#f0f0f0;text-align:center;">
+			<a href="/profile/{{user.id}}"style="color:#f0f0f0;">{{ user }}</a>
+		</td>
+	{% endif %}
+{% endblock %}
+
