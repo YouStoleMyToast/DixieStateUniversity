@@ -1,0 +1,18 @@
+{% load staticfiles %}
+{% load friend_tags %}
+
+{% for friend in friend_list %}
+	<p>
+	<img src="{{ MEDIA_URL }}{{ friend.image }}" height='70' width='50' alt="Image Not Found" />
+	<a href="{% url 'chirp:profile' friend.id %}"> {{ friend.user }} </a>
+	</p>
+	<br>
+{% endfor %}
+{{form}}
+<form style="width:100%;" action='.' method='POST' id="postform">
+	<table style="width:100%;">
+		{% csrf_token %}<br>
+		<tr><td>{{ form }}</td></tr>
+		<tr><td><input type='submit' value="Chirp"></td></tr>
+	</table>
+</form>

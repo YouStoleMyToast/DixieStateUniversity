@@ -1,0 +1,14 @@
+{% load staticfiles %}
+{% load friendbtn_tags %}
+
+
+<form action='/' method='POST' id='friend-change'>
+{% if profile.user == pageowner.user %}
+	<td rowspan=2 style="vertical-align:bottom;"></td>
+{% elif isfriend == True %}
+	<td rowspan=2 style="vertical-align:bottom;"><a href="{% url 'chirp:friendchange' pageowner.user.id 1 %}" class="btn btn-small btn-info" type="button" value="Unfriend" >Unfriend</a></td>
+{% elif isfriend == False %}
+	<td rowspan=2 style="vertical-align:bottom;"><a href="{% url 'chirp:friendchange' pageowner.user.id 0 %}" class="btn btn-small btn-info" type="button" value="Add Friend" >Friend</a></td>
+{% endif %}
+</form>	
+

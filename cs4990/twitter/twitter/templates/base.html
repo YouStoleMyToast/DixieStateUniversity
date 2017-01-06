@@ -1,0 +1,80 @@
+{% load staticfiles %}
+{% load friend_tags %}
+{% load friendpost_tags %}
+{% load userpost_tags %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}Chirp!{% endblock title %}</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- see http://netdna.bootstrapcdn.com/#bootswatch for some other "flavors" to try -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale: 1.0">
+    <style type="text/css">body { padding-top: 70px; }</style>
+    {% block extrascripts %}{% endblock extrascripts %}
+</head>
+<body>
+<div class="container">
+	<div class="navbar navbar-default navbar-fixed-top">
+		<img src="{{ MEDIA_URL }}chirpy.png" height='50' width='50' />
+		<a class="navbar-brand" href="/">Chirp!</a>
+		<ul class="nav navbar-nav">
+		    <li class="active"><a href="/">Home</a></li>
+		    {% if user.is_authenticated %}
+		    	<li><a href="{% url 'chirp:profile' user.id %}">Your Profile</a></li>
+		    {% endif %}
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		    {% if user.is_authenticated %}
+		    	{% if user.is_staff %}
+		        	<li><a href="/admin/"><span class="glyphicon glyphicon-user"></span>Admin</a></li>
+		        {% endif %}
+		        <li><a href="{% url 'auth_logout' %}">Log Out</a></li>
+		    {% else %}
+		    	<li><a href="{% url 'auth_login' %}"><span class="glyphicon glyphicon-user"></span>Log In</a></li>
+		    {% endif %}
+		</ul>
+	</div>
+	<div class="body-content">
+		<div class="row">
+			<!-- main content area -->
+			<div class="col-lg-9">
+				{% block content %}
+				<div class="jumbotron">
+					<h1>Hello, World!</h1>
+					<p>Welcome to a world of Twitter Bootstrap CSS, making life easier for all of us.</p>
+				</div>
+				{% endblock content%}
+			</div>
+			<!-- sidebar -->
+			<div class="col-lg-3">
+				{% if user.is_authenticated %}
+				<table class="table">
+					<tr>
+						<th style="font-size:28px;">{{ user }}</th>
+					</tr>
+					<tr>
+						<td><img src="{{MEDIA_URL}}{{user.profile.image}}" height='70' width='50' /></td>
+					</tr>
+					<tr>
+						<td style="font-size:22px">your friends</td>
+					</tr>
+				</table>
+				<table class="table">
+					{% friend_tags %}
+				</table>
+				{% endif %}
+			</div>
+		</div>
+	</div><!-- body-content -->
+	<hr>
+	<footer>Copyright &copy;2013 Eric Beilmann. All rights reserved.</footer>
+</div><!-- container -->
+
+</body>
+
+<html>

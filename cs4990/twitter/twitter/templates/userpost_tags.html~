@@ -1,0 +1,10 @@
+{% load staticfiles %}
+{% load userpost_tags %}
+
+{% for post in userpost_list %}
+	<tr>
+		<td><img src="{{ MEDIA_URL }}{{ post.image }}" height='70' width='50' /></td>
+		<td><a href="{% url 'chirp:profile' post.id %}"> {{ post.user }} </a></td>
+		<td>{{ post.message }}</td>
+	</tr>
+{% endfor %}

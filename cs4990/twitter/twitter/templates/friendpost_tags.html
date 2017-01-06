@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load friendpost_tags %}
+
+{% if pageowner.user == profile %}
+	{% for post in person_list %}
+			<tr>
+				<td><img src="{{ MEDIA_URL }}{{ post.2 }}" height='70' width='50' /></td>
+				<td><a href="{% url 'chirp:profile' post.0.id %}"> {{ post.0 }} </a></td>
+				<td>{{ post.1 }}</td>
+			</tr>
+	{% endfor %}
+{% else %}
+	{% for post in pageownerpost_list %}
+			<tr>
+				<td><img src="{{ MEDIA_URL }}{{ post.2 }}" height='70' width='50' /></td>
+				<td><a href="{% url 'chirp:profile' post.0.id %}"> {{ post.0 }} </a></td>
+				<td>{{ post.1 }}</td>
+			</tr>
+	{% endfor %}
+{% endif %}
+

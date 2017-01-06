@@ -1,0 +1,43 @@
+{% block extrascripts %}
+<script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
+<script type='text/javascript'>
+
+$(function(){
+	$('#submit-form').submit(
+		function (evt) {
+			evt.perventDefault();
+			$.ajax({
+				url:$(this).attr('action'),
+				type:'post',
+				data:$(this).serialize(),
+				success:function(data)
+				{
+					alert('logged in.');
+				},
+				error:function(){alert('Can\'t login.');},
+			});
+			return false;
+		});
+});
+</script>
+{% endblock %}
+
+
+{% if form.non_field_errors %}
+{{ form.non_field_errors }}
+{% endif %}
+<form method="post" action="/accounts/login/" id="submit-form">{% csrf_token %}
+<table>
+{% if form.username.errors %}
+<tr><td colspan="2">{% for e in form.username.errors %}{{ e }}{% endfor %}</td></tr>
+{% endif %}
+<tr><td><label for="id_username">Username:</label></td><td>{{ form.username }}</td></tr>
+{% if form.password.errors %}
+<tr><td colspan="2">{% for e in form.password.errors %}{{ e }}{% endfor %}</td></tr>
+{% endif %}
+<tr><td><label for="id_password">Password:</label></td><td>{{ form.password }}</td></tr>
+</table>
+
+<input type="submit" value="login" formaction="/" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
