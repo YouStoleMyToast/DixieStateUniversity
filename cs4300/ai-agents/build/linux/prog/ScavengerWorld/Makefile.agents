@@ -1,0 +1,3 @@
+CXX_SRC := $(CXX_SRC) Snorlax.cpp Manual.cpp eebpikachu.cpp eebgyarados.cpp eebymodel.cpp eebyproblem.cpp eebystate.cpp eebyaction.cpp eebglados.cpp eebmodel.cpp eebproblem.cpp eebstate.cpp eebaction.cpp 
+CXX_HEADERS := $(CXX_HEADERS) 
+REMOTE_SRC := $(REMOTE_SRC) 
