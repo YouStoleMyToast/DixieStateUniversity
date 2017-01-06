@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}List of Suggestions{% endblock %}
+
+{% block catcontent %}
+	<h1>List of Suggestion Categories</h1>
+	<table class="table">
+		{% for category in categories %}
+			<tr>
+			<td><a href="{% url 'suggestionbox:categorysuggestions' category.id %}">{{ category.title }}</a></td>
+			<td>{{ category.description }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
+
+
+
+
+
+
+
+
+

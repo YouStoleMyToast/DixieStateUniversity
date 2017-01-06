@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block extrascripts %}
+<script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
+<script type='text/javascript'>
+
+$(function(){
+	$('#suggestionadd').submit(
+		function (evt) {
+			alert('Just tried to submit suggestion');
+			evt.perventDefault();
+			$.ajax({
+				url:$(this).attr('action'),
+				type:'post',
+				data:$(this).serialize(),
+				success:function(data)
+				{
+					alert('Successfully added suggestion.');
+				},
+				error:function(){alert('Can\'t add suggestion.');},
+			});
+			return false;
+		});
+});
+</script>
+{% endblock %}
+
+
+{% block title %}List of Suggestions for {{ category.title }}{% endblock %}
+
+{% block content %}
+	<h1>List of Suggestions for {{ category.title }}</h1>
+	{% if suggestions %}
+		<table class="table">
+			<tr>
+				<th>Author</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Pub Date</th>
+				<th>Status</th>
+				<th>Category</th>
+			</tr>
+			{% for suggestion in suggestions %}
+				{% if user.is_authenticated %}
+				<tr>
+					{% if suggestion.user == user %}
+					<td style="color:green;">{{ suggestion.user }}</td>
+					{% else %}
+					<td>{{ suggestion.user }}</td>
+					{% endif %}
+					<td><a href="{% url 'suggestionbox:detail' suggestion.id %}">{{ suggestion.title }}</a></td>
+					<td>{{ suggestion.description }}</td>
+					<td>{{ suggestion.pub_date }}</td>
+					<td>{{ suggestion.status }}</td>
+					<td>{{ suggestion.category }}</td>
+				</tr>
+				{% endif %}
+			{% endfor %}
+		</table>
+
+	{% else %}
+		<p>No Suggestions Yet</p>
+		<p>Be the first of your friends to suggest something.</p>
+	{% endif %}
+	
+	<form action='.' method='POST' id="suggestionadd">
+	<table class="table">
+	{% csrf_token %}
+	<p>{{ form }}</p>
+	<input type='submit' value='add suggestion'>
+	</table>
+	</form>
+{% endblock %}
+

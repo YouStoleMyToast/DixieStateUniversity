@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extrascripts %}
+<script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
+<script type='text/javascript'>
+
+$(function(){
+	$('#commentadd').submit(
+		function (evt) {
+			alert('Just tried to submit comment');
+			evt.perventDefault();
+			$.ajax({
+				url:$(this).attr('action'),
+				type:'post',
+				data:$(this).serialize(),
+				success:function(data)
+				{
+					alert('Successfully added comment.');
+				},
+				error:function(){alert('Can\'t add comment.');},
+			});
+			return false;
+		});
+});
+</script>
+{% endblock %}
+
+{% block title %}Details{{ suggestion.title }}{% endblock %}
+
+{% block content %}
+	{% if suggestion %}
+		<h1>Suggestion</h1>
+		<table class="table">
+			<tr>
+				<th>Author</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Pub Date</th>
+				<th>Status</th>
+				<th>Category</th>
+			</tr>
+			<tr>
+				{% if suggestion.user == user %}
+				<td style="color:green;">{{ suggestion.user }}</td>
+				{% else %}
+				<td>{{ suggestion.user }}</td>
+				{% endif %}
+				<td>{{ suggestion.title }}</td>
+				<td>{{ suggestion.description }}</td>
+				<td>{{ suggestion.pub_date }}</td>
+				<td>{{ suggestion.status }}</td>
+				<td>{{ suggestion.category }}</td>
+			</tr>
+		</table>
+		<h1>Response</h1>
+		<table class="table">
+			<tr>
+				<th>Author</th>
+				<th>comment</th>
+				<th>Pub Date</th>
+			</tr>
+			{% for comment in comments %}
+				{% if comment %}
+				<tr>
+					{% if comment.user == user %}
+					<td style="color:green;">{{ comment.user }}</td>
+					{% else %}
+					<td>{{ comment.user }}</td>
+					{% endif %}
+					<td>{{ comment.comment }}</td>
+					<td>{{ comment.pub_date }}</td>
+				</tr>
+				{% else %}
+				<tr>
+					<td>No responses yet.</p>
+				</tr>
+				{% endif %}
+			{% endfor %}
+		</table>
+	{% else %}
+		<h1>No Suggestions Yet</h1>
+		<p>Be the first of your friends to suggest something.</p>
+	{% endif %}
+		<form action='.' method='POST' id="commentadd">
+		<table class="table">
+		{% csrf_token %}
+		<p>{{ comform.comment }}</p>
+		<input type='submit' value='add comment'>
+		</table>
+		</form>
+{% endblock %}

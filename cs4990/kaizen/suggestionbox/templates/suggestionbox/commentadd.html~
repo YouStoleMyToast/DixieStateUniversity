@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block extrascripts %}
+<script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
+<script type='text/javascript'>
+
+$(function(){
+	$('#commentadd').submit(
+		function (evt) {
+			alert('Just tried to submit comment');
+			evt.perventDefault();
+			$.ajax({
+				url:$(this).attr('action'),
+				type:'post',
+				data:$(this).serialize(),
+				success:function(data)
+				{
+					updateQty();
+					alert('Successfully added comment.');
+				},
+				error:function(){alert('Can\'t add comment.');},
+			});
+			return false;
+		});
+});
+</script>
+{% endblock %}
+
+
+{% block formcontent %}
+
+	<form action='.' method='POST' id="commentadd">
+	<table class="table">
+
+	{% csrf_token %}<br>
+	<p>Comment: </p>
+	<p>{{ form }}</p>
+
+	<input type='submit' value='comment'>
+	</table>
+	</form>
+			
+{% endblock %}
+
+
+
+
+

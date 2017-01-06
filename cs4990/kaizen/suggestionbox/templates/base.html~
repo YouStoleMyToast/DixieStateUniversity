@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<html>
+
+<head>
+<title>Kaizen</title>
+</head>
+
+
+<body>
+<h1>Kaizen</h1>
+<h1>By Eric Beilmann</h1>
+
+<p>"I am in your power, boss me arround"</p>
+{% block content %}
+
+{% end block %}
+
+
+</body>
+
+
+
+
+
+</html>

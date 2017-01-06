@@ -1,0 +1,31 @@
+from django import forms
+from django.forms import ModelForm, Textarea
+from suggestionbox.models import Comment, Suggestion
+
+class CommentForm(ModelForm):
+	class Meta:
+		model=Comment
+		fields=['comment']
+		
+		
+class SuggestionForm(ModelForm):
+	class Meta:
+		model=Suggestion
+		fields=['title','description']
+		
+#class CommentForm(ModelForm):
+#	def __init__(self, **kwargs):
+#		self.user=kwargs.pop('user',None)
+#		self.sid=kwargs.pop('sid',None)
+#		super(CommentForm, self).__init__(**kwargs)
+		
+#	def save(self, commit=True):
+#		obj=super(CommentForm, self).save(commit=False)
+#		obj.user=self.user
+#		obj.sid=self.sid
+#		if commit:
+#			obj.save()
+#		return obj
+
+#	class Meta:
+#		model=Comment
